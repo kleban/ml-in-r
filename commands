@@ -2,7 +2,7 @@ tlmgr install lwarp
 tlmgr install oberdiek
 
 
-# cd e:\repos\oa_2023\intro-to-r
+# cd e:\repos\oa_2023\ml-in-r
 # quarto create-project . --type book
 quarto preview .
 quarto render .
