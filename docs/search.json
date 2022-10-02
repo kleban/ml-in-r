@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Вступ до прикладного програмування в R",
+    "section": "",
+    "text": "This is a Quarto book.\n\n\nTo learn more about Quarto books visit https://quarto.org/docs/books."
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code."
+  },
+  {
+    "objectID": "intro.html#yio",
+    "href": "intro.html#yio",
+    "title": "1  Introduction",
+    "section": "1.1 Yio!",
+    "text": "1.1 Yio!\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever."
+  },
+  {
+    "objectID": "jupyter-r.html",
+    "href": "jupyter-r.html",
+    "title": "3  ggplot2 demo",
+    "section": "",
+    "text": "Описовий текст"
+  },
+  {
+    "objectID": "jupyter-r.html#jupyter-with-r",
+    "href": "jupyter-r.html#jupyter-with-r",
+    "title": "3  ggplot2 demo",
+    "section": "3.1 Jupyter with R",
+    "text": "3.1 Jupyter with R"
+  },
+  {
+    "objectID": "jupyter-csharp.html",
+    "href": "jupyter-csharp.html",
+    "title": "4  C# Title",
+    "section": "",
+    "text": "Описовий текст"
+  },
+  {
+    "objectID": "jupyter-csharp.html#jupyter-with-c",
+    "href": "jupyter-csharp.html#jupyter-with-c",
+    "title": "4  C# Title",
+    "section": "4.1 Jupyter with C",
+    "text": "4.1 Jupyter with C\n\n{.c# .cell-code} int a = 10 + new Random().Next(); Console.WriteLine(a);\n\n965186926\n\n\nint a = 10;\ndisplay(a)"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  }
+]

@@ -1,0 +1,29 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Вступ до прикладного програмування в R"
+  subtitle: "Матеріали для студентів спеціальності економічна кібернекати, 1 курс"
+  author: "Юрій Клебан"
+  date: "12/05/2022"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - jupyter-r.ipynb
+    - jupyter-csharp.ipynb
+    - references.qmd
+  page-navigation: true
+  page-footer: "Copyright 2022, Юрій Клебан" 
+    
+language: _language-ua.yml 
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+
+
+

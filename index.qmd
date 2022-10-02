@@ -1,0 +1,17 @@
+---
+format:
+  html:
+    toc: true
+    html-math-method: katex
+---
+
+# Про курс {.unnumbered}
+
+This is a Quarto book.
+
+## Yeah
+
+To learn more about Quarto books visit <https://quarto.org/docs/books>.
+
+```{toc}
+```
