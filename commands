@@ -6,8 +6,12 @@ tlmgr install oberdiek
 # quarto create-project . --type book
 quarto preview .
 quarto render .
-quarto publish gh-pages
+quarto publish gh-pages --yes
 
 1. Render
 2. Pull to github
 3. publish
+
+cd e:\repos\oa_2023\ml-in-r
+quarto render .
+quarto publish gh-pages

@@ -3,17 +3,32 @@ project:
   output-dir: docs
 
 book:
-  title: "Прикладне математичне моделювання в R"
-  subtitle: "Матеріали для студентів спеціальності економічна кібернекати, 3 курс"
+  title: "Математичне моделювання в R"
+  subtitle: "Матеріали підготовано для студентів 3-го курсу спеціальності економічна кібернетика"
   author: "Юрій Клебан"
-  date: "12/05/2022"
+  date: "10/02/2022"
+  cover-image: img/cover.png
+  site-url: https://kleban.github.io/ml-in-r/
+  repo-url: https://github.com/kleban/ml-in-r/
+  repo-branch: main
+  sharing: [twitter, facebook, linkedin]
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - jupyter-r.ipynb
-    - jupyter-csharp.ipynb
-    - references.qmd
+    - part: 030-supervised-learning.qmd
+      chapters:        
+        - 031-supervised-learning-linear-regression-1.ipynb
+        - 032-supervised-learning-linear-regression-2.ipynb
+        - 033-supervised-learning-desicion-trees-regression.ipynb
+        - 034-supervised-learning-neutal-networks-regression.ipynb
+        - 035-supervised-learning-logistic-regression.ipynb
+        - 036-supervised-learning-desicion-trees-classification.ipynb
+        - 037-supervised-learning-neural-network-classification.ipynb
+   # - part: "Тема 4. Навчання \"без учителя\""
+    #  chapters:        
+     #   - jupyter-csharp.ipynb
+    #- references.qmd
+ # appendices:
+ #   - summary.qmd
   page-navigation: true
   page-footer: "Copyright 2022, Юрій Клебан" 
     
@@ -24,6 +39,8 @@ bibliography: references.bib
 format:
   html:
     theme: cosmo
-
+    cover-image: img/cover.png
+    code-link: true
+    css: css/style.css
 
 

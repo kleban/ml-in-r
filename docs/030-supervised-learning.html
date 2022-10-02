@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Юрій Клебан">
-<meta name="dcterms.date" content="2022-10-02">
 
-<title>Математичне моделювання в R</title>
+<title>Математичне моделювання в R - ТЕМА 3. НАВЧАННЯ “З УЧИТЕЛЕМ”</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./030-supervised-learning.html" rel="next">
+<link href="./031-supervised-learning-linear-regression-1.html" rel="next">
+<link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -72,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Математичне моделювання в R</h1>
+      <h1 class="quarto-secondary-nav-title">ТЕМА 3. НАВЧАННЯ “З УЧИТЕЛЕМ”</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -121,12 +120,12 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">Про курс</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Про курс</a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./030-supervised-learning.html" class="sidebar-item-text sidebar-link">ТЕМА 3. НАВЧАННЯ "З УЧИТЕЛЕМ"</a>
+            <a href="./030-supervised-learning.html" class="sidebar-item-text sidebar-link active">ТЕМА 3. НАВЧАННЯ "З УЧИТЕЛЕМ"</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -169,95 +168,39 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Зміст</h2>
-   
-  <ul>
-  <li><a href="#про-курс" id="toc-про-курс" class="nav-link active" data-scroll-target="#про-курс">Про курс</a>
-  <ul class="collapse">
-  <li><a href="#опис-навчальної-дисципліни" id="toc-опис-навчальної-дисципліни" class="nav-link" data-scroll-target="#опис-навчальної-дисципліни">Опис навчальної дисципліни</a></li>
-  <li><a href="#мета-дисципліни" id="toc-мета-дисципліни" class="nav-link" data-scroll-target="#мета-дисципліни">Мета дисципліни</a></li>
-  <li><a href="#дотримання-принципів-доброчесності" id="toc-дотримання-принципів-доброчесності" class="nav-link" data-scroll-target="#дотримання-принципів-доброчесності">Дотримання принципів доброчесності</a></li>
-  </ul></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Математичне моделювання в R</h1>
-<p class="subtitle lead">Матеріали підготовано для студентів 3-го курсу спеціальності економічна кібернетика</p>
+<h1 class="title d-none d-lg-block">ТЕМА 3. НАВЧАННЯ “З УЧИТЕЛЕМ”</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Автор</div>
-    <div class="quarto-title-meta-contents">
-             <p>Юрій Клебан </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Опубліковано</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">October 2, 2022</p>
-    </div>
-  </div>
     
   </div>
   
 
 </header>
 
-
-<section id="про-курс" class="level1 unnumbered">
-<p><img src="img/cover.png" title="Математичне моделювання в R" class="quarto-cover-image img-fluid"></p><h1 class="unnumbered">Про курс</h1>
-<p>Матеріали підготовлені для читання курсу <strong><em>“Вступ до прикладного математичного моделювання в R”</em></strong> <code>[08.435]</code> для студентів 3-го курсу, спеціальності економічна кібернетика.</p>
-<section id="опис-навчальної-дисципліни" class="level2">
-<h2 class="anchored" data-anchor-id="опис-навчальної-дисципліни">Опис навчальної дисципліни</h2>
-<p>Навчальна дисципліна спрямована на вивчення основ прикладного математичного моделювання з використаням різних видів моделей та підходів до їх побудови, а також удосокналенню процесів роботи з даними та моделями на основі мови R.</p>
-<p><em>Місце навчальної дисципліни у підготовці здобувачів</em>: програмні результати дисципліни використовуються під час вивчення таких навчальних дисциплін: “Математичні методи та моделі в аналізі великих даних”, “Економічна кібернетика”, “Дослідження операцій”, “Інтелектуальні технології моделювання у прийнятті рішень”. Закріплення на практиці здобутих програмних результатів відбувається під час проходження Навчальної практики з курсу «Економіко-математичне моделювання».</p>
-</section>
-<section id="мета-дисципліни" class="level2">
-<h2 class="anchored" data-anchor-id="мета-дисципліни">Мета дисципліни</h2>
-<p>Мета навчальної дисципліни – формування у студентів теоретичних знань та практичних навичок використання мови програмування R для побудови, навчання та оцінки якості математичних моделей на основі регресії, класифікації, кластеризації та асоціативних правил.</p>
-</section>
-<section id="дотримання-принципів-доброчесності" class="level2">
-<h2 class="anchored" data-anchor-id="дотримання-принципів-доброчесності">Дотримання принципів доброчесності</h2>
-<p>Викладач та слухач цього курсу, як очікується, повинні дотримуватися Кодексу академічної доброчесності університету:</p>
-<ul class="task-list">
-<li><p><input type="checkbox" disabled="" checked="">будь-яка робота, подана здобувачем протягом курсу, має бути його власною роботою здобувача; не вдаватися до кроків, що можуть нечесно покращити Ваші результати чи погіршити/покращити результати інших здобувачів;</p></li>
-<li><p><input type="checkbox" disabled="" checked="">якщо буде виявлено ознаки плагіату або іншої недобросовісної академічної поведінки, то студент буде позбавлений можливості отримати передбачені бали за завдання;</p></li>
-<li><p><input type="checkbox" disabled="" checked="">не публікувати у відкритому доступі відповіді на запитання, що використовуються в рамках курсу для оцінювання знань здобувачів;</p></li>
-<li><p><input type="checkbox" disabled="" checked="">під час фінальних видів контролю необхідно працювати самостійно; не дозволяється говорити або обговорювати, а також не можна копіювати документи, використовувати електронні засоби отримання інформації.</p></li>
-</ul>
-<p>Порушення академічної доброчесності під час виконання контрольних завдань призведе до втрати балів або вживання заходів, які передбачені Кодексу академічної доброчесності НаУОА.</p>
+<p>Прикладне математичне моделювання в R</p>
 <hr>
-<div class="callout-note callout callout-style-simple">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>Матеріали курсу створені з використанням ряду технологій:</p>
-<ul class="task-list">
-<li><p><input type="checkbox" disabled="" checked=""><a href="https://www.r-project.org"><code>R</code> Language</a> - безкоштована мова програмування для виконання досліджень у сфері статистики, машинного навчання та візуалізацї результатів.</p></li>
-<li><p><input type="checkbox" disabled="" checked=""><a href="https://quarto.org"><code>Quarto</code> Book</a> - система для публікації наукових та технічних текстів з відкритим кодом (<code>R</code>/<code>Python</code>/<code>Julia</code>/<code>Observable</code>).</p></li>
-<li><p><input type="checkbox" disabled="" checked=""><a href="https://github.com/jupyterlab/jupyterlab"><code>JupyterLab</code></a> - середовище розробки на основі <a href="https://jupyter.org/"><code>Jupyter Notebook</code></a>. <code>JupyterLab</code> є розширеним веб-інтерфейсом для роботи з ноутбуками.</p></li>
-<li><p><input type="checkbox" disabled="" checked=""><code>Git</code>/<code>Github</code> - система контролю версій та, відповідно, сервіс для організації зберігання коду, а також публікації статичних сторінок.</p></li>
-</ul>
-</div>
-</div>
-</div>
+<p>У даній темі розкрито основні принципи побудови та використання регресійних моделей, а також моделей для розв’язання задачк ласифікації.</p>
+<p>Під час вивчення матеріалів розглядаються алгоритми на основі лінійної та логістичної регресії, нейронних мереж, дерев рішень та градієнтного бустінгу.</p>
+<p>Для практичного закріплення знань використовують можливості бібліотек R: <code>caret</code>, <code>neuralnet</code>, <code>gmodels</code>, <code>rpart</code> та інші.</p>
+<hr>
+<iframe src="https://onedrive.live.com/embed?cid=0A1340BA71B3F0AA&amp;resid=A1340BA71B3F0AA%214539&amp;authkey=AI_KhHqmSyn5fcE&amp;em=2&amp;wdAr=1.7777777777777777&amp;wdEaaCheck=1" width="100%" height="400px" frameborder="0">
+Це вбудований документ <a target="_blank" href="https://office.com">Microsoft Office</a> на платформі <a target="_blank" href="https://office.com/webapps">Office</a>.
+</iframe>
+<hr>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -360,10 +303,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Про курс</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./030-supervised-learning.html" class="pagination-link">
-        <span class="nav-page-text">ТЕМА 3. НАВЧАННЯ “З УЧИТЕЛЕМ”</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./031-supervised-learning-linear-regression-1.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Лінійна регресія. Престиж професій</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
