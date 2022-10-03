@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Математичне моделювання в R - 5&nbsp; Логістична регресія. Класифікація. Титанік</title>
+<title>Математичне моделювання в R - 7&nbsp; Логістична регресія. Класифікація. Титанік</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Логістична регресія. Класифікація. Титанік</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Логістична регресія. Класифікація. Титанік</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -189,9 +189,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <a href="./index.html" class="sidebar-item-text sidebar-link">Про курс</a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./010-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">ТЕМА 1. ВСТУП ДО КУРСУ</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./030-supervised-learning.html" class="sidebar-item-text sidebar-link">ТЕМА 3. НАВЧАННЯ "З УЧИТЕЛЕМ"</a>
+            <a href="./020-feature-engeneering.html" class="sidebar-item-text sidebar-link">ТЕМА 2. КОНСТРУЮВАННЯ ОЗНАК</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -199,32 +204,52 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./031-supervised-learning-linear-regression-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Лінійна регресія. Престиж професій</span></a>
+  <a href="./023-feature-engeneering-woe-binning.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Woe Binning</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./030-supervised-learning.html" class="sidebar-item-text sidebar-link">ТЕМА 3. НАВЧАННЯ "З УЧИТЕЛЕМ"</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./031-supervised-learning-linear-regression-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Лінійна регресія. Престиж професій</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./032-supervised-learning-linear-regression-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Лінійна регресія. Прокат велосипедів</span></a>
+  <a href="./032-supervised-learning-linear-regression-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Лінійна регресія. Прокат велосипедів</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./033-supervised-learning-desicion-trees-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Дерева рішень. Регресія. Баланс кредитної карти</span></a>
+  <a href="./033-supervised-learning-desicion-trees-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Дерева рішень. Регресія. Баланс кредитної карти</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./034-supervised-learning-neutal-networks-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Нейронні мережі. Регресія. Вартість житла</span></a>
+  <a href="./034-supervised-learning-neutal-networks-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Нейронні мережі. Регресія. Вартість житла</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./035-supervised-learning-logistic-regression.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Логістична регресія. Класифікація. Титанік</span></a>
+  <a href="./035-supervised-learning-logistic-regression.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Логістична регресія. Класифікація. Титанік</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./036-supervised-learning-desicion-trees-classification.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Дерева рішень. Класифікація. Депозити</span></a>
+  <a href="./036-supervised-learning-desicion-trees-classification.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Дерева рішень. Класифікація. Депозити</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./037-supervised-learning-neural-network-classification.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Нейронні мережі. Deep Learning. Класифікація. Кредитний скоринг</span></a>
   </div>
 </li>
       </ul>
@@ -238,18 +263,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Зміст</h2>
    
   <ul>
-  <li><a href="#dataset-overview" id="toc-dataset-overview" class="nav-link active" data-scroll-target="#dataset-overview"><span class="toc-section-number">5.1</span>  Dataset overview</a></li>
-  <li><a href="#data-preprocessing" id="toc-data-preprocessing" class="nav-link" data-scroll-target="#data-preprocessing"><span class="toc-section-number">5.2</span>  Data preprocessing</a>
+  <li><a href="#dataset-overview" id="toc-dataset-overview" class="nav-link active" data-scroll-target="#dataset-overview"><span class="toc-section-number">7.1</span>  Dataset overview</a></li>
+  <li><a href="#data-preprocessing" id="toc-data-preprocessing" class="nav-link" data-scroll-target="#data-preprocessing"><span class="toc-section-number">7.2</span>  Data preprocessing</a>
   <ul class="collapse">
-  <li><a href="#remove-unused-columns" id="toc-remove-unused-columns" class="nav-link" data-scroll-target="#remove-unused-columns"><span class="toc-section-number">5.2.1</span>  Remove unused columns</a></li>
-  <li><a href="#check-missing-data" id="toc-check-missing-data" class="nav-link" data-scroll-target="#check-missing-data"><span class="toc-section-number">5.2.2</span>  Check missing data</a></li>
-  <li><a href="#visual-analysis" id="toc-visual-analysis" class="nav-link" data-scroll-target="#visual-analysis"><span class="toc-section-number">5.2.3</span>  Visual analysis</a></li>
+  <li><a href="#remove-unused-columns" id="toc-remove-unused-columns" class="nav-link" data-scroll-target="#remove-unused-columns"><span class="toc-section-number">7.2.1</span>  Remove unused columns</a></li>
+  <li><a href="#check-missing-data" id="toc-check-missing-data" class="nav-link" data-scroll-target="#check-missing-data"><span class="toc-section-number">7.2.2</span>  Check missing data</a></li>
+  <li><a href="#visual-analysis" id="toc-visual-analysis" class="nav-link" data-scroll-target="#visual-analysis"><span class="toc-section-number">7.2.3</span>  Visual analysis</a></li>
   </ul></li>
-  <li><a href="#splitting-data" id="toc-splitting-data" class="nav-link" data-scroll-target="#splitting-data"><span class="toc-section-number">5.3</span>  Splitting data</a></li>
-  <li><a href="#missing-replacement" id="toc-missing-replacement" class="nav-link" data-scroll-target="#missing-replacement"><span class="toc-section-number">5.4</span>  Missing replacement</a></li>
-  <li><a href="#model-building" id="toc-model-building" class="nav-link" data-scroll-target="#model-building"><span class="toc-section-number">6</span>  Model building</a>
+  <li><a href="#splitting-data" id="toc-splitting-data" class="nav-link" data-scroll-target="#splitting-data"><span class="toc-section-number">7.3</span>  Splitting data</a></li>
+  <li><a href="#missing-replacement" id="toc-missing-replacement" class="nav-link" data-scroll-target="#missing-replacement"><span class="toc-section-number">7.4</span>  Missing replacement</a></li>
+  <li><a href="#model-building" id="toc-model-building" class="nav-link" data-scroll-target="#model-building"><span class="toc-section-number">8</span>  Model building</a>
   <ul class="collapse">
-  <li><a href="#model-accuracy-check" id="toc-model-accuracy-check" class="nav-link" data-scroll-target="#model-accuracy-check"><span class="toc-section-number">6.1</span>  Model accuracy check</a></li>
+  <li><a href="#model-accuracy-check" id="toc-model-accuracy-check" class="nav-link" data-scroll-target="#model-accuracy-check"><span class="toc-section-number">8.1</span>  Model accuracy check</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -259,7 +284,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Логістична регресія. Класифікація. Титанік</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Логістична регресія. Класифікація. Титанік</span></h1>
 </div>
 
 
@@ -280,8 +305,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("Amelia")</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("InformationValue")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="dataset-overview" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="dataset-overview"><span class="header-section-number">5.1</span> Dataset overview</h2>
+<section id="dataset-overview" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="dataset-overview"><span class="header-section-number">7.1</span> Dataset overview</h2>
 <p>У даному навчальному матеріалі використано класичний приклад даних з інформацією про пасажирів корабля Титанік.</p>
 <p>Source: https://github.com/Geoyi/Cleaning-Titanic-Data</p>
 <p><strong>Dataset description:</strong></p>
@@ -418,10 +443,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Закреслені поля надалі будуть видалені з датасету для моделювання.</p>
 <hr>
 </section>
-<section id="data-preprocessing" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="data-preprocessing"><span class="header-section-number">5.2</span> Data preprocessing</h2>
-<section id="remove-unused-columns" class="level3" data-number="5.2.1">
-<h3 data-number="5.2.1" class="anchored" data-anchor-id="remove-unused-columns"><span class="header-section-number">5.2.1</span> Remove unused columns</h3>
+<section id="data-preprocessing" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="data-preprocessing"><span class="header-section-number">7.2</span> Data preprocessing</h2>
+<section id="remove-unused-columns" class="level3" data-number="7.2.1">
+<h3 data-number="7.2.1" class="anchored" data-anchor-id="remove-unused-columns"><span class="header-section-number">7.2.1</span> Remove unused columns</h3>
 <p>Lets remove columns: - [x] <code>name</code> - just string - [x] <code>ticket</code> - it can be useful to analyze numbers and check if - [x] <code>boat</code> - if boat is not missing - survived, we cannot use it - [x] <code>body</code> - if body is not missing - not survived, cant use it - [x] <code>home.dest</code> - just text</p>
 <div class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(dplyr)) <span class="co"># filter()</span></span>
@@ -479,8 +504,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <hr>
 </section>
-<section id="check-missing-data" class="level3" data-number="5.2.2">
-<h3 data-number="5.2.2" class="anchored" data-anchor-id="check-missing-data"><span class="header-section-number">5.2.2</span> Check missing data</h3>
+<section id="check-missing-data" class="level3" data-number="7.2.2">
+<h3 data-number="7.2.2" class="anchored" data-anchor-id="check-missing-data"><span class="header-section-number">7.2.2</span> Check missing data</h3>
 <p>Для оцінки кількості пропусків побудуємо матрицю та мапу:</p>
 <div class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mice)</span>
@@ -589,8 +614,8 @@ The following objects are masked from 'package:base':
 We will replace all missing data on the next stages for: <code>fare</code>, <code>cabin</code>, <code>age</code>, <code>embarked</code>.
 </div>
 </section>
-<section id="visual-analysis" class="level3" data-number="5.2.3">
-<h3 data-number="5.2.3" class="anchored" data-anchor-id="visual-analysis"><span class="header-section-number">5.2.3</span> Visual analysis</h3>
+<section id="visual-analysis" class="level3" data-number="7.2.3">
+<h3 data-number="7.2.3" class="anchored" data-anchor-id="visual-analysis"><span class="header-section-number">7.2.3</span> Visual analysis</h3>
 <div class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co"># for plots</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gmodels) <span class="co"># for CrossTable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -725,8 +750,8 @@ titanic_data$survived |         1 |         2 |         3 | Row Total |
 <hr>
 </section>
 </section>
-<section id="splitting-data" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="splitting-data"><span class="header-section-number">5.3</span> Splitting data</h2>
+<section id="splitting-data" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="splitting-data"><span class="header-section-number">7.3</span> Splitting data</h2>
 <p>Lest split out dataset for test and train</p>
 <div class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1</span>) <span class="co"># seed</span></span>
@@ -785,8 +810,8 @@ Total Observations in Table:  393
 </div>
 <hr>
 </section>
-<section id="missing-replacement" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="missing-replacement"><span class="header-section-number">5.4</span> Missing replacement</h2>
+<section id="missing-replacement" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="missing-replacement"><span class="header-section-number">7.4</span> Missing replacement</h2>
 <p>Missing data replacement should have base points for each parameter.</p>
 <p>So, we will fix data for replacement from train and implement it to both train and test.</p>
 <div class="cell" data-execution_count="21">
@@ -1029,8 +1054,8 @@ FALSE
 </div>
 <hr>
 </section>
-<section id="model-building" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Model building</h1>
+<section id="model-building" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Model building</h1>
 <p>Перед побудовою моделі визначимо категоріальні змінні як фактори (factor), щоб під час моделювання для них було сформовано dummy-змінні.</p>
 <div class="cell" data-execution_count="34">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(titanic_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1238,8 +1263,8 @@ Number of Fisher Scoring iterations: 5</code></pre>
 </div>
 <p>As you see for logistic regression results are the same, so we can use default algorithm. But <code>train()</code> method is very powerfull with desicion trees, boosting, random forest, neural network and other complex algorithms.</p>
 <hr>
-<section id="model-accuracy-check" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="model-accuracy-check"><span class="header-section-number">6.1</span> Model accuracy check</h2>
+<section id="model-accuracy-check" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="model-accuracy-check"><span class="header-section-number">8.1</span> Model accuracy check</h2>
 <p>Lets create new datasets for train and test results storing. We will use them</p>
 <div class="cell" data-execution_count="41">
 <div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>train_results <span class="ot">&lt;-</span> titanic_train <span class="sc">%&gt;%</span> </span>
@@ -1685,12 +1710,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./034-supervised-learning-neutal-networks-regression.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Нейронні мережі. Регресія. Вартість житла</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Нейронні мережі. Регресія. Вартість житла</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./036-supervised-learning-desicion-trees-classification.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Дерева рішень. Класифікація. Депозити</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Дерева рішень. Класифікація. Депозити</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

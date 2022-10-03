@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Математичне моделювання в R - 3&nbsp; Дерева рішень. Регресія. Баланс кредитної карти</title>
+<title>Математичне моделювання в R - 5&nbsp; Дерева рішень. Регресія. Баланс кредитної карти</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Дерева рішень. Регресія. Баланс кредитної карти</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Дерева рішень. Регресія. Баланс кредитної карти</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -189,9 +189,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <a href="./index.html" class="sidebar-item-text sidebar-link">Про курс</a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./010-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">ТЕМА 1. ВСТУП ДО КУРСУ</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./030-supervised-learning.html" class="sidebar-item-text sidebar-link">ТЕМА 3. НАВЧАННЯ "З УЧИТЕЛЕМ"</a>
+            <a href="./020-feature-engeneering.html" class="sidebar-item-text sidebar-link">ТЕМА 2. КОНСТРУЮВАННЯ ОЗНАК</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -199,32 +204,52 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./031-supervised-learning-linear-regression-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Лінійна регресія. Престиж професій</span></a>
+  <a href="./023-feature-engeneering-woe-binning.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Woe Binning</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./030-supervised-learning.html" class="sidebar-item-text sidebar-link">ТЕМА 3. НАВЧАННЯ "З УЧИТЕЛЕМ"</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./031-supervised-learning-linear-regression-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Лінійна регресія. Престиж професій</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./032-supervised-learning-linear-regression-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Лінійна регресія. Прокат велосипедів</span></a>
+  <a href="./032-supervised-learning-linear-regression-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Лінійна регресія. Прокат велосипедів</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./033-supervised-learning-desicion-trees-regression.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Дерева рішень. Регресія. Баланс кредитної карти</span></a>
+  <a href="./033-supervised-learning-desicion-trees-regression.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Дерева рішень. Регресія. Баланс кредитної карти</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./034-supervised-learning-neutal-networks-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Нейронні мережі. Регресія. Вартість житла</span></a>
+  <a href="./034-supervised-learning-neutal-networks-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Нейронні мережі. Регресія. Вартість житла</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./035-supervised-learning-logistic-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Логістична регресія. Класифікація. Титанік</span></a>
+  <a href="./035-supervised-learning-logistic-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Логістична регресія. Класифікація. Титанік</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./036-supervised-learning-desicion-trees-classification.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Дерева рішень. Класифікація. Депозити</span></a>
+  <a href="./036-supervised-learning-desicion-trees-classification.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Дерева рішень. Класифікація. Депозити</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./037-supervised-learning-neural-network-classification.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Нейронні мережі. Deep Learning. Класифікація. Кредитний скоринг</span></a>
   </div>
 </li>
       </ul>
@@ -238,20 +263,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Зміст</h2>
    
   <ul>
-  <li><a href="#підготовка" id="toc-підготовка" class="nav-link active" data-scroll-target="#підготовка"><span class="toc-section-number">3.1</span>  Підготовка</a></li>
-  <li><a href="#набір-даних" id="toc-набір-даних" class="nav-link" data-scroll-target="#набір-даних"><span class="toc-section-number">3.2</span>  Набір даних</a></li>
-  <li><a href="#тренувальна-та-тестова-вибірки" id="toc-тренувальна-та-тестова-вибірки" class="nav-link" data-scroll-target="#тренувальна-та-тестова-вибірки"><span class="toc-section-number">3.3</span>  Тренувальна та тестова вибірки</a></li>
-  <li><a href="#оглядовий-аналіз-даних" id="toc-оглядовий-аналіз-даних" class="nav-link" data-scroll-target="#оглядовий-аналіз-даних"><span class="toc-section-number">3.4</span>  Оглядовий аналіз даних</a></li>
-  <li><a href="#моделювання.-робота-з-пакетом-rpart" id="toc-моделювання.-робота-з-пакетом-rpart" class="nav-link" data-scroll-target="#моделювання.-робота-з-пакетом-rpart"><span class="toc-section-number">3.5</span>  Моделювання. Робота з пакетом RPart</a>
+  <li><a href="#підготовка" id="toc-підготовка" class="nav-link active" data-scroll-target="#підготовка"><span class="toc-section-number">5.1</span>  Підготовка</a></li>
+  <li><a href="#набір-даних" id="toc-набір-даних" class="nav-link" data-scroll-target="#набір-даних"><span class="toc-section-number">5.2</span>  Набір даних</a></li>
+  <li><a href="#тренувальна-та-тестова-вибірки" id="toc-тренувальна-та-тестова-вибірки" class="nav-link" data-scroll-target="#тренувальна-та-тестова-вибірки"><span class="toc-section-number">5.3</span>  Тренувальна та тестова вибірки</a></li>
+  <li><a href="#оглядовий-аналіз-даних" id="toc-оглядовий-аналіз-даних" class="nav-link" data-scroll-target="#оглядовий-аналіз-даних"><span class="toc-section-number">5.4</span>  Оглядовий аналіз даних</a></li>
+  <li><a href="#моделювання.-робота-з-пакетом-rpart" id="toc-моделювання.-робота-з-пакетом-rpart" class="nav-link" data-scroll-target="#моделювання.-робота-з-пакетом-rpart"><span class="toc-section-number">5.5</span>  Моделювання. Робота з пакетом RPart</a>
   <ul class="collapse">
-  <li><a href="#побудова-моделі-без-налаштувань" id="toc-побудова-моделі-без-налаштувань" class="nav-link" data-scroll-target="#побудова-моделі-без-налаштувань"><span class="toc-section-number">3.5.1</span>  Побудова моделі без налаштувань</a></li>
-  <li><a href="#оцінка-метрик" id="toc-оцінка-метрик" class="nav-link" data-scroll-target="#оцінка-метрик"><span class="toc-section-number">3.5.2</span>  Оцінка метрик</a></li>
-  <li><a href="#візуальне-представлення" id="toc-візуальне-представлення" class="nav-link" data-scroll-target="#візуальне-представлення"><span class="toc-section-number">3.5.3</span>  Візуальне представлення</a></li>
-  <li><a href="#побудова-моделі-з-розділеннями" id="toc-побудова-моделі-з-розділеннями" class="nav-link" data-scroll-target="#побудова-моделі-з-розділеннями"><span class="toc-section-number">3.5.4</span>  Побудова моделі з розділеннями</a></li>
-  <li><a href="#оцінка-метрик-1" id="toc-оцінка-метрик-1" class="nav-link" data-scroll-target="#оцінка-метрик-1"><span class="toc-section-number">3.5.5</span>  Оцінка метрик</a></li>
-  <li><a href="#візуалізація-результатів" id="toc-візуалізація-результатів" class="nav-link" data-scroll-target="#візуалізація-результатів"><span class="toc-section-number">3.5.6</span>  Візуалізація результатів</a></li>
+  <li><a href="#побудова-моделі-без-налаштувань" id="toc-побудова-моделі-без-налаштувань" class="nav-link" data-scroll-target="#побудова-моделі-без-налаштувань"><span class="toc-section-number">5.5.1</span>  Побудова моделі без налаштувань</a></li>
+  <li><a href="#оцінка-метрик" id="toc-оцінка-метрик" class="nav-link" data-scroll-target="#оцінка-метрик"><span class="toc-section-number">5.5.2</span>  Оцінка метрик</a></li>
+  <li><a href="#візуальне-представлення" id="toc-візуальне-представлення" class="nav-link" data-scroll-target="#візуальне-представлення"><span class="toc-section-number">5.5.3</span>  Візуальне представлення</a></li>
+  <li><a href="#побудова-моделі-з-розділеннями" id="toc-побудова-моделі-з-розділеннями" class="nav-link" data-scroll-target="#побудова-моделі-з-розділеннями"><span class="toc-section-number">5.5.4</span>  Побудова моделі з розділеннями</a></li>
+  <li><a href="#оцінка-метрик-1" id="toc-оцінка-метрик-1" class="nav-link" data-scroll-target="#оцінка-метрик-1"><span class="toc-section-number">5.5.5</span>  Оцінка метрик</a></li>
+  <li><a href="#візуалізація-результатів" id="toc-візуалізація-результатів" class="nav-link" data-scroll-target="#візуалізація-результатів"><span class="toc-section-number">5.5.6</span>  Візуалізація результатів</a></li>
   </ul></li>
-  <li><a href="#моделювання.-робота-з-пакетом-partykit" id="toc-моделювання.-робота-з-пакетом-partykit" class="nav-link" data-scroll-target="#моделювання.-робота-з-пакетом-partykit"><span class="toc-section-number">3.6</span>  Моделювання. Робота з пакетом <code>partykit</code></a></li>
+  <li><a href="#моделювання.-робота-з-пакетом-partykit" id="toc-моделювання.-робота-з-пакетом-partykit" class="nav-link" data-scroll-target="#моделювання.-робота-з-пакетом-partykit"><span class="toc-section-number">5.6</span>  Моделювання. Робота з пакетом <code>partykit</code></a></li>
   </ul>
 </nav>
     </div>
@@ -260,7 +285,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Дерева рішень. Регресія. Баланс кредитної карти</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Дерева рішень. Регресія. Баланс кредитної карти</span></h1>
 </div>
 
 
@@ -277,8 +302,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Прикладне математичне моделювання в R</p>
 <hr>
 <p>У даній частині навчального процесу потрібно побудувати математичні моделі регресії клієнтів на основі алгоритму дерева рішень та перевірити їх на тестовій вибірці.</p>
-<section id="підготовка" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="підготовка"><span class="header-section-number">3.1</span> Підготовка</h2>
+<section id="підготовка" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="підготовка"><span class="header-section-number">5.1</span> Підготовка</h2>
 <div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("DMwR")</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("gmodels")</span></span>
@@ -337,8 +362,8 @@ Type 'rattle()' to shake, rattle, and roll your data.
 <p>Для очистки сесії від непотрібних даних використайте команду <code>rm()</code>:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>()) <span class="co">#видаляє усі змінні</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="набір-даних" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="набір-даних"><span class="header-section-number">3.2</span> Набір даних</h2>
+<section id="набір-даних" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="набір-даних"><span class="header-section-number">5.2</span> Набір даних</h2>
 <p>Дані складають з 400 спостежень та наступник пкоазників:</p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" checked=""><code>ID</code> - ідентифікатор;</li>
@@ -447,8 +472,8 @@ Note
 </div>
 </div>
 </section>
-<section id="тренувальна-та-тестова-вибірки" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="тренувальна-та-тестова-вибірки"><span class="header-section-number">3.3</span> Тренувальна та тестова вибірки</h2>
+<section id="тренувальна-та-тестова-вибірки" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="тренувальна-та-тестова-вибірки"><span class="header-section-number">5.3</span> Тренувальна та тестова вибірки</h2>
 <p>Розділимо загальну вибірку на 2 частини: * тренувальна, <code>70%</code> вибірки, для побудови регресії; * тестова, <code>30%</code> вибірки, для перевірки точності моделі.</p>
 <div class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2023</span>) <span class="co">#довільне число як точка "відправки" для генератора випадкових чисел</span></span>
@@ -485,8 +510,8 @@ Note
 </div>
 </div>
 </section>
-<section id="оглядовий-аналіз-даних" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="оглядовий-аналіз-даних"><span class="header-section-number">3.4</span> Оглядовий аналіз даних</h2>
+<section id="оглядовий-аналіз-даних" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="оглядовий-аналіз-даних"><span class="header-section-number">5.4</span> Оглядовий аналіз даних</h2>
 <p>Для початку переглянемо категоріальні змінні.</p>
 <div class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Потбірні пакети</span></span>
@@ -659,10 +684,10 @@ Total Observations in Table:  280
 <p>Графік розподілу значень балансу:</p>
 <hr>
 </section>
-<section id="моделювання.-робота-з-пакетом-rpart" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="моделювання.-робота-з-пакетом-rpart"><span class="header-section-number">3.5</span> Моделювання. Робота з пакетом RPart</h2>
-<section id="побудова-моделі-без-налаштувань" class="level3" data-number="3.5.1">
-<h3 data-number="3.5.1" class="anchored" data-anchor-id="побудова-моделі-без-налаштувань"><span class="header-section-number">3.5.1</span> Побудова моделі без налаштувань</h3>
+<section id="моделювання.-робота-з-пакетом-rpart" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="моделювання.-робота-з-пакетом-rpart"><span class="header-section-number">5.5</span> Моделювання. Робота з пакетом RPart</h2>
+<section id="побудова-моделі-без-налаштувань" class="level3" data-number="5.5.1">
+<h3 data-number="5.5.1" class="anchored" data-anchor-id="побудова-моделі-без-налаштувань"><span class="header-section-number">5.5.1</span> Побудова моделі без налаштувань</h3>
 <p>Для побудови регресії на основі дерева рішень інсталюємо пакет <code>rpart</code> (<code>install.package("rpart")</code>).</p>
 <p>Використаємо функцію для побудови моделі <code>rpart()</code>:</p>
 <div class="cell" data-execution_count="24">
@@ -700,8 +725,8 @@ Total Observations in Table:  280
 </div>
 </div>
 </section>
-<section id="оцінка-метрик" class="level3" data-number="3.5.2">
-<h3 data-number="3.5.2" class="anchored" data-anchor-id="оцінка-метрик"><span class="header-section-number">3.5.2</span> Оцінка метрик</h3>
+<section id="оцінка-метрик" class="level3" data-number="5.5.2">
+<h3 data-number="5.5.2" class="anchored" data-anchor-id="оцінка-метрик"><span class="header-section-number">5.5.2</span> Оцінка метрик</h3>
 <p>Переглянемо похибки моделі на обох вибірках:</p>
 <div class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">#library(DMwR)</span></span>
@@ -763,8 +788,8 @@ Total Observations in Table:  280
 </div>
 </div>
 </section>
-<section id="візуальне-представлення" class="level3" data-number="3.5.3">
-<h3 data-number="3.5.3" class="anchored" data-anchor-id="візуальне-представлення"><span class="header-section-number">3.5.3</span> Візуальне представлення</h3>
+<section id="візуальне-представлення" class="level3" data-number="5.5.3">
+<h3 data-number="5.5.3" class="anchored" data-anchor-id="візуальне-представлення"><span class="header-section-number">5.5.3</span> Візуальне представлення</h3>
 <p>Для візуалізації дерева рішень скористаємося пакетом <code>rpart.plot</code>:</p>
 <div class="cell" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co">#library(rpart.plot)</span></span>
@@ -797,8 +822,8 @@ Total Observations in Table:  280
 </div>
 <hr>
 </section>
-<section id="побудова-моделі-з-розділеннями" class="level3" data-number="3.5.4">
-<h3 data-number="3.5.4" class="anchored" data-anchor-id="побудова-моделі-з-розділеннями"><span class="header-section-number">3.5.4</span> Побудова моделі з розділеннями</h3>
+<section id="побудова-моделі-з-розділеннями" class="level3" data-number="5.5.4">
+<h3 data-number="5.5.4" class="anchored" data-anchor-id="побудова-моделі-з-розділеннями"><span class="header-section-number">5.5.4</span> Побудова моделі з розділеннями</h3>
 <p>Побудуємо модель з вказанням мінімальної кількості розділень даних (<code>minsplit</code>):</p>
 <div class="cell" data-execution_count="35">
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>rpart_model2 <span class="ot">&lt;-</span> <span class="fu">rpart</span>(Balance <span class="sc">~</span> ., train_data, <span class="at">control =</span> <span class="fu">rpart.control</span>(<span class="at">minsplit =</span> <span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -829,8 +854,8 @@ Total Observations in Table:  280
 </div>
 </div>
 </section>
-<section id="оцінка-метрик-1" class="level3" data-number="3.5.5">
-<h3 data-number="3.5.5" class="anchored" data-anchor-id="оцінка-метрик-1"><span class="header-section-number">3.5.5</span> Оцінка метрик</h3>
+<section id="оцінка-метрик-1" class="level3" data-number="5.5.5">
+<h3 data-number="5.5.5" class="anchored" data-anchor-id="оцінка-метрик-1"><span class="header-section-number">5.5.5</span> Оцінка метрик</h3>
 <p>Переглянемо похибки:</p>
 <div class="cell" data-execution_count="37">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">regr.eval</span>(train_res<span class="sc">$</span>Balance, train_res<span class="sc">$</span>RPartPredicted10)</span>
@@ -865,8 +890,8 @@ Total Observations in Table:  280
 </div>
 </div>
 </section>
-<section id="візуалізація-результатів" class="level3" data-number="3.5.6">
-<h3 data-number="3.5.6" class="anchored" data-anchor-id="візуалізація-результатів"><span class="header-section-number">3.5.6</span> Візуалізація результатів</h3>
+<section id="візуалізація-результатів" class="level3" data-number="5.5.6">
+<h3 data-number="5.5.6" class="anchored" data-anchor-id="візуалізація-результатів"><span class="header-section-number">5.5.6</span> Візуалізація результатів</h3>
 <p>Візуалізуємо модель:</p>
 <div class="cell" data-execution_count="39">
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prp</span>(rpart_model2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -877,8 +902,8 @@ Total Observations in Table:  280
 <hr>
 </section>
 </section>
-<section id="моделювання.-робота-з-пакетом-partykit" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="моделювання.-робота-з-пакетом-partykit"><span class="header-section-number">3.6</span> Моделювання. Робота з пакетом <code>partykit</code></h2>
+<section id="моделювання.-робота-з-пакетом-partykit" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="моделювання.-робота-з-пакетом-partykit"><span class="header-section-number">5.6</span> Моделювання. Робота з пакетом <code>partykit</code></h2>
 <p>Побудуємо дерево рішень на основі <code>partykit</code> та функції <code>ctree()</code> та порівняємо з результатами роботи <code>rpart()</code>.</p>
 <div class="cell" data-execution_count="40">
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co">#library(partykit)</span></span>
@@ -1085,12 +1110,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./032-supervised-learning-linear-regression-2.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Лінійна регресія. Прокат велосипедів</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Лінійна регресія. Прокат велосипедів</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./034-supervised-learning-neutal-networks-regression.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Нейронні мережі. Регресія. Вартість житла</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Нейронні мережі. Регресія. Вартість житла</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

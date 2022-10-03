@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Математичне моделювання в R - 1&nbsp; Лінійна регресія. Престиж професій</title>
+<title>Математичне моделювання в R - 3&nbsp; Лінійна регресія. Престиж професій</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -138,7 +138,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Лінійна регресія. Престиж професій</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Лінійна регресія. Престиж професій</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -190,9 +190,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <a href="./index.html" class="sidebar-item-text sidebar-link">Про курс</a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./010-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">ТЕМА 1. ВСТУП ДО КУРСУ</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./030-supervised-learning.html" class="sidebar-item-text sidebar-link">ТЕМА 3. НАВЧАННЯ "З УЧИТЕЛЕМ"</a>
+            <a href="./020-feature-engeneering.html" class="sidebar-item-text sidebar-link">ТЕМА 2. КОНСТРУЮВАННЯ ОЗНАК</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -200,32 +205,52 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./031-supervised-learning-linear-regression-1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Лінійна регресія. Престиж професій</span></a>
+  <a href="./023-feature-engeneering-woe-binning.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Woe Binning</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./030-supervised-learning.html" class="sidebar-item-text sidebar-link">ТЕМА 3. НАВЧАННЯ "З УЧИТЕЛЕМ"</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./031-supervised-learning-linear-regression-1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Лінійна регресія. Престиж професій</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./032-supervised-learning-linear-regression-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Лінійна регресія. Прокат велосипедів</span></a>
+  <a href="./032-supervised-learning-linear-regression-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Лінійна регресія. Прокат велосипедів</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./033-supervised-learning-desicion-trees-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Дерева рішень. Регресія. Баланс кредитної карти</span></a>
+  <a href="./033-supervised-learning-desicion-trees-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Дерева рішень. Регресія. Баланс кредитної карти</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./034-supervised-learning-neutal-networks-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Нейронні мережі. Регресія. Вартість житла</span></a>
+  <a href="./034-supervised-learning-neutal-networks-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Нейронні мережі. Регресія. Вартість житла</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./035-supervised-learning-logistic-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Логістична регресія. Класифікація. Титанік</span></a>
+  <a href="./035-supervised-learning-logistic-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Логістична регресія. Класифікація. Титанік</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./036-supervised-learning-desicion-trees-classification.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Дерева рішень. Класифікація. Депозити</span></a>
+  <a href="./036-supervised-learning-desicion-trees-classification.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Дерева рішень. Класифікація. Депозити</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./037-supervised-learning-neural-network-classification.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Нейронні мережі. Deep Learning. Класифікація. Кредитний скоринг</span></a>
   </div>
 </li>
       </ul>
@@ -239,30 +264,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Зміст</h2>
    
   <ul>
-  <li><a href="#dataset-overview" id="toc-dataset-overview" class="nav-link active" data-scroll-target="#dataset-overview"><span class="toc-section-number">1.1</span>  Dataset overview</a></li>
-  <li><a href="#traintest-split" id="toc-traintest-split" class="nav-link" data-scroll-target="#traintest-split"><span class="toc-section-number">1.2</span>  Train/Test split</a></li>
-  <li><a href="#short-eda-exploratory-data-analysis" id="toc-short-eda-exploratory-data-analysis" class="nav-link" data-scroll-target="#short-eda-exploratory-data-analysis"><span class="toc-section-number">1.3</span>  Short EDA (Exploratory data analysis)</a>
+  <li><a href="#dataset-overview" id="toc-dataset-overview" class="nav-link active" data-scroll-target="#dataset-overview"><span class="toc-section-number">3.1</span>  Dataset overview</a></li>
+  <li><a href="#traintest-split" id="toc-traintest-split" class="nav-link" data-scroll-target="#traintest-split"><span class="toc-section-number">3.2</span>  Train/Test split</a></li>
+  <li><a href="#short-eda-exploratory-data-analysis" id="toc-short-eda-exploratory-data-analysis" class="nav-link" data-scroll-target="#short-eda-exploratory-data-analysis"><span class="toc-section-number">3.3</span>  Short EDA (Exploratory data analysis)</a>
   <ul class="collapse">
-  <li><a href="#correlation" id="toc-correlation" class="nav-link" data-scroll-target="#correlation"><span class="toc-section-number">1.3.1</span>  Correlation</a></li>
-  <li><a href="#visual-analysis" id="toc-visual-analysis" class="nav-link" data-scroll-target="#visual-analysis"><span class="toc-section-number">1.3.2</span>  Visual analysis</a></li>
+  <li><a href="#correlation" id="toc-correlation" class="nav-link" data-scroll-target="#correlation"><span class="toc-section-number">3.3.1</span>  Correlation</a></li>
+  <li><a href="#visual-analysis" id="toc-visual-analysis" class="nav-link" data-scroll-target="#visual-analysis"><span class="toc-section-number">3.3.2</span>  Visual analysis</a></li>
   </ul></li>
-  <li><a href="#model-building" id="toc-model-building" class="nav-link" data-scroll-target="#model-building"><span class="toc-section-number">1.4</span>  Model building</a>
+  <li><a href="#model-building" id="toc-model-building" class="nav-link" data-scroll-target="#model-building"><span class="toc-section-number">3.4</span>  Model building</a>
   <ul class="collapse">
-  <li><a href="#demo-task-generating-final-formula-for-regression" id="toc-demo-task-generating-final-formula-for-regression" class="nav-link" data-scroll-target="#demo-task-generating-final-formula-for-regression"><span class="toc-section-number">1.4.1</span>  Demo task: generating final formula for regression</a></li>
-  <li><a href="#зміна-форми-залежності" id="toc-зміна-форми-залежності" class="nav-link" data-scroll-target="#зміна-форми-залежності"><span class="toc-section-number">1.4.2</span>  Зміна форми залежності</a></li>
+  <li><a href="#demo-task-generating-final-formula-for-regression" id="toc-demo-task-generating-final-formula-for-regression" class="nav-link" data-scroll-target="#demo-task-generating-final-formula-for-regression"><span class="toc-section-number">3.4.1</span>  Demo task: generating final formula for regression</a></li>
+  <li><a href="#зміна-форми-залежності" id="toc-зміна-форми-залежності" class="nav-link" data-scroll-target="#зміна-форми-залежності"><span class="toc-section-number">3.4.2</span>  Зміна форми залежності</a></li>
   </ul></li>
-  <li><a href="#prediction-on-test-data-and-accuracy" id="toc-prediction-on-test-data-and-accuracy" class="nav-link" data-scroll-target="#prediction-on-test-data-and-accuracy"><span class="toc-section-number">1.5</span>  Prediction on test data and accuracy</a>
+  <li><a href="#prediction-on-test-data-and-accuracy" id="toc-prediction-on-test-data-and-accuracy" class="nav-link" data-scroll-target="#prediction-on-test-data-and-accuracy"><span class="toc-section-number">3.5</span>  Prediction on test data and accuracy</a>
   <ul class="collapse">
-  <li><a href="#перевірка-на-мультиколінераність" id="toc-перевірка-на-мультиколінераність" class="nav-link" data-scroll-target="#перевірка-на-мультиколінераність"><span class="toc-section-number">1.5.1</span>  Перевірка на мультиколінераність</a></li>
-  <li><a href="#extending-model" id="toc-extending-model" class="nav-link" data-scroll-target="#extending-model"><span class="toc-section-number">1.5.2</span>  Extending model</a></li>
+  <li><a href="#перевірка-на-мультиколінераність" id="toc-перевірка-на-мультиколінераність" class="nav-link" data-scroll-target="#перевірка-на-мультиколінераність"><span class="toc-section-number">3.5.1</span>  Перевірка на мультиколінераність</a></li>
+  <li><a href="#extending-model" id="toc-extending-model" class="nav-link" data-scroll-target="#extending-model"><span class="toc-section-number">3.5.2</span>  Extending model</a></li>
   </ul></li>
-  <li><a href="#model-errors" id="toc-model-errors" class="nav-link" data-scroll-target="#model-errors"><span class="toc-section-number">1.6</span>  Model errors</a></li>
-  <li><a href="#features-selection" id="toc-features-selection" class="nav-link" data-scroll-target="#features-selection"><span class="toc-section-number">1.7</span>  Features selection</a>
+  <li><a href="#model-errors" id="toc-model-errors" class="nav-link" data-scroll-target="#model-errors"><span class="toc-section-number">3.6</span>  Model errors</a></li>
+  <li><a href="#features-selection" id="toc-features-selection" class="nav-link" data-scroll-target="#features-selection"><span class="toc-section-number">3.7</span>  Features selection</a>
   <ul class="collapse">
-  <li><a href="#bestsubsets-method" id="toc-bestsubsets-method" class="nav-link" data-scroll-target="#bestsubsets-method"><span class="toc-section-number">1.7.1</span>  BestSubsets method</a></li>
-  <li><a href="#stepwise-method" id="toc-stepwise-method" class="nav-link" data-scroll-target="#stepwise-method"><span class="toc-section-number">1.7.2</span>  Stepwise method</a></li>
+  <li><a href="#bestsubsets-method" id="toc-bestsubsets-method" class="nav-link" data-scroll-target="#bestsubsets-method"><span class="toc-section-number">3.7.1</span>  BestSubsets method</a></li>
+  <li><a href="#stepwise-method" id="toc-stepwise-method" class="nav-link" data-scroll-target="#stepwise-method"><span class="toc-section-number">3.7.2</span>  Stepwise method</a></li>
   </ul></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="toc-section-number">1.8</span>  References</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="toc-section-number">3.8</span>  References</a></li>
   </ul>
 </nav>
     </div>
@@ -271,7 +296,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Лінійна регресія. Престиж професій</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Лінійна регресія. Престиж професій</span></h1>
 </div>
 
 
@@ -300,8 +325,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Розділ про мультиколінеарність та вибір найкращої моделі.</p>
 </div>
 </div>
-<section id="dataset-overview" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="dataset-overview"><span class="header-section-number">1.1</span> Dataset overview</h2>
+<section id="dataset-overview" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="dataset-overview"><span class="header-section-number">3.1</span> Dataset overview</h2>
 <p>У даному навчальному матеріалі використано класичний приклад даних з інформацією про престижність професій у Канаді 1971 року. Джерело: <code>carData::Prestige</code>.</p>
 <div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("carData")</span></span>
@@ -384,8 +409,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </section>
-<section id="traintest-split" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="traintest-split"><span class="header-section-number">1.2</span> Train/Test split</h2>
+<section id="traintest-split" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="traintest-split"><span class="header-section-number">3.2</span> Train/Test split</h2>
 <p>Розділимо загальну вибірку на 2 частини: * тренувальна, 70% вибірки, для побудови регресії; * тестова, 30% вибірки, для перевірки точності моделі.</p>
 <div class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">10</span>) <span class="co">#довільне число як точка "відправки" для генератора випадкових чисел</span></span>
@@ -448,10 +473,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </section>
-<section id="short-eda-exploratory-data-analysis" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="short-eda-exploratory-data-analysis"><span class="header-section-number">1.3</span> Short EDA (Exploratory data analysis)</h2>
-<section id="correlation" class="level3" data-number="1.3.1">
-<h3 data-number="1.3.1" class="anchored" data-anchor-id="correlation"><span class="header-section-number">1.3.1</span> Correlation</h3>
+<section id="short-eda-exploratory-data-analysis" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="short-eda-exploratory-data-analysis"><span class="header-section-number">3.3</span> Short EDA (Exploratory data analysis)</h2>
+<section id="correlation" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="correlation"><span class="header-section-number">3.3.1</span> Correlation</h3>
 <p>Переглянемо наявність зв’язків між параметрами за допоомгою матриці попарних кореляцій. Дані на перетині рядків вказують на рівень кореляції між вибраними показниками.</p>
 <p>Виключимо змінну type, оскільки вона не має числового представлення:</p>
 <div class="cell" data-execution_count="8">
@@ -487,8 +512,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>You can see hight correlation between <code>education ~ prestige</code>, <code>education ~ census</code>, <code>prestige ~ income</code>.</p>
 </section>
-<section id="visual-analysis" class="level3" data-number="1.3.2">
-<h3 data-number="1.3.2" class="anchored" data-anchor-id="visual-analysis"><span class="header-section-number">1.3.2</span> Visual analysis</h3>
+<section id="visual-analysis" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="visual-analysis"><span class="header-section-number">3.3.2</span> Visual analysis</h3>
 <p>Lets check data distribution of some variables</p>
 <p>Target/Output variable <code>prestige</code>:</p>
 <div class="cell" data-execution_count="10">
@@ -524,8 +549,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <hr>
 </section>
 </section>
-<section id="model-building" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="model-building"><span class="header-section-number">1.4</span> Model building</h2>
+<section id="model-building" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="model-building"><span class="header-section-number">3.4</span> Model building</h2>
 <p>Функція <code>lm()</code> використовується для побудови лінійної регресії.</p>
 <p>Syntax: <code>lm(formula, data = train_data)</code></p>
 <p><code>formula</code> дозволяє вказати на залежність між вхідними та вихідним параметром. У даному випадку <code>prestige</code> - залежна змінна (<code>Y</code>), а усі, що після знаку <code>~</code> - незалежні (<code>X</code>).</p>
@@ -558,8 +583,8 @@ F-statistic: 127.6 on 2 and 68 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
 <hr>
-<section id="demo-task-generating-final-formula-for-regression" class="level3" data-number="1.4.1">
-<h3 data-number="1.4.1" class="anchored" data-anchor-id="demo-task-generating-final-formula-for-regression"><span class="header-section-number">1.4.1</span> Demo task: generating final formula for regression</h3>
+<section id="demo-task-generating-final-formula-for-regression" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="demo-task-generating-final-formula-for-regression"><span class="header-section-number">3.4.1</span> Demo task: generating final formula for regression</h3>
 <p>Спробуємо створити рядковий вигляд для побудованої регресії (шляхом звичайного “склеювання” рядків). Це завдання для закріплення знань з алгоритмічного програмування в R.</p>
 <div class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>lm_mod<span class="sc">$</span>coefficients <span class="co"># coefficients of the model</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -623,8 +648,8 @@ F-statistic: 127.6 on 2 and 68 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
 </section>
-<section id="зміна-форми-залежності" class="level3" data-number="1.4.2">
-<h3 data-number="1.4.2" class="anchored" data-anchor-id="зміна-форми-залежності"><span class="header-section-number">1.4.2</span> Зміна форми залежності</h3>
+<section id="зміна-форми-залежності" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="зміна-форми-залежності"><span class="header-section-number">3.4.2</span> Зміна форми залежності</h3>
 <p>Спробуємо змінити форму залежності і побудуємо модель на основі трансформованих показників. Скористаємося логарифмуванням незалежних змінних:</p>
 <div class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>lm_mod2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="at">formula =</span> prestige <span class="sc">~</span> <span class="fu">log</span>(income) <span class="sc">+</span> <span class="fu">log</span>(education), <span class="at">data =</span> train_data)</span>
@@ -702,8 +727,8 @@ F-statistic: 151.7 on 2 and 68 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </section>
 </section>
-<section id="prediction-on-test-data-and-accuracy" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="prediction-on-test-data-and-accuracy"><span class="header-section-number">1.5</span> Prediction on test data and accuracy</h2>
+<section id="prediction-on-test-data-and-accuracy" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="prediction-on-test-data-and-accuracy"><span class="header-section-number">3.5</span> Prediction on test data and accuracy</h2>
 <p>Здійснимо прогноз за допомогою функції <code>predict()</code>.</p>
 <div class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
@@ -803,8 +828,8 @@ The following object is masked from 'package:broom':
 </div>
 </div>
 <p>Mae - Mean Absolute Error. Rmse - Root mean squared error. Детальніше: https://medium.com/human-in-a-machine-world/mae-and-rmse-which-metric-is-better-e60ac3bde13d.</p>
-<section id="перевірка-на-мультиколінераність" class="level3" data-number="1.5.1">
-<h3 data-number="1.5.1" class="anchored" data-anchor-id="перевірка-на-мультиколінераність"><span class="header-section-number">1.5.1</span> Перевірка на мультиколінераність</h3>
+<section id="перевірка-на-мультиколінераність" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="перевірка-на-мультиколінераність"><span class="header-section-number">3.5.1</span> Перевірка на мультиколінераність</h3>
 <p>Зафіксуємо значення R^2 для моделі у деякій змінній:</p>
 <div class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>r_sq <span class="ot">=</span> <span class="fu">rsquare</span>(lm_mod, <span class="at">data =</span> test_data)</span>
@@ -856,8 +881,8 @@ The following object is masked from 'package:dplyr':
 </div>
 <p>The best way is to exclude the biggest and rebuild model in this case.</p>
 </section>
-<section id="extending-model" class="level3" data-number="1.5.2">
-<h3 data-number="1.5.2" class="anchored" data-anchor-id="extending-model"><span class="header-section-number">1.5.2</span> Extending model</h3>
+<section id="extending-model" class="level3" data-number="3.5.2">
+<h3 data-number="3.5.2" class="anchored" data-anchor-id="extending-model"><span class="header-section-number">3.5.2</span> Extending model</h3>
 <p>Додамо до моделі категоріальний параметр type. Переглянемо можливі варіанти значень:</p>
 <div class="cell" data-execution_count="34">
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(train_data<span class="sc">$</span>type)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1013,8 +1038,8 @@ F-statistic: 73.59 on 4 and 64 DF,  p-value: &lt; 2.2e-16</code></pre>
 <hr>
 </section>
 </section>
-<section id="model-errors" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="model-errors"><span class="header-section-number">1.6</span> Model errors</h2>
+<section id="model-errors" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="model-errors"><span class="header-section-number">3.6</span> Model errors</h2>
 <p>Переглянемо характеристики моделі:</p>
 <div class="cell" data-execution_count="38">
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>lm_mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="at">formula =</span> prestige <span class="sc">~</span> income <span class="sc">+</span> education <span class="sc">+</span> type, <span class="at">data =</span> train_data)</span>
@@ -1104,11 +1129,11 @@ BP = 9.0675, df = 4, p-value = 0.05943</code></pre>
 <p>Візуальних закономірностей у похибках немає. Схоже, що вони мають випадковий характер.</p>
 <hr>
 </section>
-<section id="features-selection" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="features-selection"><span class="header-section-number">1.7</span> Features selection</h2>
+<section id="features-selection" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="features-selection"><span class="header-section-number">3.7</span> Features selection</h2>
 <p>Ручний відбір параметрів моделі має ряд недоліків, що пов’язані із якістю моделі та затратами часу на її побудову. Вивчимо окремі алгоритми автоматизованого відбору параметрів у модель.</p>
-<section id="bestsubsets-method" class="level3" data-number="1.7.1">
-<h3 data-number="1.7.1" class="anchored" data-anchor-id="bestsubsets-method"><span class="header-section-number">1.7.1</span> BestSubsets method</h3>
+<section id="bestsubsets-method" class="level3" data-number="3.7.1">
+<h3 data-number="3.7.1" class="anchored" data-anchor-id="bestsubsets-method"><span class="header-section-number">3.7.1</span> BestSubsets method</h3>
 <p>Метод <code>BestSubsets</code> також відомий як <code>all possible regressions</code>. Цей метод відповідно до назв будує всі можливі варіанти моделей на незалежних змінних. Кількість моделей становить <span class="math inline">\(2^p\)</span>, де <span class="math inline">\(p\)</span> - кількість неазелжних змінних, так для 10 вхідних параметрів буде побудовано <span class="math inline">\(2^10 =1024\)</span> моделей.</p>
 <div class="cell" data-execution_count="43">
 <div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaps)</span>
@@ -1173,8 +1198,8 @@ BP = 9.0675, df = 4, p-value = 0.05943</code></pre>
 <p><code>a0 + a1*income + a2*typeprof + a3*income:typeprof + a4*education:women + a5*income:education:typeprof + a6*income:typeprof:women + a7*income:typewc:women + a8*income:education:typewc:women</code></p>
 <hr>
 </section>
-<section id="stepwise-method" class="level3" data-number="1.7.2">
-<h3 data-number="1.7.2" class="anchored" data-anchor-id="stepwise-method"><span class="header-section-number">1.7.2</span> Stepwise method</h3>
+<section id="stepwise-method" class="level3" data-number="3.7.2">
+<h3 data-number="3.7.2" class="anchored" data-anchor-id="stepwise-method"><span class="header-section-number">3.7.2</span> Stepwise method</h3>
 <p>Stepwise - метод, що перебирає можливі варіанти та повертає найкращу модель з найнижчим показником AIC. Перебір моделі може бути з виключенням або з включенням показників у модель - у обох напрямках.</p>
 <p>Для початку очистимо дані, що мають пропуски у полі type (також ці дані можна заповнити).</p>
 <div class="cell" data-execution_count="49">
@@ -1308,8 +1333,8 @@ F-statistic: 52.42 on 6 and 62 DF,  p-value: &lt; 2.2e-16</code></pre>
 <hr>
 </section>
 </section>
-<section id="references" class="level2" data-number="1.8">
-<h2 data-number="1.8" class="anchored" data-anchor-id="references"><span class="header-section-number">1.8</span> References</h2>
+<section id="references" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="references"><span class="header-section-number">3.8</span> References</h2>
 
 
 </section>
@@ -1421,7 +1446,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./032-supervised-learning-linear-regression-2.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Лінійна регресія. Прокат велосипедів</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Лінійна регресія. Прокат велосипедів</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

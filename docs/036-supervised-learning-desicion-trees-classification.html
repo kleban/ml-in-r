@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Математичне моделювання в R - 6&nbsp; Дерева рішень. Класифікація. Депозити</title>
+<title>Математичне моделювання в R - 8&nbsp; Дерева рішень. Класифікація. Депозити</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -93,6 +93,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./037-supervised-learning-neural-network-classification.html" rel="next">
 <link href="./035-supervised-learning-logistic-regression.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -133,7 +134,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Дерева рішень. Класифікація. Депозити</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Дерева рішень. Класифікація. Депозити</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -185,9 +186,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <a href="./index.html" class="sidebar-item-text sidebar-link">Про курс</a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./010-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">ТЕМА 1. ВСТУП ДО КУРСУ</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./030-supervised-learning.html" class="sidebar-item-text sidebar-link">ТЕМА 3. НАВЧАННЯ "З УЧИТЕЛЕМ"</a>
+            <a href="./020-feature-engeneering.html" class="sidebar-item-text sidebar-link">ТЕМА 2. КОНСТРУЮВАННЯ ОЗНАК</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -195,32 +201,52 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./031-supervised-learning-linear-regression-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Лінійна регресія. Престиж професій</span></a>
+  <a href="./023-feature-engeneering-woe-binning.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Woe Binning</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./030-supervised-learning.html" class="sidebar-item-text sidebar-link">ТЕМА 3. НАВЧАННЯ "З УЧИТЕЛЕМ"</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./031-supervised-learning-linear-regression-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Лінійна регресія. Престиж професій</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./032-supervised-learning-linear-regression-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Лінійна регресія. Прокат велосипедів</span></a>
+  <a href="./032-supervised-learning-linear-regression-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Лінійна регресія. Прокат велосипедів</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./033-supervised-learning-desicion-trees-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Дерева рішень. Регресія. Баланс кредитної карти</span></a>
+  <a href="./033-supervised-learning-desicion-trees-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Дерева рішень. Регресія. Баланс кредитної карти</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./034-supervised-learning-neutal-networks-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Нейронні мережі. Регресія. Вартість житла</span></a>
+  <a href="./034-supervised-learning-neutal-networks-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Нейронні мережі. Регресія. Вартість житла</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./035-supervised-learning-logistic-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Логістична регресія. Класифікація. Титанік</span></a>
+  <a href="./035-supervised-learning-logistic-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Логістична регресія. Класифікація. Титанік</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./036-supervised-learning-desicion-trees-classification.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Дерева рішень. Класифікація. Депозити</span></a>
+  <a href="./036-supervised-learning-desicion-trees-classification.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Дерева рішень. Класифікація. Депозити</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./037-supervised-learning-neural-network-classification.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Нейронні мережі. Deep Learning. Класифікація. Кредитний скоринг</span></a>
   </div>
 </li>
       </ul>
@@ -234,17 +260,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Зміст</h2>
    
   <ul>
-  <li><a href="#dataset-description" id="toc-dataset-description" class="nav-link active" data-scroll-target="#dataset-description"><span class="toc-section-number">6.1</span>  Dataset description</a></li>
-  <li><a href="#data-load-and-preview" id="toc-data-load-and-preview" class="nav-link" data-scroll-target="#data-load-and-preview"><span class="toc-section-number">6.2</span>  Data load and preview</a></li>
-  <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization"><span class="toc-section-number">6.3</span>  Data visualization</a></li>
-  <li><a href="#data-preprocessing" id="toc-data-preprocessing" class="nav-link" data-scroll-target="#data-preprocessing"><span class="toc-section-number">6.4</span>  Data preprocessing</a></li>
-  <li><a href="#traintest-split" id="toc-traintest-split" class="nav-link" data-scroll-target="#traintest-split"><span class="toc-section-number">6.5</span>  Train/test split</a></li>
-  <li><a href="#decision-trees-with-rpart" id="toc-decision-trees-with-rpart" class="nav-link" data-scroll-target="#decision-trees-with-rpart"><span class="toc-section-number">6.6</span>  Decision trees with <code>rpart()</code></a></li>
-  <li><a href="#desicion-trees-with-partykit" id="toc-desicion-trees-with-partykit" class="nav-link" data-scroll-target="#desicion-trees-with-partykit"><span class="toc-section-number">6.7</span>  Desicion trees with PartyKit</a></li>
-  <li><a href="#desision-tree-with-c50" id="toc-desision-tree-with-c50" class="nav-link" data-scroll-target="#desision-tree-with-c50"><span class="toc-section-number">6.8</span>  Desision Tree with c50</a></li>
-  <li><a href="#randomforest" id="toc-randomforest" class="nav-link" data-scroll-target="#randomforest"><span class="toc-section-number">6.9</span>  RandomForest</a></li>
-  <li><a href="#xgboost" id="toc-xgboost" class="nav-link" data-scroll-target="#xgboost"><span class="toc-section-number">6.10</span>  xgBoost</a></li>
-  <li><a href="#lightgbm" id="toc-lightgbm" class="nav-link" data-scroll-target="#lightgbm"><span class="toc-section-number">6.11</span>  lightgbm</a></li>
+  <li><a href="#dataset-description" id="toc-dataset-description" class="nav-link active" data-scroll-target="#dataset-description"><span class="toc-section-number">8.1</span>  Dataset description</a></li>
+  <li><a href="#data-load-and-preview" id="toc-data-load-and-preview" class="nav-link" data-scroll-target="#data-load-and-preview"><span class="toc-section-number">8.2</span>  Data load and preview</a></li>
+  <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization"><span class="toc-section-number">8.3</span>  Data visualization</a></li>
+  <li><a href="#data-preprocessing" id="toc-data-preprocessing" class="nav-link" data-scroll-target="#data-preprocessing"><span class="toc-section-number">8.4</span>  Data preprocessing</a></li>
+  <li><a href="#traintest-split" id="toc-traintest-split" class="nav-link" data-scroll-target="#traintest-split"><span class="toc-section-number">8.5</span>  Train/test split</a></li>
+  <li><a href="#decision-trees-with-rpart" id="toc-decision-trees-with-rpart" class="nav-link" data-scroll-target="#decision-trees-with-rpart"><span class="toc-section-number">8.6</span>  Decision trees with <code>rpart()</code></a></li>
+  <li><a href="#desicion-trees-with-partykit" id="toc-desicion-trees-with-partykit" class="nav-link" data-scroll-target="#desicion-trees-with-partykit"><span class="toc-section-number">8.7</span>  Desicion trees with PartyKit</a></li>
+  <li><a href="#desision-tree-with-c50" id="toc-desision-tree-with-c50" class="nav-link" data-scroll-target="#desision-tree-with-c50"><span class="toc-section-number">8.8</span>  Desision Tree with c50</a></li>
+  <li><a href="#randomforest" id="toc-randomforest" class="nav-link" data-scroll-target="#randomforest"><span class="toc-section-number">8.9</span>  RandomForest</a></li>
+  <li><a href="#xgboost" id="toc-xgboost" class="nav-link" data-scroll-target="#xgboost"><span class="toc-section-number">8.10</span>  xgBoost</a></li>
+  <li><a href="#lightgbm" id="toc-lightgbm" class="nav-link" data-scroll-target="#lightgbm"><span class="toc-section-number">8.11</span>  lightgbm</a></li>
   </ul>
 </nav>
     </div>
@@ -253,7 +279,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Дерева рішень. Класифікація. Депозити</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Дерева рішень. Класифікація. Депозити</span></h1>
 </div>
 
 
@@ -277,8 +303,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("lightgbm")</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("Matrix") </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="dataset-description" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="dataset-description"><span class="header-section-number">6.1</span> Dataset description</h2>
+<section id="dataset-description" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="dataset-description"><span class="header-section-number">8.1</span> Dataset description</h2>
 <p><strong>Abstract</strong></p>
 <p>The data is related with direct marketing campaigns (phone calls) of a Portuguese banking institution. The classification goal is to predict if the client will subscribe a term deposit (variable y).</p>
 <p><strong>Data Set Information:</strong></p>
@@ -543,8 +569,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Source: https://archive.ics.uci.edu/ml/datasets/bank+marketing</p>
 <hr>
 </section>
-<section id="data-load-and-preview" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="data-load-and-preview"><span class="header-section-number">6.2</span> Data load and preview</h2>
+<section id="data-load-and-preview" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="data-load-and-preview"><span class="header-section-number">8.2</span> Data load and preview</h2>
 <p>Для початку завантажимо дані у змінну <code>data</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://raw.githubusercontent.com/kleban/r-course-eng/main/data/banking.csv"</span>, </span>
@@ -575,8 +601,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <hr>
 </section>
-<section id="data-visualization" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="data-visualization"><span class="header-section-number">6.3</span> Data visualization</h2>
+<section id="data-visualization" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="data-visualization"><span class="header-section-number">8.3</span> Data visualization</h2>
 <p><strong>Вік клієнта (age):</strong></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
@@ -737,8 +763,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">CrossTable</span>(data<span class="sc">$</span>deposit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="data-preprocessing" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="data-preprocessing"><span class="header-section-number">6.4</span> Data preprocessing</h2>
+<section id="data-preprocessing" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="data-preprocessing"><span class="header-section-number">8.4</span> Data preprocessing</h2>
 <p>Перетворимо значення <code>deposit</code> до <code>0</code> і <code>1</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>deposit <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data<span class="sc">$</span>deposit <span class="sc">==</span> <span class="st">"yes"</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -760,8 +786,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <hr>
 </section>
-<section id="traintest-split" class="level2" data-number="6.5">
-<h2 data-number="6.5" class="anchored" data-anchor-id="traintest-split"><span class="header-section-number">6.5</span> Train/test split</h2>
+<section id="traintest-split" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="traintest-split"><span class="header-section-number">8.5</span> Train/test split</h2>
 <p>Задаємо seed для генератора випадкових чисел</p>
 <p>Train 65%, test 35%</p>
 <div class="cell">
@@ -777,8 +803,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <hr>
 </section>
-<section id="decision-trees-with-rpart" class="level2" data-number="6.6">
-<h2 data-number="6.6" class="anchored" data-anchor-id="decision-trees-with-rpart"><span class="header-section-number">6.6</span> Decision trees with <code>rpart()</code></h2>
+<section id="decision-trees-with-rpart" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="decision-trees-with-rpart"><span class="header-section-number">8.6</span> Decision trees with <code>rpart()</code></h2>
 <p>Для побудови дерев рішень у <code>R</code> є ряд пакетів та алгоритмів. Розглянемо пакет <code>rpart</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("rpart")</span></span>
@@ -844,8 +870,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <hr>
 </section>
-<section id="desicion-trees-with-partykit" class="level2" data-number="6.7">
-<h2 data-number="6.7" class="anchored" data-anchor-id="desicion-trees-with-partykit"><span class="header-section-number">6.7</span> Desicion trees with PartyKit</h2>
+<section id="desicion-trees-with-partykit" class="level2" data-number="8.7">
+<h2 data-number="8.7" class="anchored" data-anchor-id="desicion-trees-with-partykit"><span class="header-section-number">8.7</span> Desicion trees with PartyKit</h2>
 <p>Побудуємо дерево рішень за допоомгою пакету <code>partykit</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("partykit")</span></span>
@@ -903,8 +929,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <hr>
 </section>
-<section id="desision-tree-with-c50" class="level2" data-number="6.8">
-<h2 data-number="6.8" class="anchored" data-anchor-id="desision-tree-with-c50"><span class="header-section-number">6.8</span> Desision Tree with c50</h2>
+<section id="desision-tree-with-c50" class="level2" data-number="8.8">
+<h2 data-number="8.8" class="anchored" data-anchor-id="desision-tree-with-c50"><span class="header-section-number">8.8</span> Desision Tree with c50</h2>
 <p>Скористаємося алгоритмом <code>C50</code> для побудови дерева рішень. Для початку потрібно виіхдний показник перетворити у категоріальний (<code>factor</code>):</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="co"># lets make anew temporary dataset for modeling with target output as factor</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -955,8 +981,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <hr>
 </section>
-<section id="randomforest" class="level2" data-number="6.9">
-<h2 data-number="6.9" class="anchored" data-anchor-id="randomforest"><span class="header-section-number">6.9</span> RandomForest</h2>
+<section id="randomforest" class="level2" data-number="8.9">
+<h2 data-number="8.9" class="anchored" data-anchor-id="randomforest"><span class="header-section-number">8.9</span> RandomForest</h2>
 <p>You can use <code>random forest</code> with default or special training parameters.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(train_results)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1017,8 +1043,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Balanced accuracy is hte best for now</p>
 <hr>
 </section>
-<section id="xgboost" class="level2" data-number="6.10">
-<h2 data-number="6.10" class="anchored" data-anchor-id="xgboost"><span class="header-section-number">6.10</span> xgBoost</h2>
+<section id="xgboost" class="level2" data-number="8.10">
+<h2 data-number="8.10" class="anchored" data-anchor-id="xgboost"><span class="header-section-number">8.10</span> xgBoost</h2>
 <p>Our next step is testing gradient boosting with <code>xgboost</code> algorithm.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(xgboost)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1080,8 +1106,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <hr>
 </section>
-<section id="lightgbm" class="level2" data-number="6.11">
-<h2 data-number="6.11" class="anchored" data-anchor-id="lightgbm"><span class="header-section-number">6.11</span> lightgbm</h2>
+<section id="lightgbm" class="level2" data-number="8.11">
+<h2 data-number="8.11" class="anchored" data-anchor-id="lightgbm"><span class="header-section-number">8.11</span> lightgbm</h2>
 <p>Light gbm is one of most useful package for machine learning. It has one super power: speed of calculations. While you using very big datasets <code>randomForest</code> and <code>xgBoost</code> work slow, but <code>lightgbm</code> works better.</p>
 <p>For this algorithm we should convert our data to special matrices too. So, lets install packages for example:</p>
 <div class="cell">
@@ -1277,10 +1303,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./035-supervised-learning-logistic-regression.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Логістична регресія. Класифікація. Титанік</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Логістична регресія. Класифікація. Титанік</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./037-supervised-learning-neural-network-classification.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Нейронні мережі. Deep Learning. Класифікація. Кредитний скоринг</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

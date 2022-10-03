@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Математичне моделювання в R - 4&nbsp; Нейронні мережі. Регресія. Вартість житла</title>
+<title>Математичне моделювання в R - 6&nbsp; Нейронні мережі. Регресія. Вартість житла</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -138,7 +138,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Нейронні мережі. Регресія. Вартість житла</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Нейронні мережі. Регресія. Вартість житла</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -190,9 +190,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <a href="./index.html" class="sidebar-item-text sidebar-link">Про курс</a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./010-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">ТЕМА 1. ВСТУП ДО КУРСУ</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./030-supervised-learning.html" class="sidebar-item-text sidebar-link">ТЕМА 3. НАВЧАННЯ "З УЧИТЕЛЕМ"</a>
+            <a href="./020-feature-engeneering.html" class="sidebar-item-text sidebar-link">ТЕМА 2. КОНСТРУЮВАННЯ ОЗНАК</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -200,32 +205,52 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./031-supervised-learning-linear-regression-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Лінійна регресія. Престиж професій</span></a>
+  <a href="./023-feature-engeneering-woe-binning.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Woe Binning</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./030-supervised-learning.html" class="sidebar-item-text sidebar-link">ТЕМА 3. НАВЧАННЯ "З УЧИТЕЛЕМ"</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./031-supervised-learning-linear-regression-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Лінійна регресія. Престиж професій</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./032-supervised-learning-linear-regression-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Лінійна регресія. Прокат велосипедів</span></a>
+  <a href="./032-supervised-learning-linear-regression-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Лінійна регресія. Прокат велосипедів</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./033-supervised-learning-desicion-trees-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Дерева рішень. Регресія. Баланс кредитної карти</span></a>
+  <a href="./033-supervised-learning-desicion-trees-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Дерева рішень. Регресія. Баланс кредитної карти</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./034-supervised-learning-neutal-networks-regression.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Нейронні мережі. Регресія. Вартість житла</span></a>
+  <a href="./034-supervised-learning-neutal-networks-regression.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Нейронні мережі. Регресія. Вартість житла</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./035-supervised-learning-logistic-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Логістична регресія. Класифікація. Титанік</span></a>
+  <a href="./035-supervised-learning-logistic-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Логістична регресія. Класифікація. Титанік</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./036-supervised-learning-desicion-trees-classification.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Дерева рішень. Класифікація. Депозити</span></a>
+  <a href="./036-supervised-learning-desicion-trees-classification.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Дерева рішень. Класифікація. Депозити</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./037-supervised-learning-neural-network-classification.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Нейронні мережі. Deep Learning. Класифікація. Кредитний скоринг</span></a>
   </div>
 </li>
       </ul>
@@ -239,16 +264,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Зміст</h2>
    
   <ul>
-  <li><a href="#dataset-description" id="toc-dataset-description" class="nav-link active" data-scroll-target="#dataset-description"><span class="toc-section-number">4.1</span>  Dataset description</a></li>
-  <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization"><span class="toc-section-number">4.2</span>  Data visualization</a></li>
-  <li><a href="#data-scaling" id="toc-data-scaling" class="nav-link" data-scroll-target="#data-scaling"><span class="toc-section-number">4.3</span>  Data scaling</a></li>
-  <li><a href="#traintest-split" id="toc-traintest-split" class="nav-link" data-scroll-target="#traintest-split"><span class="toc-section-number">4.4</span>  Train/test split</a></li>
-  <li><a href="#baseline-linear-regression" id="toc-baseline-linear-regression" class="nav-link" data-scroll-target="#baseline-linear-regression"><span class="toc-section-number">4.5</span>  Baseline (Linear regression)</a></li>
-  <li><a href="#побудова-нейромережі-за-допомогою-neuralnet" id="toc-побудова-нейромережі-за-допомогою-neuralnet" class="nav-link" data-scroll-target="#побудова-нейромережі-за-допомогою-neuralnet"><span class="toc-section-number">4.6</span>  Побудова нейромережі за допомогою <code>neuralnet</code></a></li>
-  <li><a href="#neuralnet-caret" id="toc-neuralnet-caret" class="nav-link" data-scroll-target="#neuralnet-caret"><span class="toc-section-number">4.7</span>  <code>neuralnet</code> + <code>caret</code></a></li>
-  <li><a href="#neural-network-with-nnet" id="toc-neural-network-with-nnet" class="nav-link" data-scroll-target="#neural-network-with-nnet"><span class="toc-section-number">4.8</span>  Neural network with <code>nnet</code></a></li>
-  <li><a href="#final-models-compare" id="toc-final-models-compare" class="nav-link" data-scroll-target="#final-models-compare"><span class="toc-section-number">4.9</span>  Final models compare</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="toc-section-number">5</span>  References</a></li>
+  <li><a href="#dataset-description" id="toc-dataset-description" class="nav-link active" data-scroll-target="#dataset-description"><span class="toc-section-number">6.1</span>  Dataset description</a></li>
+  <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization"><span class="toc-section-number">6.2</span>  Data visualization</a></li>
+  <li><a href="#data-scaling" id="toc-data-scaling" class="nav-link" data-scroll-target="#data-scaling"><span class="toc-section-number">6.3</span>  Data scaling</a></li>
+  <li><a href="#traintest-split" id="toc-traintest-split" class="nav-link" data-scroll-target="#traintest-split"><span class="toc-section-number">6.4</span>  Train/test split</a></li>
+  <li><a href="#baseline-linear-regression" id="toc-baseline-linear-regression" class="nav-link" data-scroll-target="#baseline-linear-regression"><span class="toc-section-number">6.5</span>  Baseline (Linear regression)</a></li>
+  <li><a href="#побудова-нейромережі-за-допомогою-neuralnet" id="toc-побудова-нейромережі-за-допомогою-neuralnet" class="nav-link" data-scroll-target="#побудова-нейромережі-за-допомогою-neuralnet"><span class="toc-section-number">6.6</span>  Побудова нейромережі за допомогою <code>neuralnet</code></a></li>
+  <li><a href="#neuralnet-caret" id="toc-neuralnet-caret" class="nav-link" data-scroll-target="#neuralnet-caret"><span class="toc-section-number">6.7</span>  <code>neuralnet</code> + <code>caret</code></a></li>
+  <li><a href="#neural-network-with-nnet" id="toc-neural-network-with-nnet" class="nav-link" data-scroll-target="#neural-network-with-nnet"><span class="toc-section-number">6.8</span>  Neural network with <code>nnet</code></a></li>
+  <li><a href="#final-models-compare" id="toc-final-models-compare" class="nav-link" data-scroll-target="#final-models-compare"><span class="toc-section-number">6.9</span>  Final models compare</a></li>
+  <li><a href="#валідація-моделі-на-різних-розмірах-вибірки" id="toc-валідація-моделі-на-різних-розмірах-вибірки" class="nav-link" data-scroll-target="#валідація-моделі-на-різних-розмірах-вибірки"><span class="toc-section-number">6.10</span>  Валідація моделі на різних розмірах вибірки</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="toc-section-number">7</span>  References</a></li>
   </ul>
 </nav>
     </div>
@@ -257,7 +283,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Нейронні мережі. Регресія. Вартість житла</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Нейронні мережі. Регресія. Вартість житла</span></h1>
 </div>
 
 
@@ -274,8 +300,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Курс: “Математичне моделювання в R”</p>
 <hr>
 <p>У цій лекції ми скористаємося набором даних Boston: вартість житла у пригородах Бостона</p>
-<section id="dataset-description" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="dataset-description"><span class="header-section-number">4.1</span> Dataset description</h2>
+<section id="dataset-description" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="dataset-description"><span class="header-section-number">6.1</span> Dataset description</h2>
 <div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("MASS")</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("neuralnet")</span></span>
@@ -284,7 +310,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("caTools")</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("reshape")</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("Metrics")</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("nnet")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("nnet")</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("plyr")</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("boot")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><code>medv</code> is TARGET!</p>
 <div class="cell" data-execution_count="2">
@@ -437,8 +465,8 @@ New York: Wiley.
 </div>
 </div>
 </section>
-<section id="data-visualization" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="data-visualization"><span class="header-section-number">4.2</span> Data visualization</h2>
+<section id="data-visualization" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="data-visualization"><span class="header-section-number">6.2</span> Data visualization</h2>
 <p>Lets move our dataset to special variable:</p>
 <div class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> Boston</span>
@@ -599,8 +627,8 @@ New York: Wiley.
 </div>
 <hr>
 </section>
-<section id="data-scaling" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="data-scaling"><span class="header-section-number">4.3</span> Data scaling</h2>
+<section id="data-scaling" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="data-scaling"><span class="header-section-number">6.3</span> Data scaling</h2>
 <p>Для роботи з нейромережами хорошою практикою є нормалізація даних перед використанням. Скористаємося формулою <span class="math inline">\((X-Xmin)/(Xmax-Xmin)\)</span>.</p>
 <p>Визначимо мінімальні та максимальні значення по факторах:</p>
 <div class="cell" data-execution_count="20">
@@ -706,8 +734,8 @@ The following objects are masked from 'package:base':
 </div>
 <hr>
 </section>
-<section id="traintest-split" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="traintest-split"><span class="header-section-number">4.4</span> Train/test split</h2>
+<section id="traintest-split" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="traintest-split"><span class="header-section-number">6.4</span> Train/test split</h2>
 <p>Сформуємо вибірки з пропорцією 70/30 % значень:</p>
 <div class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caTools)</span>
@@ -737,8 +765,8 @@ The following objects are masked from 'package:base':
 </div>
 <hr>
 </section>
-<section id="baseline-linear-regression" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="baseline-linear-regression"><span class="header-section-number">4.5</span> Baseline (Linear regression)</h2>
+<section id="baseline-linear-regression" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="baseline-linear-regression"><span class="header-section-number">6.5</span> Baseline (Linear regression)</h2>
 <p>Для порівняння ефективності використання нейронних мереж скористаємося для початку лінійною регресією:</p>
 <div class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>lm_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(medv <span class="sc">~</span> ., <span class="at">data =</span> train_data)</span>
@@ -840,8 +868,8 @@ F-statistic: 84.42 on 13 and 353 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 <hr>
 </section>
-<section id="побудова-нейромережі-за-допомогою-neuralnet" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="побудова-нейромережі-за-допомогою-neuralnet"><span class="header-section-number">4.6</span> Побудова нейромережі за допомогою <code>neuralnet</code></h2>
+<section id="побудова-нейромережі-за-допомогою-neuralnet" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="побудова-нейромережі-за-допомогою-neuralnet"><span class="header-section-number">6.6</span> Побудова нейромережі за допомогою <code>neuralnet</code></h2>
 <p>Підключаємо пакет neuralnet:</p>
 <div class="cell" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(neuralnet)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1046,8 +1074,8 @@ The following objects are masked from 'package:modelr':
 </div>
 </div>
 </section>
-<section id="neuralnet-caret" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="neuralnet-caret"><span class="header-section-number">4.7</span> <code>neuralnet</code> + <code>caret</code></h2>
+<section id="neuralnet-caret" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="neuralnet-caret"><span class="header-section-number">6.7</span> <code>neuralnet</code> + <code>caret</code></h2>
 <div class="cell" data-execution_count="48">
 <div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -1285,8 +1313,8 @@ x[order(x$layer1, x$layer2, x$layer3), ]</code></pre></dd>
 </div>
 <hr>
 </section>
-<section id="neural-network-with-nnet" class="level2" data-number="4.8">
-<h2 data-number="4.8" class="anchored" data-anchor-id="neural-network-with-nnet"><span class="header-section-number">4.8</span> Neural network with <code>nnet</code></h2>
+<section id="neural-network-with-nnet" class="level2" data-number="6.8">
+<h2 data-number="6.8" class="anchored" data-anchor-id="neural-network-with-nnet"><span class="header-section-number">6.8</span> Neural network with <code>nnet</code></h2>
 <p>Підключаємо пакет <code>nnet</code> для побудови нейромережі із <code>2-ма</code> прихованими шарами, для прикладу.</p>
 <div class="cell" data-execution_count="53">
 <div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(nnet)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1407,8 +1435,8 @@ options were -</code></pre>
 </div>
 <hr>
 </section>
-<section id="final-models-compare" class="level2" data-number="4.9">
-<h2 data-number="4.9" class="anchored" data-anchor-id="final-models-compare"><span class="header-section-number">4.9</span> Final models compare</h2>
+<section id="final-models-compare" class="level2" data-number="6.9">
+<h2 data-number="6.9" class="anchored" data-anchor-id="final-models-compare"><span class="header-section-number">6.9</span> Final models compare</h2>
 <p>Побудуємо графік розподілу пронозованих значень показників по усх моделях:</p>
 <div class="cell" data-execution_count="60">
 <div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test_lm_predicted)</span>
@@ -1502,7 +1530,7 @@ options were -</code></pre>
 </table>
 </div>
 </div>
-<div class="cell" data-execution_count="66">
+<div class="cell" data-execution_count="63">
 <div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Однакові межі для усіх графіків по Y</span></span>
 <span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a>plot_ylim <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">40</span>)</span>
 <span id="cb79-3"><a href="#cb79-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1532,7 +1560,7 @@ https://github.com/IRkernel/repr/wiki/Problems-with-unicode-on-windows</code></p
 </div>
 </div>
 <p>Combine all to one chart:</p>
-<div class="cell" data-execution_count="65">
+<div class="cell" data-execution_count="64">
 <div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span>
 <span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(test_medv,test_lm_predicted[,<span class="dv">1</span>],<span class="at">col=</span><span class="st">'black'</span>,<span class="at">main=</span><span class="st">'Real vs predicted NN + LM'</span>,<span class="at">pch=</span><span class="dv">25</span>,<span class="at">cex=</span><span class="fl">0.7</span>)</span>
@@ -1546,8 +1574,307 @@ https://github.com/IRkernel/repr/wiki/Problems-with-unicode-on-windows</code></p
 </div>
 <hr>
 </section>
-<section id="references" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> References</h1>
+<section id="валідація-моделі-на-різних-розмірах-вибірки" class="level2" data-number="6.10">
+<h2 data-number="6.10" class="anchored" data-anchor-id="валідація-моделі-на-різних-розмірах-вибірки"><span class="header-section-number">6.10</span> Валідація моделі на різних розмірах вибірки</h2>
+<div class="cell" data-execution_count="65">
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(boot)</span>
+<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plyr)</span>
+<span id="cb82-3"><a href="#cb82-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DMwR)</span>
+<span id="cb82-4"><a href="#cb82-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb82-5"><a href="#cb82-5" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2023</span>)</span>
+<span id="cb82-6"><a href="#cb82-6" aria-hidden="true" tabindex="-1"></a>errors <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">TrainSize =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">90</span>), <span class="at">RMSE1 =</span> <span class="fu">c</span>(<span class="dv">0</span>), <span class="at">RMSE2 =</span> <span class="fu">c</span>(<span class="dv">0</span>))</span>
+<span id="cb82-7"><a href="#cb82-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb82-8"><a href="#cb82-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) {</span>
+<span id="cb82-9"><a href="#cb82-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb82-10"><a href="#cb82-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">90</span>){</span>
+<span id="cb82-11"><a href="#cb82-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb82-12"><a href="#cb82-12" aria-hidden="true" tabindex="-1"></a>      split <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>(<span class="fu">nrow</span>(scaled_data)<span class="sc">*</span>j<span class="sc">/</span><span class="dv">100</span>))</span>
+<span id="cb82-13"><a href="#cb82-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb82-14"><a href="#cb82-14" aria-hidden="true" tabindex="-1"></a>      train_data <span class="ot">&lt;-</span> scaled_data[split,]</span>
+<span id="cb82-15"><a href="#cb82-15" aria-hidden="true" tabindex="-1"></a>      test_data <span class="ot">&lt;-</span> scaled_data[<span class="sc">-</span>split,]</span>
+<span id="cb82-16"><a href="#cb82-16" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb82-17"><a href="#cb82-17" aria-hidden="true" tabindex="-1"></a>      nnet_model <span class="ot">&lt;-</span> <span class="fu">nnet</span>(formula, <span class="at">data =</span> train_data,  <span class="at">size =</span> <span class="dv">3</span>, <span class="at">maxit =</span> <span class="dv">100</span>, <span class="at">trace =</span> F)</span>
+<span id="cb82-18"><a href="#cb82-18" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb82-19"><a href="#cb82-19" aria-hidden="true" tabindex="-1"></a>      nnet_predicted_prob_scaled <span class="ot">&lt;-</span> <span class="fu">predict</span>(nnet_model, test_data)</span>
+<span id="cb82-20"><a href="#cb82-20" aria-hidden="true" tabindex="-1"></a>      nnet_predicted <span class="ot">&lt;-</span> nnet_predicted_prob_scaled <span class="sc">*</span> (<span class="fu">max</span>(data<span class="sc">$</span>medv) <span class="sc">-</span> <span class="fu">min</span>(data<span class="sc">$</span>medv)) <span class="sc">+</span> <span class="fu">min</span>(data<span class="sc">$</span>medv)</span>
+<span id="cb82-21"><a href="#cb82-21" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb82-22"><a href="#cb82-22" aria-hidden="true" tabindex="-1"></a>      errors_list <span class="ot">&lt;-</span> <span class="fu">regr.eval</span>(test_data<span class="sc">$</span>medv, nnet_predicted)</span>
+<span id="cb82-23"><a href="#cb82-23" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb82-24"><a href="#cb82-24" aria-hidden="true" tabindex="-1"></a>      errors[errors<span class="sc">$</span>TrainSize <span class="sc">==</span> j, ]<span class="sc">$</span>RMSE1 <span class="ot">&lt;-</span> errors[errors<span class="sc">$</span>TrainSize <span class="sc">==</span> j, ]<span class="sc">$</span>RMSE1 <span class="sc">+</span> errors_list[<span class="dv">3</span>]</span>
+<span id="cb82-25"><a href="#cb82-25" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb82-26"><a href="#cb82-26" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'boot'
+
+
+The following object is masked from 'package:lattice':
+
+    melanoma
+
+
+------------------------------------------------------------------------------
+
+You have loaded plyr after dplyr - this is likely to cause problems.
+If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
+library(plyr); library(dplyr)
+
+------------------------------------------------------------------------------
+
+
+Attaching package: 'plyr'
+
+
+The following objects are masked from 'package:reshape':
+
+    rename, round_any
+
+
+The following objects are masked from 'package:dplyr':
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+
+Loading required package: grid
+
+Registered S3 method overwritten by 'quantmod':
+  method            from
+  as.zoo.data.frame zoo 
+
+
+Attaching package: 'DMwR'
+
+
+The following object is masked from 'package:plyr':
+
+    join
+
+
+The following object is masked from 'package:modelr':
+
+    bootstrap
+
+</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="66">
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>errors<span class="sc">$</span>RMSE1 <span class="ot">&lt;-</span> errors<span class="sc">$</span>RMSE1<span class="sc">/</span><span class="dv">10</span></span>
+<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span> (<span class="at">x =</span> errors<span class="sc">$</span>TrainSize, </span>
+<span id="cb84-3"><a href="#cb84-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> errors<span class="sc">$</span>RMSE1, </span>
+<span id="cb84-4"><a href="#cb84-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">ylim =</span> <span class="fu">c</span>(<span class="fu">min</span>(errors<span class="sc">$</span>RMSE1), </span>
+<span id="cb84-5"><a href="#cb84-5" aria-hidden="true" tabindex="-1"></a>               <span class="fu">max</span>(errors<span class="sc">$</span>RMSE1)), </span>
+<span id="cb84-6"><a href="#cb84-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">type =</span> <span class="st">"l"</span>, </span>
+<span id="cb84-7"><a href="#cb84-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">xlab =</span> <span class="st">"length of training set"</span>, </span>
+<span id="cb84-8"><a href="#cb84-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">ylab =</span> <span class="st">"mean RMSE"</span>, </span>
+<span id="cb84-9"><a href="#cb84-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">main =</span> <span class="st">"Variation of RMSE with length of training set"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="034-supervised-learning-neutal-networks-regression_files/figure-html/cell-67-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="67">
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) {</span>
+<span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb85-3"><a href="#cb85-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">90</span>){</span>
+<span id="cb85-4"><a href="#cb85-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb85-5"><a href="#cb85-5" aria-hidden="true" tabindex="-1"></a>    split <span class="ot">&lt;-</span> <span class="fu">sample.split</span>(scaled_data<span class="sc">$</span>medv, <span class="at">SplitRatio =</span> j<span class="sc">/</span><span class="dv">100</span>)</span>
+<span id="cb85-6"><a href="#cb85-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb85-7"><a href="#cb85-7" aria-hidden="true" tabindex="-1"></a>    train_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(scaled_data, split <span class="sc">==</span> <span class="cn">TRUE</span>)</span>
+<span id="cb85-8"><a href="#cb85-8" aria-hidden="true" tabindex="-1"></a>    test_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(scaled_data, split <span class="sc">==</span> <span class="cn">FALSE</span>)</span>
+<span id="cb85-9"><a href="#cb85-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb85-10"><a href="#cb85-10" aria-hidden="true" tabindex="-1"></a>    nnet_model <span class="ot">&lt;-</span> <span class="fu">nnet</span>(formula, <span class="at">data =</span> train_data,  <span class="at">size =</span> <span class="dv">3</span>, <span class="at">maxit =</span> <span class="dv">100</span>, <span class="at">trace =</span> F)</span>
+<span id="cb85-11"><a href="#cb85-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb85-12"><a href="#cb85-12" aria-hidden="true" tabindex="-1"></a>    nnet_predicted_prob_scaled <span class="ot">&lt;-</span> <span class="fu">predict</span>(nnet_model, test_data)</span>
+<span id="cb85-13"><a href="#cb85-13" aria-hidden="true" tabindex="-1"></a>    nnet_predicted <span class="ot">&lt;-</span> nnet_predicted_prob_scaled <span class="sc">*</span> (<span class="fu">max</span>(data<span class="sc">$</span>medv) <span class="sc">-</span> <span class="fu">min</span>(data<span class="sc">$</span>medv)) <span class="sc">+</span> <span class="fu">min</span>(data<span class="sc">$</span>medv)</span>
+<span id="cb85-14"><a href="#cb85-14" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb85-15"><a href="#cb85-15" aria-hidden="true" tabindex="-1"></a>    errors_list <span class="ot">&lt;-</span> <span class="fu">regr.eval</span>(test_data<span class="sc">$</span>medv, nnet_predicted)</span>
+<span id="cb85-16"><a href="#cb85-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb85-17"><a href="#cb85-17" aria-hidden="true" tabindex="-1"></a>    errors[errors<span class="sc">$</span>TrainSize <span class="sc">==</span> j, ]<span class="sc">$</span>RMSE2 <span class="ot">&lt;-</span> errors[errors<span class="sc">$</span>TrainSize <span class="sc">==</span> j, ]<span class="sc">$</span>RMSE2 <span class="sc">+</span> errors_list[<span class="dv">3</span>]</span>
+<span id="cb85-18"><a href="#cb85-18" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb85-19"><a href="#cb85-19" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="68">
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a>errors<span class="sc">$</span>RMSE2 <span class="ot">&lt;-</span> errors<span class="sc">$</span>RMSE2<span class="sc">/</span><span class="dv">10</span></span>
+<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span> (<span class="at">x =</span> errors<span class="sc">$</span>TrainSize, </span>
+<span id="cb86-3"><a href="#cb86-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> errors<span class="sc">$</span>RMSE2, </span>
+<span id="cb86-4"><a href="#cb86-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">ylim =</span> <span class="fu">c</span>(<span class="fu">min</span>(errors<span class="sc">$</span>RMSE2), </span>
+<span id="cb86-5"><a href="#cb86-5" aria-hidden="true" tabindex="-1"></a>               <span class="fu">max</span>(errors<span class="sc">$</span>RMSE2)), </span>
+<span id="cb86-6"><a href="#cb86-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">type =</span> <span class="st">"l"</span>, </span>
+<span id="cb86-7"><a href="#cb86-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">xlab =</span> <span class="st">"length of training set"</span>, </span>
+<span id="cb86-8"><a href="#cb86-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">ylab =</span> <span class="st">"mean RMSE"</span>, </span>
+<span id="cb86-9"><a href="#cb86-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">main =</span> <span class="st">"Variation of RMSE with length of training set"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="034-supervised-learning-neutal-networks-regression_files/figure-html/cell-69-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="69">
+<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(errors)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+<table class="dataframe table table-sm table-striped">
+<caption>A data.frame: 6 × 3</caption>
+<thead>
+    <tr><th></th><th scope="col">TrainSize</th><th scope="col">RMSE1</th><th scope="col">RMSE2</th></tr>
+    <tr><th></th><th scope="col">&lt;int&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+    <tr><th scope="row">1</th><td>1</td><td>22.65845</td><td>22.34442</td></tr>
+    <tr><th scope="row">2</th><td>2</td><td>32.76667</td><td>22.23155</td></tr>
+    <tr><th scope="row">3</th><td>3</td><td>30.06977</td><td>22.14714</td></tr>
+    <tr><th scope="row">4</th><td>4</td><td>34.59365</td><td>22.05084</td></tr>
+    <tr><th scope="row">5</th><td>5</td><td>29.49516</td><td>22.39201</td></tr>
+    <tr><th scope="row">6</th><td>6</td><td>27.93207</td><td>22.22010</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<hr>
+<div class="cell" data-execution_count="70">
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(caret)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="71">
+<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a>folds <span class="ot">&lt;-</span> <span class="fu">createFolds</span>(scaled_data<span class="sc">$</span>medv, <span class="at">k =</span> <span class="dv">10</span>, <span class="at">list =</span> <span class="cn">TRUE</span>, <span class="at">returnTrain =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a>errors2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">FoldExcluded =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">RMSE =</span> <span class="fu">c</span>(<span class="dv">0</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="72">
+<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a>folds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<dl>
+    <dt>$Fold01</dt>
+        <dd><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class="list-inline"><li>16</li><li>20</li><li>21</li><li>39</li><li>46</li><li>47</li><li>48</li><li>56</li><li>69</li><li>91</li><li>120</li><li>127</li><li>132</li><li>143</li><li>151</li><li>186</li><li>187</li><li>191</li><li>196</li><li>227</li><li>231</li><li>236</li><li>239</li><li>252</li><li>258</li><li>259</li><li>279</li><li>280</li><li>289</li><li>314</li><li>320</li><li>335</li><li>337</li><li>350</li><li>352</li><li>360</li><li>372</li><li>373</li><li>380</li><li>385</li><li>392</li><li>409</li><li>415</li><li>419</li><li>420</li><li>431</li><li>439</li><li>445</li><li>452</li><li>468</li><li>484</li><li>486</li></ol>
+</dd>
+    <dt>$Fold02</dt>
+        <dd><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class="list-inline"><li>5</li><li>15</li><li>22</li><li>23</li><li>33</li><li>34</li><li>35</li><li>52</li><li>79</li><li>80</li><li>88</li><li>97</li><li>98</li><li>126</li><li>130</li><li>135</li><li>160</li><li>168</li><li>184</li><li>205</li><li>230</li><li>243</li><li>253</li><li>261</li><li>263</li><li>267</li><li>270</li><li>273</li><li>304</li><li>313</li><li>319</li><li>354</li><li>366</li><li>387</li><li>389</li><li>411</li><li>422</li><li>423</li><li>440</li><li>451</li><li>454</li><li>463</li><li>467</li><li>478</li><li>480</li><li>482</li><li>483</li><li>498</li><li>504</li></ol>
+</dd>
+    <dt>$Fold03</dt>
+        <dd><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class="list-inline"><li>4</li><li>17</li><li>26</li><li>38</li><li>53</li><li>70</li><li>71</li><li>82</li><li>86</li><li>100</li><li>104</li><li>128</li><li>133</li><li>134</li><li>141</li><li>147</li><li>201</li><li>208</li><li>209</li><li>212</li><li>214</li><li>217</li><li>224</li><li>246</li><li>269</li><li>274</li><li>305</li><li>325</li><li>326</li><li>332</li><li>341</li><li>348</li><li>353</li><li>355</li><li>356</li><li>362</li><li>365</li><li>369</li><li>370</li><li>377</li><li>382</li><li>390</li><li>400</li><li>404</li><li>407</li><li>408</li><li>417</li><li>418</li><li>470</li><li>495</li><li>501</li></ol>
+</dd>
+    <dt>$Fold04</dt>
+        <dd><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class="list-inline"><li>3</li><li>9</li><li>28</li><li>68</li><li>72</li><li>77</li><li>87</li><li>89</li><li>93</li><li>95</li><li>131</li><li>139</li><li>140</li><li>144</li><li>163</li><li>195</li><li>197</li><li>204</li><li>213</li><li>229</li><li>233</li><li>248</li><li>254</li><li>284</li><li>290</li><li>291</li><li>299</li><li>300</li><li>301</li><li>303</li><li>316</li><li>317</li><li>318</li><li>327</li><li>329</li><li>333</li><li>339</li><li>342</li><li>346</li><li>349</li><li>351</li><li>363</li><li>391</li><li>393</li><li>399</li><li>406</li><li>426</li><li>441</li><li>450</li><li>472</li><li>473</li><li>476</li></ol>
+</dd>
+    <dt>$Fold05</dt>
+        <dd><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class="list-inline"><li>55</li><li>76</li><li>85</li><li>94</li><li>113</li><li>117</li><li>118</li><li>125</li><li>142</li><li>156</li><li>157</li><li>159</li><li>167</li><li>170</li><li>172</li><li>179</li><li>189</li><li>190</li><li>192</li><li>194</li><li>203</li><li>221</li><li>240</li><li>262</li><li>272</li><li>285</li><li>286</li><li>310</li><li>324</li><li>330</li><li>338</li><li>344</li><li>358</li><li>368</li><li>371</li><li>388</li><li>414</li><li>425</li><li>427</li><li>429</li><li>434</li><li>449</li><li>459</li><li>475</li><li>493</li><li>497</li><li>500</li><li>503</li><li>505</li></ol>
+</dd>
+    <dt>$Fold06</dt>
+        <dd><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class="list-inline"><li>11</li><li>13</li><li>14</li><li>41</li><li>42</li><li>45</li><li>57</li><li>62</li><li>63</li><li>106</li><li>108</li><li>114</li><li>116</li><li>119</li><li>121</li><li>136</li><li>137</li><li>153</li><li>171</li><li>176</li><li>177</li><li>199</li><li>202</li><li>207</li><li>215</li><li>223</li><li>226</li><li>234</li><li>235</li><li>244</li><li>257</li><li>281</li><li>282</li><li>288</li><li>292</li><li>302</li><li>307</li><li>312</li><li>334</li><li>336</li><li>379</li><li>395</li><li>413</li><li>428</li><li>433</li><li>435</li><li>444</li><li>446</li><li>453</li><li>456</li><li>485</li></ol>
+</dd>
+    <dt>$Fold07</dt>
+        <dd><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class="list-inline"><li>1</li><li>7</li><li>10</li><li>12</li><li>27</li><li>30</li><li>40</li><li>58</li><li>60</li><li>73</li><li>74</li><li>78</li><li>81</li><li>83</li><li>92</li><li>96</li><li>152</li><li>154</li><li>158</li><li>162</li><li>169</li><li>206</li><li>210</li><li>216</li><li>218</li><li>237</li><li>242</li><li>245</li><li>249</li><li>260</li><li>266</li><li>276</li><li>293</li><li>295</li><li>311</li><li>321</li><li>345</li><li>347</li><li>357</li><li>378</li><li>383</li><li>386</li><li>405</li><li>424</li><li>438</li><li>447</li><li>448</li><li>455</li><li>457</li><li>458</li><li>460</li></ol>
+</dd>
+    <dt>$Fold08</dt>
+        <dd><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class="list-inline"><li>8</li><li>24</li><li>29</li><li>32</li><li>43</li><li>102</li><li>105</li><li>110</li><li>111</li><li>112</li><li>123</li><li>124</li><li>146</li><li>149</li><li>165</li><li>166</li><li>173</li><li>175</li><li>181</li><li>183</li><li>200</li><li>220</li><li>222</li><li>225</li><li>247</li><li>251</li><li>264</li><li>271</li><li>278</li><li>283</li><li>287</li><li>296</li><li>297</li><li>331</li><li>340</li><li>359</li><li>364</li><li>376</li><li>394</li><li>398</li><li>432</li><li>443</li><li>461</li><li>469</li><li>479</li><li>488</li><li>490</li><li>491</li><li>496</li><li>506</li></ol>
+</dd>
+    <dt>$Fold09</dt>
+        <dd><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class="list-inline"><li>6</li><li>18</li><li>19</li><li>25</li><li>36</li><li>50</li><li>54</li><li>59</li><li>61</li><li>66</li><li>90</li><li>99</li><li>103</li><li>107</li><li>109</li><li>155</li><li>161</li><li>164</li><li>174</li><li>178</li><li>180</li><li>182</li><li>198</li><li>211</li><li>219</li><li>250</li><li>265</li><li>275</li><li>306</li><li>328</li><li>361</li><li>367</li><li>375</li><li>381</li><li>384</li><li>396</li><li>397</li><li>402</li><li>403</li><li>412</li><li>416</li><li>437</li><li>442</li><li>464</li><li>465</li><li>466</li><li>471</li><li>477</li><li>481</li><li>502</li></ol>
+</dd>
+    <dt>$Fold10</dt>
+        <dd><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class="list-inline"><li>2</li><li>31</li><li>37</li><li>44</li><li>49</li><li>51</li><li>64</li><li>65</li><li>67</li><li>75</li><li>84</li><li>101</li><li>115</li><li>122</li><li>129</li><li>138</li><li>145</li><li>148</li><li>150</li><li>185</li><li>188</li><li>193</li><li>228</li><li>232</li><li>238</li><li>241</li><li>255</li><li>256</li><li>268</li><li>277</li><li>294</li><li>298</li><li>308</li><li>309</li><li>315</li><li>322</li><li>323</li><li>343</li><li>374</li><li>401</li><li>410</li><li>421</li><li>430</li><li>436</li><li>462</li><li>474</li><li>487</li><li>489</li><li>492</li><li>494</li><li>499</li></ol>
+</dd>
+</dl>
+</div>
+</div>
+<div class="cell" data-execution_count="73">
+<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) {</span>
+<span id="cb91-2"><a href="#cb91-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb91-3"><a href="#cb91-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>){    </span>
+<span id="cb91-4"><a href="#cb91-4" aria-hidden="true" tabindex="-1"></a>    train_data <span class="ot">&lt;-</span> scaled_data[<span class="sc">-</span>folds[[j]], ]</span>
+<span id="cb91-5"><a href="#cb91-5" aria-hidden="true" tabindex="-1"></a>    test_data <span class="ot">&lt;-</span> scaled_data[folds[[j]], ]</span>
+<span id="cb91-6"><a href="#cb91-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb91-7"><a href="#cb91-7" aria-hidden="true" tabindex="-1"></a>    nnet_model <span class="ot">&lt;-</span> <span class="fu">nnet</span>(formula, <span class="at">data =</span> train_data, <span class="at">trace =</span> F,  <span class="at">size =</span> <span class="dv">3</span>, <span class="at">maxit =</span> <span class="dv">100</span>)</span>
+<span id="cb91-8"><a href="#cb91-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb91-9"><a href="#cb91-9" aria-hidden="true" tabindex="-1"></a>    nnet_predicted_prob_scaled <span class="ot">&lt;-</span> <span class="fu">predict</span>(nnet_model, test_data)</span>
+<span id="cb91-10"><a href="#cb91-10" aria-hidden="true" tabindex="-1"></a>    nnet_predicted <span class="ot">&lt;-</span> nnet_predicted_prob_scaled <span class="sc">*</span> (<span class="fu">max</span>(data<span class="sc">$</span>medv) <span class="sc">-</span> <span class="fu">min</span>(data<span class="sc">$</span>medv)) <span class="sc">+</span> <span class="fu">min</span>(data<span class="sc">$</span>medv)</span>
+<span id="cb91-11"><a href="#cb91-11" aria-hidden="true" tabindex="-1"></a>    errors_list <span class="ot">&lt;-</span> <span class="fu">regr.eval</span>(test_data<span class="sc">$</span>medv, nnet_predicted)</span>
+<span id="cb91-12"><a href="#cb91-12" aria-hidden="true" tabindex="-1"></a>    errors2[errors2<span class="sc">$</span>FoldExcluded <span class="sc">==</span> j, ]<span class="sc">$</span>RMSE <span class="ot">&lt;-</span> errors2[errors2<span class="sc">$</span>FoldExcluded <span class="sc">==</span> j, ]<span class="sc">$</span>RMSE <span class="sc">+</span> errors_list[<span class="dv">3</span>]</span>
+<span id="cb91-13"><a href="#cb91-13" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb91-14"><a href="#cb91-14" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="74">
+<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a>errors2<span class="sc">$</span>RMSE <span class="ot">&lt;-</span> errors2<span class="sc">$</span>RMSE<span class="sc">/</span><span class="dv">10</span></span>
+<span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span> (<span class="at">x =</span> errors2<span class="sc">$</span>FoldExcluded, <span class="at">y =</span> errors2<span class="sc">$</span>RMSE, </span>
+<span id="cb92-3"><a href="#cb92-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">ylim =</span> <span class="fu">c</span>(<span class="fu">min</span>(errors2<span class="sc">$</span>RMSE)<span class="sc">-</span><span class="dv">5</span>, </span>
+<span id="cb92-4"><a href="#cb92-4" aria-hidden="true" tabindex="-1"></a>               <span class="fu">max</span>(errors2<span class="sc">$</span>RMSE)<span class="sc">+</span><span class="dv">5</span>), </span>
+<span id="cb92-5"><a href="#cb92-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">type =</span> <span class="st">"l"</span>, </span>
+<span id="cb92-6"><a href="#cb92-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">xlab =</span> <span class="st">"length of training set"</span>, </span>
+<span id="cb92-7"><a href="#cb92-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">ylab =</span> <span class="st">"mean RMSE"</span>, </span>
+<span id="cb92-8"><a href="#cb92-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">main =</span> <span class="st">"Variation of RMSE with length of training set"</span>)</span>
+<span id="cb92-9"><a href="#cb92-9" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(errors2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+<table class="dataframe table table-sm table-striped">
+<caption>A data.frame: 6 × 2</caption>
+<thead>
+    <tr><th></th><th scope="col">FoldExcluded</th><th scope="col">RMSE</th></tr>
+    <tr><th></th><th scope="col">&lt;int&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+    <tr><th scope="row">1</th><td>1</td><td>23.88887</td></tr>
+    <tr><th scope="row">2</th><td>2</td><td>24.57703</td></tr>
+    <tr><th scope="row">3</th><td>3</td><td>24.03482</td></tr>
+    <tr><th scope="row">4</th><td>4</td><td>25.52928</td></tr>
+    <tr><th scope="row">5</th><td>5</td><td>24.05225</td></tr>
+    <tr><th scope="row">6</th><td>6</td><td>24.70978</td></tr>
+</tbody>
+</table>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="034-supervised-learning-neutal-networks-regression_files/figure-html/cell-75-output-2.png" class="img-fluid"></p>
+</div>
+</div>
+<hr>
+</section>
+<section id="references" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> References</h1>
 <ol type="1">
 <li><p>Harrison, D. and Rubinfeld, D.L. (1978) Hedonic prices and the demand for clean air. J. Environ. Economics and Management 5, 81–102.</p></li>
 <li><p>Belsley D.A., Kuh, E. and Welsch, R.E. (1980) Regression Diagnostics. Identifying Influential Data and Sources of Collinearity. New York: Wiley.</p></li>
@@ -1658,12 +1985,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./033-supervised-learning-desicion-trees-regression.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Дерева рішень. Регресія. Баланс кредитної карти</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Дерева рішень. Регресія. Баланс кредитної карти</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./035-supervised-learning-logistic-regression.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Логістична регресія. Класифікація. Титанік</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Логістична регресія. Класифікація. Титанік</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

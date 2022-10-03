@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Математичне моделювання в R - 7&nbsp; Нейронні мережі. Deep Learning. Класифікація. Кредитний скоринг</title>
+<title>Математичне моделювання в R - 9&nbsp; Нейронні мережі. Deep Learning. Класифікація. Кредитний скоринг</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -136,7 +136,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Нейронні мережі. Deep Learning. Класифікація. Кредитний скоринг</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Нейронні мережі. Deep Learning. Класифікація. Кредитний скоринг</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -188,9 +188,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <a href="./index.html" class="sidebar-item-text sidebar-link">Про курс</a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./010-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">ТЕМА 1. ВСТУП ДО КУРСУ</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./030-supervised-learning.html" class="sidebar-item-text sidebar-link">ТЕМА 3. НАВЧАННЯ "З УЧИТЕЛЕМ"</a>
+            <a href="./020-feature-engeneering.html" class="sidebar-item-text sidebar-link">ТЕМА 2. КОНСТРУЮВАННЯ ОЗНАК</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -198,37 +203,52 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./031-supervised-learning-linear-regression-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Лінійна регресія. Престиж професій</span></a>
+  <a href="./023-feature-engeneering-woe-binning.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Woe Binning</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./030-supervised-learning.html" class="sidebar-item-text sidebar-link">ТЕМА 3. НАВЧАННЯ "З УЧИТЕЛЕМ"</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./031-supervised-learning-linear-regression-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Лінійна регресія. Престиж професій</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./032-supervised-learning-linear-regression-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Лінійна регресія. Прокат велосипедів</span></a>
+  <a href="./032-supervised-learning-linear-regression-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Лінійна регресія. Прокат велосипедів</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./033-supervised-learning-desicion-trees-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Дерева рішень. Регресія. Баланс кредитної карти</span></a>
+  <a href="./033-supervised-learning-desicion-trees-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Дерева рішень. Регресія. Баланс кредитної карти</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./034-supervised-learning-neutal-networks-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Нейронні мережі. Регресія. Вартість житла</span></a>
+  <a href="./034-supervised-learning-neutal-networks-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Нейронні мережі. Регресія. Вартість житла</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./035-supervised-learning-logistic-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Логістична регресія. Класифікація. Титанік</span></a>
+  <a href="./035-supervised-learning-logistic-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Логістична регресія. Класифікація. Титанік</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./036-supervised-learning-desicion-trees-classification.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Дерева рішень. Класифікація. Депозити</span></a>
+  <a href="./036-supervised-learning-desicion-trees-classification.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Дерева рішень. Класифікація. Депозити</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./037-supervised-learning-neural-network-classification.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Нейронні мережі. Deep Learning. Класифікація. Кредитний скоринг</span></a>
+  <a href="./037-supervised-learning-neural-network-classification.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Нейронні мережі. Deep Learning. Класифікація. Кредитний скоринг</span></a>
   </div>
 </li>
       </ul>
@@ -242,22 +262,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Зміст</h2>
    
   <ul>
-  <li><a href="#набір-даних" id="toc-набір-даних" class="nav-link active" data-scroll-target="#набір-даних"><span class="toc-section-number">7.1</span>  Набір даних</a></li>
-  <li><a href="#оглядовий-аналіз-даних" id="toc-оглядовий-аналіз-даних" class="nav-link" data-scroll-target="#оглядовий-аналіз-даних"><span class="toc-section-number">7.2</span>  Оглядовий аналіз даних</a>
+  <li><a href="#набір-даних" id="toc-набір-даних" class="nav-link active" data-scroll-target="#набір-даних"><span class="toc-section-number">9.1</span>  Набір даних</a></li>
+  <li><a href="#оглядовий-аналіз-даних" id="toc-оглядовий-аналіз-даних" class="nav-link" data-scroll-target="#оглядовий-аналіз-даних"><span class="toc-section-number">9.2</span>  Оглядовий аналіз даних</a>
   <ul class="collapse">
-  <li><a href="#таблиця-customers" id="toc-таблиця-customers" class="nav-link" data-scroll-target="#таблиця-customers"><span class="toc-section-number">7.2.1</span>  Таблиця <code>customers</code></a></li>
-  <li><a href="#таблиця-cards" id="toc-таблиця-cards" class="nav-link" data-scroll-target="#таблиця-cards"><span class="toc-section-number">7.2.2</span>  Таблиця <code>cards</code></a></li>
-  <li><a href="#таблиця-products" id="toc-таблиця-products" class="nav-link" data-scroll-target="#таблиця-products"><span class="toc-section-number">7.2.3</span>  Таблиця <code>products</code></a></li>
+  <li><a href="#таблиця-customers" id="toc-таблиця-customers" class="nav-link" data-scroll-target="#таблиця-customers"><span class="toc-section-number">9.2.1</span>  Таблиця <code>customers</code></a></li>
+  <li><a href="#таблиця-cards" id="toc-таблиця-cards" class="nav-link" data-scroll-target="#таблиця-cards"><span class="toc-section-number">9.2.2</span>  Таблиця <code>cards</code></a></li>
+  <li><a href="#таблиця-products" id="toc-таблиця-products" class="nav-link" data-scroll-target="#таблиця-products"><span class="toc-section-number">9.2.3</span>  Таблиця <code>products</code></a></li>
   </ul></li>
-  <li><a href="#feature-engeniering" id="toc-feature-engeniering" class="nav-link" data-scroll-target="#feature-engeniering"><span class="toc-section-number">7.3</span>  Feature engeniering</a>
+  <li><a href="#feature-engeniering" id="toc-feature-engeniering" class="nav-link" data-scroll-target="#feature-engeniering"><span class="toc-section-number">9.3</span>  Feature engeniering</a>
   <ul class="collapse">
-  <li><a href="#показник-numofproducts" id="toc-показник-numofproducts" class="nav-link" data-scroll-target="#показник-numofproducts"><span class="toc-section-number">7.3.1</span>  Показник <code>NumOfProducts</code></a></li>
-  <li><a href="#показник-hascreditcard" id="toc-показник-hascreditcard" class="nav-link" data-scroll-target="#показник-hascreditcard"><span class="toc-section-number">7.3.2</span>  Показник <code>HasCreditCard</code></a></li>
-  <li><a href="#показник-balance" id="toc-показник-balance" class="nav-link" data-scroll-target="#показник-balance"><span class="toc-section-number">7.3.3</span>  Показник <code>Balance</code></a></li>
-  <li><a href="#нормалізація-даних" id="toc-нормалізація-даних" class="nav-link" data-scroll-target="#нормалізація-даних"><span class="toc-section-number">7.3.4</span>  Нормалізація даних</a></li>
+  <li><a href="#показник-numofproducts" id="toc-показник-numofproducts" class="nav-link" data-scroll-target="#показник-numofproducts"><span class="toc-section-number">9.3.1</span>  Показник <code>NumOfProducts</code></a></li>
+  <li><a href="#показник-hascreditcard" id="toc-показник-hascreditcard" class="nav-link" data-scroll-target="#показник-hascreditcard"><span class="toc-section-number">9.3.2</span>  Показник <code>HasCreditCard</code></a></li>
+  <li><a href="#показник-balance" id="toc-показник-balance" class="nav-link" data-scroll-target="#показник-balance"><span class="toc-section-number">9.3.3</span>  Показник <code>Balance</code></a></li>
+  <li><a href="#нормалізація-даних" id="toc-нормалізація-даних" class="nav-link" data-scroll-target="#нормалізація-даних"><span class="toc-section-number">9.3.4</span>  Нормалізація даних</a></li>
   </ul></li>
-  <li><a href="#формування-вибірок" id="toc-формування-вибірок" class="nav-link" data-scroll-target="#формування-вибірок"><span class="toc-section-number">7.4</span>  Формування вибірок</a></li>
-  <li><a href="#побудова-deep-learning-моделі" id="toc-побудова-deep-learning-моделі" class="nav-link" data-scroll-target="#побудова-deep-learning-моделі"><span class="toc-section-number">7.5</span>  Побудова Deep Learning моделі</a></li>
+  <li><a href="#формування-вибірок" id="toc-формування-вибірок" class="nav-link" data-scroll-target="#формування-вибірок"><span class="toc-section-number">9.4</span>  Формування вибірок</a></li>
+  <li><a href="#побудова-deep-learning-моделі" id="toc-побудова-deep-learning-моделі" class="nav-link" data-scroll-target="#побудова-deep-learning-моделі"><span class="toc-section-number">9.5</span>  Побудова Deep Learning моделі</a></li>
   </ul>
 </nav>
     </div>
@@ -266,7 +286,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Нейронні мережі. Deep Learning. Класифікація. Кредитний скоринг</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Нейронні мережі. Deep Learning. Класифікація. Кредитний скоринг</span></h1>
 </div>
 
 
@@ -282,18 +302,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <p>Курс: “Математичне моделювання в R”</p>
 <hr>
-<div class="cell" data-execution_count="2">
+<div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.setlocale</span>(<span class="st">"LC_CTYPE"</span>, <span class="st">"ukrainian"</span>) </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">warn =</span> <span class="sc">-</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 'Ukrainian_Ukraine.1251'
 </div>
 </div>
-<section id="набір-даних" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="набір-даних"><span class="header-section-number">7.1</span> Набір даних</h2>
+<section id="набір-даних" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="набір-даних"><span class="header-section-number">9.1</span> Набір даних</h2>
 <p>Джерело: <a href="https://www.kaggle.com/barelydedicated/bank-customer-churn-modeling" class="uri">https://www.kaggle.com/barelydedicated/bank-customer-churn-modeling</a>.</p>
 <p>Завантажимо файли з даними:</p>
-<div class="cell" data-execution_count="3">
+<div class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>customers <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/customers.csv"</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>products <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/products.csv"</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>cards <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/cards.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -313,7 +333,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><input type="checkbox" disabled="" checked=""><code>Exited</code> - залишив/не залишив банк.</li>
 </ul>
 <p>Інформація про клієнтів:</p>
-<div class="cell" data-execution_count="4">
+<div class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(customers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>'data.frame':   10000 obs. of  11 variables:
@@ -330,7 +350,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
  $ Exited         : int  1 0 1 0 0 1 0 1 0 0 ...</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="5">
+<div class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(customers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
@@ -352,17 +372,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </section>
-<section id="оглядовий-аналіз-даних" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="оглядовий-аналіз-даних"><span class="header-section-number">7.2</span> Оглядовий аналіз даних</h2>
-<section id="таблиця-customers" class="level3" data-number="7.2.1">
-<h3 data-number="7.2.1" class="anchored" data-anchor-id="таблиця-customers"><span class="header-section-number">7.2.1</span> Таблиця <code>customers</code></h3>
+<section id="оглядовий-аналіз-даних" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="оглядовий-аналіз-даних"><span class="header-section-number">9.2</span> Оглядовий аналіз даних</h2>
+<section id="таблиця-customers" class="level3" data-number="9.2.1">
+<h3 data-number="9.2.1" class="anchored" data-anchor-id="таблиця-customers"><span class="header-section-number">9.2.1</span> Таблиця <code>customers</code></h3>
 <p>Оглянемо дані колекції <code>customers</code> візуально та за допомогою крос-таблиць:</p>
-<div class="cell" data-execution_count="6">
+<div class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gmodels)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Кредитний рейтинг (<code>CreditScore</code>):</p>
-<div class="cell" data-execution_count="7">
+<div class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(customers, <span class="fu">aes</span>(<span class="at">x=</span>CreditScore, <span class="at">fill=</span><span class="fu">factor</span>(Exited))) <span class="sc">+</span> </span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">10</span>, <span class="at">alpha=</span><span class="fl">0.7</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -370,14 +390,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <p>Регіон/країна (<code>Geography</code>):</p>
-<div class="cell" data-execution_count="8">
+<div class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(customers, <span class="fu">aes</span>(<span class="at">x=</span>Geography, <span class="at">fill=</span><span class="fu">factor</span>(Exited))) <span class="sc">+</span> </span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"stack"</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="037-supervised-learning-neural-network-classification_files/figure-html/cell-8-output-1.png" class="img-fluid"></p>
 </div>
 </div>
-<div class="cell" data-execution_count="9">
+<div class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">CrossTable</span>(customers<span class="sc">$</span>Geography, customers<span class="sc">$</span>Exited)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -424,14 +444,14 @@ customers$Geography |         0 |         1 | Row Total |
 </div>
 </div>
 <p>Стать (<code>Gender</code>):</p>
-<div class="cell" data-execution_count="10">
+<div class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(customers, <span class="fu">aes</span>(<span class="at">x=</span>Gender, <span class="at">fill=</span><span class="fu">factor</span>(Exited))) <span class="sc">+</span> </span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"stack"</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="037-supervised-learning-neural-network-classification_files/figure-html/cell-10-output-1.png" class="img-fluid"></p>
 </div>
 </div>
-<div class="cell" data-execution_count="11">
+<div class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">CrossTable</span>(customers<span class="sc">$</span>Gender, customers<span class="sc">$</span>Exited)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -472,7 +492,7 @@ customers$Gender |         0 |         1 | Row Total |
 </div>
 </div>
 <p>Вік (<code>Age</code>):</p>
-<div class="cell" data-execution_count="12">
+<div class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(customers, <span class="fu">aes</span>(<span class="at">x=</span>Age, <span class="at">fill=</span><span class="fu">factor</span>(Exited))) <span class="sc">+</span> </span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>, <span class="at">alpha=</span><span class="fl">0.7</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -480,7 +500,7 @@ customers$Gender |         0 |         1 | Row Total |
 </div>
 </div>
 <p>Час обслуговування клієнта (<code>Tenure</code>):</p>
-<div class="cell" data-execution_count="13">
+<div class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(customers, <span class="fu">aes</span>(<span class="at">x=</span>Tenure, <span class="at">fill=</span><span class="fu">factor</span>(Exited))) <span class="sc">+</span> </span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>, <span class="at">alpha=</span><span class="fl">0.7</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -488,7 +508,7 @@ customers$Gender |         0 |         1 | Row Total |
 </div>
 </div>
 <p>Активність (<code>IsActiveMember</code>):</p>
-<div class="cell" data-execution_count="14">
+<div class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">CrossTable</span>(customers<span class="sc">$</span>IsActiveMember, customers<span class="sc">$</span>Exited)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -529,7 +549,7 @@ customers$IsActiveMember |         0 |         1 | Row Total |
 </div>
 </div>
 <p>Заробітна плата (<code>EstimatedSalary</code>):</p>
-<div class="cell" data-execution_count="15">
+<div class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(customers, <span class="fu">aes</span>(<span class="at">x=</span>EstimatedSalary, <span class="at">fill=</span><span class="fu">factor</span>(Exited))) <span class="sc">+</span> </span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1000</span>, <span class="at">alpha=</span><span class="fl">0.7</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -537,7 +557,7 @@ customers$IsActiveMember |         0 |         1 | Row Total |
 </div>
 </div>
 <p><code>Exited</code>:</p>
-<div class="cell" data-execution_count="16">
+<div class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">CrossTable</span>(customers<span class="sc">$</span>Exited)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -565,10 +585,10 @@ Total Observations in Table:  10000
 </div>
 <hr>
 </section>
-<section id="таблиця-cards" class="level3" data-number="7.2.2">
-<h3 data-number="7.2.2" class="anchored" data-anchor-id="таблиця-cards"><span class="header-section-number">7.2.2</span> Таблиця <code>cards</code></h3>
+<section id="таблиця-cards" class="level3" data-number="9.2.2">
+<h3 data-number="9.2.2" class="anchored" data-anchor-id="таблиця-cards"><span class="header-section-number">9.2.2</span> Таблиця <code>cards</code></h3>
 <p>Інформація про карти клієнта:</p>
-<div class="cell" data-execution_count="17">
+<div class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(cards)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>'data.frame':   13545 obs. of  4 variables:
@@ -578,7 +598,7 @@ Total Observations in Table:  10000
  $ Balance     : num  5 41922 41913 79846 79859 ...</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="18">
+<div class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cards)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
@@ -599,7 +619,7 @@ Total Observations in Table:  10000
 </table>
 </div>
 </div>
-<div class="cell" data-execution_count="19">
+<div class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(cards)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>   CustomerId           CardNo        IsCreditCard       Balance      
@@ -613,10 +633,10 @@ Total Observations in Table:  10000
 </div>
 <hr>
 </section>
-<section id="таблиця-products" class="level3" data-number="7.2.3">
-<h3 data-number="7.2.3" class="anchored" data-anchor-id="таблиця-products"><span class="header-section-number">7.2.3</span> Таблиця <code>products</code></h3>
+<section id="таблиця-products" class="level3" data-number="9.2.3">
+<h3 data-number="9.2.3" class="anchored" data-anchor-id="таблиця-products"><span class="header-section-number">9.2.3</span> Таблиця <code>products</code></h3>
 <p>Інформація про продукти клієнта:</p>
-<div class="cell" data-execution_count="20">
+<div class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(products)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>'data.frame':   13862 obs. of  2 variables:
@@ -624,7 +644,7 @@ Total Observations in Table:  10000
  $ ProductName: chr  "PROD_1" "PROD_1" "PROD_1" "PROD_2" ...</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="21">
+<div class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(products)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
@@ -648,20 +668,20 @@ Total Observations in Table:  10000
 <hr>
 </section>
 </section>
-<section id="feature-engeniering" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="feature-engeniering"><span class="header-section-number">7.3</span> Feature engeniering</h2>
+<section id="feature-engeniering" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="feature-engeniering"><span class="header-section-number">9.3</span> Feature engeniering</h2>
 <p>Сформуємо додаткові змінні на основі наявних даних:</p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" checked=""><code>Balance</code> - сума по усіх картах клієнат.</li>
 <li><input type="checkbox" disabled="" checked=""><code>NumOfProducts</code> - кількість продуктів банку, які використовує клієнт.</li>
 <li><input type="checkbox" disabled="" checked=""><code>HasCreditCard</code> - dummy-змінна, наявність кредитної карти у клієнта.</li>
 </ul>
-<section id="показник-numofproducts" class="level3" data-number="7.3.1">
-<h3 data-number="7.3.1" class="anchored" data-anchor-id="показник-numofproducts"><span class="header-section-number">7.3.1</span> Показник <code>NumOfProducts</code></h3>
+<section id="показник-numofproducts" class="level3" data-number="9.3.1">
+<h3 data-number="9.3.1" class="anchored" data-anchor-id="показник-numofproducts"><span class="header-section-number">9.3.1</span> Показник <code>NumOfProducts</code></h3>
 <p>Варто звернути увагу, що генерувати нові фічі можна із використанням можлиовстей агрегації та фільтрування даних (наприклад, методи пакету <code>dplyr</code>) або за допомогою простих алгоритмічних структур (цикли, розгалуження).</p>
 <p>Для <code>R</code> використання циклів для подібних задач є не досить хорошим рішенням, адже код виглядає складно і виконується повільно. Проте ми напишемо для требування і пояснення приклади з використанням обох підходів.</p>
 <p>Імперативний підхід до програмування:</p>
-<div class="cell" data-execution_count="22">
+<div class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Створюємо пусту змінну</span></span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>customers<span class="sc">$</span>NumOfProducts <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>)</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -691,7 +711,7 @@ Total Observations in Table:  10000
 </div>
 </div>
 <p>Декларативний приклад коду:</p>
-<div class="cell" data-execution_count="23">
+<div class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>customers_tmp <span class="ot">&lt;-</span> customers <span class="sc">|&gt;</span></span>
@@ -738,9 +758,9 @@ The following objects are masked from 'package:base':
 </div>
 <hr>
 </section>
-<section id="показник-hascreditcard" class="level3" data-number="7.3.2">
-<h3 data-number="7.3.2" class="anchored" data-anchor-id="показник-hascreditcard"><span class="header-section-number">7.3.2</span> Показник <code>HasCreditCard</code></h3>
-<div class="cell" data-execution_count="24">
+<section id="показник-hascreditcard" class="level3" data-number="9.3.2">
+<h3 data-number="9.3.2" class="anchored" data-anchor-id="показник-hascreditcard"><span class="header-section-number">9.3.2</span> Показник <code>HasCreditCard</code></h3>
+<div class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>customers <span class="ot">&lt;-</span> customers <span class="sc">|&gt;</span></span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">left_join</span>(cards <span class="sc">|&gt;</span> </span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>              <span class="fu">group_by</span>(CustomerId) <span class="sc">|&gt;</span> </span>
@@ -767,9 +787,9 @@ The following objects are masked from 'package:base':
 </div>
 <hr>
 </section>
-<section id="показник-balance" class="level3" data-number="7.3.3">
-<h3 data-number="7.3.3" class="anchored" data-anchor-id="показник-balance"><span class="header-section-number">7.3.3</span> Показник <code>Balance</code></h3>
-<div class="cell" data-execution_count="25">
+<section id="показник-balance" class="level3" data-number="9.3.3">
+<h3 data-number="9.3.3" class="anchored" data-anchor-id="показник-balance"><span class="header-section-number">9.3.3</span> Показник <code>Balance</code></h3>
+<div class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>customers <span class="ot">&lt;-</span> customers <span class="sc">|&gt;</span></span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">left_join</span>(cards <span class="sc">|&gt;</span> </span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>              <span class="fu">group_by</span>(CustomerId) <span class="sc">|&gt;</span> </span>
@@ -796,20 +816,20 @@ The following objects are masked from 'package:base':
 </div>
 <p>Звичано код можна поєднати в 1 запит.</p>
 </section>
-<section id="нормалізація-даних" class="level3" data-number="7.3.4">
-<h3 data-number="7.3.4" class="anchored" data-anchor-id="нормалізація-даних"><span class="header-section-number">7.3.4</span> Нормалізація даних</h3>
+<section id="нормалізація-даних" class="level3" data-number="9.3.4">
+<h3 data-number="9.3.4" class="anchored" data-anchor-id="нормалізація-даних"><span class="header-section-number">9.3.4</span> Нормалізація даних</h3>
 <p>Видалимо зайві покзники, що заважатимуть будувати моделі:</p>
-<div class="cell" data-execution_count="26">
+<div class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>customers <span class="ot">&lt;-</span> customers <span class="sc">|&gt;</span></span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(RowNumber, CustomerId, Surname))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Варто звернути увагу, що інженереія нових фіч завершена не до кінця і у нас ще присутні параметри, що мають нечислові значення <code>Geography</code> + <code>Gender</code>. Спробуйте замінити їх, наприклад, на <code>dummy</code>-змінні або використати <code>бінінг</code>.</p>
 <p>Для скорочення часу на вивчення матеріали ми скористаємося звичайним приведенням даних до числового типу:</p>
-<div class="cell" data-execution_count="27">
+<div class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>customers<span class="sc">$</span>Geography <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">as.factor</span>(customers<span class="sc">$</span>Geography))</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>customers<span class="sc">$</span>Gender <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">as.factor</span>(customers<span class="sc">$</span>Gender))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="28">
+<div class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(customers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>'data.frame':   10000 obs. of  11 variables:
@@ -827,7 +847,7 @@ The following objects are masked from 'package:base':
 </div>
 </div>
 <p>Використовуючи функцію <code>scale()</code> нормалізуємо дані:</p>
-<div class="cell" data-execution_count="29">
+<div class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>scaled <span class="ot">&lt;-</span> <span class="fu">scale</span>(customers[<span class="sc">-</span><span class="dv">8</span>], <span class="at">center =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>scaled <span class="ot">&lt;-</span> <span class="fu">cbind</span>(scaled, customers[<span class="dv">8</span>])</span>
 <span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(scaled,)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -853,10 +873,10 @@ The following objects are masked from 'package:base':
 <hr>
 </section>
 </section>
-<section id="формування-вибірок" class="level2" data-number="7.4">
-<h2 data-number="7.4" class="anchored" data-anchor-id="формування-вибірок"><span class="header-section-number">7.4</span> Формування вибірок</h2>
+<section id="формування-вибірок" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="формування-вибірок"><span class="header-section-number">9.4</span> Формування вибірок</h2>
 <p>Розділимо вибірку на тестову та тренувальну за допомогою пакету <code>caTools</code> та функції <code>sample.split()</code>:</p>
-<div class="cell" data-execution_count="30">
+<div class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caTools)</span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2022</span>)</span>
 <span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>split <span class="ot">&lt;-</span> <span class="fu">sample.split</span>(scaled<span class="sc">$</span>Exited, <span class="at">SplitRatio =</span> <span class="fl">0.7</span>)</span>
@@ -865,13 +885,13 @@ The following objects are masked from 'package:base':
 </div>
 <hr>
 </section>
-<section id="побудова-deep-learning-моделі" class="level2" data-number="7.5">
-<h2 data-number="7.5" class="anchored" data-anchor-id="побудова-deep-learning-моделі"><span class="header-section-number">7.5</span> Побудова Deep Learning моделі</h2>
+<section id="побудова-deep-learning-моделі" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="побудова-deep-learning-моделі"><span class="header-section-number">9.5</span> Побудова Deep Learning моделі</h2>
 <p>Викосритаємо можливості пакету <code>h2o</code> для побудови моделі на основі <code>deep learning</code>. Підключимо пакет.</p>
-<div class="cell" data-execution_count="31">
+<div class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("h2o")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="32">
+<div class="cell" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(h2o)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>
@@ -921,19 +941,745 @@ Warning
 </div>
 </div>
 <p>Запустимо двигун <code>h2o</code>:</p>
-<div class="cell" data-execution_count="38">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">h2o.init</span>(<span class="at">nthreads =</span> <span class="sc">-</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Увага, це специфічні налаштуваняя для ПК на якому налагоджувався проєкт</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.setenv</span>(<span class="at">JAVA_HOME =</span> <span class="st">"C:/Program Files/Java/jdk-19/"</span>)</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">Sys.getenv</span>(<span class="st">"JAVA_HOME"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Program Files/Java/jdk-19/"</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">h2o.init</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 H2O is not running yet, starting it now...
-&lt;simpleError in system2(command, "-version", stdout = TRUE, stderr = TRUE): '"C:\Program Files\Android\jdk\jdk-8.0.302.8-hotspot\jdk8u302-b08\bin\java.exe"' not found&gt;</code></pre>
+
+Note:  In case of errors look at the following log files:
+    D:\Temp\RtmpOYzQ2d\file30182abb672c/h2o_yura_started_from_r.out
+    D:\Temp\RtmpOYzQ2d\file3018cb93ee9/h2o_yura_started_from_r.err
+
+
+Starting H2O JVM and connecting:  Connection successful!
+
+R is connected to the H2O cluster: 
+    H2O cluster uptime:         3 seconds 419 milliseconds 
+    H2O cluster timezone:       Europe/Kiev 
+    H2O data parsing timezone:  UTC 
+    H2O cluster version:        3.38.0.1 
+    H2O cluster version age:    13 days  
+    H2O cluster name:           H2O_started_from_R_yura_svm422 
+    H2O cluster total nodes:    1 
+    H2O cluster total memory:   3.95 GB 
+    H2O cluster total cores:    8 
+    H2O cluster allowed cores:  8 
+    H2O cluster healthy:        TRUE 
+    H2O Connection ip:          localhost 
+    H2O Connection port:        54321 
+    H2O Connection proxy:       NA 
+    H2O Internal Security:      FALSE 
+    R Version:                  R version 4.1.3 (2022-03-10) 
+</code></pre>
 </div>
-<div class="cell-output cell-output-error">
-<pre><code>ERROR: Error in value[[3L]](cond): You have a 32-bit version of Java. H2O works best with 64-bit Java.
-Please download the latest Java SE JDK from the following URL:
-https://www.oracle.com/technetwork/java/javase/downloads/index.html</code></pre>
+</div>
+<p>Побудуємо математичну модель:</p>
+<div class="cell" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>h2o_model <span class="ot">&lt;-</span> <span class="fu">h2o.deeplearning</span>(<span class="at">y =</span> <span class="st">'Exited'</span>, </span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>                              <span class="at">training_frame =</span> <span class="fu">as.h2o</span>(train_data),</span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>                              <span class="at">activation =</span> <span class="st">"Rectifier"</span>,</span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>                              <span class="at">hidden =</span> <span class="fu">c</span>(<span class="dv">6</span>,<span class="dv">6</span>),</span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>                              <span class="at">epochs =</span> <span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  |======================================================================| 100%
+  |======================================================================| 100%</code></pre>
 </div>
 </div>
+<p>Варто перегляднути набір параметрів, що може приймати функція <code>h2o.deeplearning()</code>, адже вона досить складна:</p>
+<div class="cell" data-execution_count="35">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(h2o.deeplearning)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+
+<table width="100%" summary="page for h2o.deeplearning {h2o}"><tbody><tr><td>h2o.deeplearning {h2o}</td><td style="text-align: right;">R Documentation</td></tr></tbody></table>
+
+<h2 class="anchored">Build a Deep Neural Network model using CPUs</h2>
+
+<h3 class="anchored">Description</h3>
+
+<p>Builds a feed-forward multilayer artificial neural network on an H2OFrame.
+</p>
+
+
+<h3 class="anchored">Usage</h3>
+
+<pre>h2o.deeplearning(
+  x,
+  y,
+  training_frame,
+  model_id = NULL,
+  validation_frame = NULL,
+  nfolds = 0,
+  keep_cross_validation_models = TRUE,
+  keep_cross_validation_predictions = FALSE,
+  keep_cross_validation_fold_assignment = FALSE,
+  fold_assignment = c("AUTO", "Random", "Modulo", "Stratified"),
+  fold_column = NULL,
+  ignore_const_cols = TRUE,
+  score_each_iteration = FALSE,
+  weights_column = NULL,
+  offset_column = NULL,
+  balance_classes = FALSE,
+  class_sampling_factors = NULL,
+  max_after_balance_size = 5,
+  checkpoint = NULL,
+  pretrained_autoencoder = NULL,
+  overwrite_with_best_model = TRUE,
+  use_all_factor_levels = TRUE,
+  standardize = TRUE,
+  activation = c("Tanh", "TanhWithDropout", "Rectifier", "RectifierWithDropout",
+    "Maxout", "MaxoutWithDropout"),
+  hidden = c(200, 200),
+  epochs = 10,
+  train_samples_per_iteration = -2,
+  target_ratio_comm_to_comp = 0.05,
+  seed = -1,
+  adaptive_rate = TRUE,
+  rho = 0.99,
+  epsilon = 1e-08,
+  rate = 0.005,
+  rate_annealing = 1e-06,
+  rate_decay = 1,
+  momentum_start = 0,
+  momentum_ramp = 1e+06,
+  momentum_stable = 0,
+  nesterov_accelerated_gradient = TRUE,
+  input_dropout_ratio = 0,
+  hidden_dropout_ratios = NULL,
+  l1 = 0,
+  l2 = 0,
+  max_w2 = 3.4028235e+38,
+  initial_weight_distribution = c("UniformAdaptive", "Uniform", "Normal"),
+  initial_weight_scale = 1,
+  initial_weights = NULL,
+  initial_biases = NULL,
+  loss = c("Automatic", "CrossEntropy", "Quadratic", "Huber", "Absolute", "Quantile"),
+  distribution = c("AUTO", "bernoulli", "multinomial", "gaussian", "poisson", "gamma",
+    "tweedie", "laplace", "quantile", "huber"),
+  quantile_alpha = 0.5,
+  tweedie_power = 1.5,
+  huber_alpha = 0.9,
+  score_interval = 5,
+  score_training_samples = 10000,
+  score_validation_samples = 0,
+  score_duty_cycle = 0.1,
+  classification_stop = 0,
+  regression_stop = 1e-06,
+  stopping_rounds = 5,
+  stopping_metric = c("AUTO", "deviance", "logloss", "MSE", "RMSE", "MAE", "RMSLE",
+    "AUC", "AUCPR", "lift_top_group", "misclassification", "mean_per_class_error",
+    "custom", "custom_increasing"),
+  stopping_tolerance = 0,
+  max_runtime_secs = 0,
+  score_validation_sampling = c("Uniform", "Stratified"),
+  diagnostics = TRUE,
+  fast_mode = TRUE,
+  force_load_balance = TRUE,
+  variable_importances = TRUE,
+  replicate_training_data = TRUE,
+  single_node_mode = FALSE,
+  shuffle_training_data = FALSE,
+  missing_values_handling = c("MeanImputation", "Skip"),
+  quiet_mode = FALSE,
+  autoencoder = FALSE,
+  sparse = FALSE,
+  col_major = FALSE,
+  average_activation = 0,
+  sparsity_beta = 0,
+  max_categorical_features = 2147483647,
+  reproducible = FALSE,
+  export_weights_and_biases = FALSE,
+  mini_batch_size = 1,
+  categorical_encoding = c("AUTO", "Enum", "OneHotInternal", "OneHotExplicit",
+    "Binary", "Eigen", "LabelEncoder", "SortByResponse", "EnumLimited"),
+  elastic_averaging = FALSE,
+  elastic_averaging_moving_rate = 0.9,
+  elastic_averaging_regularization = 0.001,
+  export_checkpoints_dir = NULL,
+  auc_type = c("AUTO", "NONE", "MACRO_OVR", "WEIGHTED_OVR", "MACRO_OVO",
+    "WEIGHTED_OVO"),
+  verbose = FALSE
+)
+</pre>
+
+
+<h3 class="anchored">Arguments</h3>
+
+<table summary="R argblock">
+<tbody><tr valign="top"><td><code>x</code></td>
+<td>
+<p>(Optional) A vector containing the names or indices of the predictor variables to use in building the model.
+If x is missing, then all columns except y are used.</p>
+</td></tr>
+<tr valign="top"><td><code>y</code></td>
+<td>
+<p>The name or column index of the response variable in the data. 
+The response must be either a numeric or a categorical/factor variable. 
+If the response is numeric, then a regression model will be trained, otherwise it will train a classification model.</p>
+</td></tr>
+<tr valign="top"><td><code>training_frame</code></td>
+<td>
+<p>Id of the training data frame.</p>
+</td></tr>
+<tr valign="top"><td><code>model_id</code></td>
+<td>
+<p>Destination id for this model; auto-generated if not specified.</p>
+</td></tr>
+<tr valign="top"><td><code>validation_frame</code></td>
+<td>
+<p>Id of the validation data frame.</p>
+</td></tr>
+<tr valign="top"><td><code>nfolds</code></td>
+<td>
+<p>Number of folds for K-fold cross-validation (0 to disable or &gt;= 2). Defaults to 0.</p>
+</td></tr>
+<tr valign="top"><td><code>keep_cross_validation_models</code></td>
+<td>
+<p><code>Logical</code>. Whether to keep the cross-validation models. Defaults to TRUE.</p>
+</td></tr>
+<tr valign="top"><td><code>keep_cross_validation_predictions</code></td>
+<td>
+<p><code>Logical</code>. Whether to keep the predictions of the cross-validation models. Defaults to FALSE.</p>
+</td></tr>
+<tr valign="top"><td><code>keep_cross_validation_fold_assignment</code></td>
+<td>
+<p><code>Logical</code>. Whether to keep the cross-validation fold assignment. Defaults to FALSE.</p>
+</td></tr>
+<tr valign="top"><td><code>fold_assignment</code></td>
+<td>
+<p>Cross-validation fold assignment scheme, if fold_column is not specified. The 'Stratified' option will
+stratify the folds based on the response variable, for classification problems. Must be one of: "AUTO",
+"Random", "Modulo", "Stratified". Defaults to AUTO.</p>
+</td></tr>
+<tr valign="top"><td><code>fold_column</code></td>
+<td>
+<p>Column with cross-validation fold index assignment per observation.</p>
+</td></tr>
+<tr valign="top"><td><code>ignore_const_cols</code></td>
+<td>
+<p><code>Logical</code>. Ignore constant columns. Defaults to TRUE.</p>
+</td></tr>
+<tr valign="top"><td><code>score_each_iteration</code></td>
+<td>
+<p><code>Logical</code>. Whether to score during each iteration of model training. Defaults to FALSE.</p>
+</td></tr>
+<tr valign="top"><td><code>weights_column</code></td>
+<td>
+<p>Column with observation weights. Giving some observation a weight of zero is equivalent to excluding it from
+the dataset; giving an observation a relative weight of 2 is equivalent to repeating that row twice. Negative
+weights are not allowed. Note: Weights are per-row observation weights and do not increase the size of the
+data frame. This is typically the number of times a row is repeated, but non-integer values are supported as
+well. During training, rows with higher weights matter more, due to the larger loss function pre-factor. If
+you set weight = 0 for a row, the returned prediction frame at that row is zero and this is incorrect. To get
+an accurate prediction, remove all rows with weight == 0.</p>
+</td></tr>
+<tr valign="top"><td><code>offset_column</code></td>
+<td>
+<p>Offset column. This will be added to the combination of columns before applying the link function.</p>
+</td></tr>
+<tr valign="top"><td><code>balance_classes</code></td>
+<td>
+<p><code>Logical</code>. Balance training data class counts via over/under-sampling (for imbalanced data). Defaults to
+FALSE.</p>
+</td></tr>
+<tr valign="top"><td><code>class_sampling_factors</code></td>
+<td>
+<p>Desired over/under-sampling ratios per class (in lexicographic order). If not specified, sampling factors will
+be automatically computed to obtain class balance during training. Requires balance_classes.</p>
+</td></tr>
+<tr valign="top"><td><code>max_after_balance_size</code></td>
+<td>
+<p>Maximum relative size of the training data after balancing class counts (can be less than 1.0). Requires
+balance_classes. Defaults to 5.0.</p>
+</td></tr>
+<tr valign="top"><td><code>checkpoint</code></td>
+<td>
+<p>Model checkpoint to resume training with.</p>
+</td></tr>
+<tr valign="top"><td><code>pretrained_autoencoder</code></td>
+<td>
+<p>Pretrained autoencoder model to initialize this model with.</p>
+</td></tr>
+<tr valign="top"><td><code>overwrite_with_best_model</code></td>
+<td>
+<p><code>Logical</code>. If enabled, override the final model with the best model found during training. Defaults to
+TRUE.</p>
+</td></tr>
+<tr valign="top"><td><code>use_all_factor_levels</code></td>
+<td>
+<p><code>Logical</code>. Use all factor levels of categorical variables. Otherwise, the first factor level is omitted
+(without loss of accuracy). Useful for variable importances and auto-enabled for autoencoder. Defaults to
+TRUE.</p>
+</td></tr>
+<tr valign="top"><td><code>standardize</code></td>
+<td>
+<p><code>Logical</code>. If enabled, automatically standardize the data. If disabled, the user must provide properly
+scaled input data. Defaults to TRUE.</p>
+</td></tr>
+<tr valign="top"><td><code>activation</code></td>
+<td>
+<p>Activation function. Must be one of: "Tanh", "TanhWithDropout", "Rectifier", "RectifierWithDropout", "Maxout",
+"MaxoutWithDropout". Defaults to Rectifier.</p>
+</td></tr>
+<tr valign="top"><td><code>hidden</code></td>
+<td>
+<p>Hidden layer sizes (e.g. [100, 100]). Defaults to c(200, 200).</p>
+</td></tr>
+<tr valign="top"><td><code>epochs</code></td>
+<td>
+<p>How many times the dataset should be iterated (streamed), can be fractional. Defaults to 10.</p>
+</td></tr>
+<tr valign="top"><td><code>train_samples_per_iteration</code></td>
+<td>
+<p>Number of training samples (globally) per MapReduce iteration. Special values are 0: one epoch, -1: all
+available data (e.g., replicated training data), -2: automatic. Defaults to -2.</p>
+</td></tr>
+<tr valign="top"><td><code>target_ratio_comm_to_comp</code></td>
+<td>
+<p>Target ratio of communication overhead to computation. Only for multi-node operation and
+train_samples_per_iteration = -2 (auto-tuning). Defaults to 0.05.</p>
+</td></tr>
+<tr valign="top"><td><code>seed</code></td>
+<td>
+<p>Seed for random numbers (affects certain parts of the algo that are stochastic and those might or might not be enabled by default).
+Note: only reproducible when running single threaded.
+Defaults to -1 (time-based random number).</p>
+</td></tr>
+<tr valign="top"><td><code>adaptive_rate</code></td>
+<td>
+<p><code>Logical</code>. Adaptive learning rate. Defaults to TRUE.</p>
+</td></tr>
+<tr valign="top"><td><code>rho</code></td>
+<td>
+<p>Adaptive learning rate time decay factor (similarity to prior updates). Defaults to 0.99.</p>
+</td></tr>
+<tr valign="top"><td><code>epsilon</code></td>
+<td>
+<p>Adaptive learning rate smoothing factor (to avoid divisions by zero and allow progress). Defaults to 1e-08.</p>
+</td></tr>
+<tr valign="top"><td><code>rate</code></td>
+<td>
+<p>Learning rate (higher =&gt; less stable, lower =&gt; slower convergence). Defaults to 0.005.</p>
+</td></tr>
+<tr valign="top"><td><code>rate_annealing</code></td>
+<td>
+<p>Learning rate annealing: rate / (1 + rate_annealing * samples). Defaults to 1e-06.</p>
+</td></tr>
+<tr valign="top"><td><code>rate_decay</code></td>
+<td>
+<p>Learning rate decay factor between layers (N-th layer: rate * rate_decay ^ (n - 1). Defaults to 1.</p>
+</td></tr>
+<tr valign="top"><td><code>momentum_start</code></td>
+<td>
+<p>Initial momentum at the beginning of training (try 0.5). Defaults to 0.</p>
+</td></tr>
+<tr valign="top"><td><code>momentum_ramp</code></td>
+<td>
+<p>Number of training samples for which momentum increases. Defaults to 1000000.</p>
+</td></tr>
+<tr valign="top"><td><code>momentum_stable</code></td>
+<td>
+<p>Final momentum after the ramp is over (try 0.99). Defaults to 0.</p>
+</td></tr>
+<tr valign="top"><td><code>nesterov_accelerated_gradient</code></td>
+<td>
+<p><code>Logical</code>. Use Nesterov accelerated gradient (recommended). Defaults to TRUE.</p>
+</td></tr>
+<tr valign="top"><td><code>input_dropout_ratio</code></td>
+<td>
+<p>Input layer dropout ratio (can improve generalization, try 0.1 or 0.2). Defaults to 0.</p>
+</td></tr>
+<tr valign="top"><td><code>hidden_dropout_ratios</code></td>
+<td>
+<p>Hidden layer dropout ratios (can improve generalization), specify one value per hidden layer, defaults to 0.5.</p>
+</td></tr>
+<tr valign="top"><td><code>l1</code></td>
+<td>
+<p>L1 regularization (can add stability and improve generalization, causes many weights to become 0). Defaults to
+0.</p>
+</td></tr>
+<tr valign="top"><td><code>l2</code></td>
+<td>
+<p>L2 regularization (can add stability and improve generalization, causes many weights to be small. Defaults to
+0.</p>
+</td></tr>
+<tr valign="top"><td><code>max_w2</code></td>
+<td>
+<p>Constraint for squared sum of incoming weights per unit (e.g. for Rectifier). Defaults to 3.4028235e+38.</p>
+</td></tr>
+<tr valign="top"><td><code>initial_weight_distribution</code></td>
+<td>
+<p>Initial weight distribution. Must be one of: "UniformAdaptive", "Uniform", "Normal". Defaults to
+UniformAdaptive.</p>
+</td></tr>
+<tr valign="top"><td><code>initial_weight_scale</code></td>
+<td>
+<p>Uniform: -value...value, Normal: stddev. Defaults to 1.</p>
+</td></tr>
+<tr valign="top"><td><code>initial_weights</code></td>
+<td>
+<p>A list of H2OFrame ids to initialize the weight matrices of this model with.</p>
+</td></tr>
+<tr valign="top"><td><code>initial_biases</code></td>
+<td>
+<p>A list of H2OFrame ids to initialize the bias vectors of this model with.</p>
+</td></tr>
+<tr valign="top"><td><code>loss</code></td>
+<td>
+<p>Loss function. Must be one of: "Automatic", "CrossEntropy", "Quadratic", "Huber", "Absolute", "Quantile".
+Defaults to Automatic.</p>
+</td></tr>
+<tr valign="top"><td><code>distribution</code></td>
+<td>
+<p>Distribution function Must be one of: "AUTO", "bernoulli", "multinomial", "gaussian", "poisson", "gamma",
+"tweedie", "laplace", "quantile", "huber". Defaults to AUTO.</p>
+</td></tr>
+<tr valign="top"><td><code>quantile_alpha</code></td>
+<td>
+<p>Desired quantile for Quantile regression, must be between 0 and 1. Defaults to 0.5.</p>
+</td></tr>
+<tr valign="top"><td><code>tweedie_power</code></td>
+<td>
+<p>Tweedie power for Tweedie regression, must be between 1 and 2. Defaults to 1.5.</p>
+</td></tr>
+<tr valign="top"><td><code>huber_alpha</code></td>
+<td>
+<p>Desired quantile for Huber/M-regression (threshold between quadratic and linear loss, must be between 0 and
+1). Defaults to 0.9.</p>
+</td></tr>
+<tr valign="top"><td><code>score_interval</code></td>
+<td>
+<p>Shortest time interval (in seconds) between model scoring. Defaults to 5.</p>
+</td></tr>
+<tr valign="top"><td><code>score_training_samples</code></td>
+<td>
+<p>Number of training set samples for scoring (0 for all). Defaults to 10000.</p>
+</td></tr>
+<tr valign="top"><td><code>score_validation_samples</code></td>
+<td>
+<p>Number of validation set samples for scoring (0 for all). Defaults to 0.</p>
+</td></tr>
+<tr valign="top"><td><code>score_duty_cycle</code></td>
+<td>
+<p>Maximum duty cycle fraction for scoring (lower: more training, higher: more scoring). Defaults to 0.1.</p>
+</td></tr>
+<tr valign="top"><td><code>classification_stop</code></td>
+<td>
+<p>Stopping criterion for classification error fraction on training data (-1 to disable). Defaults to 0.</p>
+</td></tr>
+<tr valign="top"><td><code>regression_stop</code></td>
+<td>
+<p>Stopping criterion for regression error (MSE) on training data (-1 to disable). Defaults to 1e-06.</p>
+</td></tr>
+<tr valign="top"><td><code>stopping_rounds</code></td>
+<td>
+<p>Early stopping based on convergence of stopping_metric. Stop if simple moving average of length k of the
+stopping_metric does not improve for k:=stopping_rounds scoring events (0 to disable) Defaults to 5.</p>
+</td></tr>
+<tr valign="top"><td><code>stopping_metric</code></td>
+<td>
+<p>Metric to use for early stopping (AUTO: logloss for classification, deviance for regression and
+anonomaly_score for Isolation Forest). Note that custom and custom_increasing can only be used in GBM and DRF
+with the Python client. Must be one of: "AUTO", "deviance", "logloss", "MSE", "RMSE", "MAE", "RMSLE", "AUC",
+"AUCPR", "lift_top_group", "misclassification", "mean_per_class_error", "custom", "custom_increasing".
+Defaults to AUTO.</p>
+</td></tr>
+<tr valign="top"><td><code>stopping_tolerance</code></td>
+<td>
+<p>Relative tolerance for metric-based stopping criterion (stop if relative improvement is not at least this
+much) Defaults to 0.</p>
+</td></tr>
+<tr valign="top"><td><code>max_runtime_secs</code></td>
+<td>
+<p>Maximum allowed runtime in seconds for model training. Use 0 to disable. Defaults to 0.</p>
+</td></tr>
+<tr valign="top"><td><code>score_validation_sampling</code></td>
+<td>
+<p>Method used to sample validation dataset for scoring. Must be one of: "Uniform", "Stratified". Defaults to
+Uniform.</p>
+</td></tr>
+<tr valign="top"><td><code>diagnostics</code></td>
+<td>
+<p><code>Logical</code>. Enable diagnostics for hidden layers. Defaults to TRUE.</p>
+</td></tr>
+<tr valign="top"><td><code>fast_mode</code></td>
+<td>
+<p><code>Logical</code>. Enable fast mode (minor approximation in back-propagation). Defaults to TRUE.</p>
+</td></tr>
+<tr valign="top"><td><code>force_load_balance</code></td>
+<td>
+<p><code>Logical</code>. Force extra load balancing to increase training speed for small datasets (to keep all cores
+busy). Defaults to TRUE.</p>
+</td></tr>
+<tr valign="top"><td><code>variable_importances</code></td>
+<td>
+<p><code>Logical</code>. Compute variable importances for input features (Gedeon method) - can be slow for large
+networks. Defaults to TRUE.</p>
+</td></tr>
+<tr valign="top"><td><code>replicate_training_data</code></td>
+<td>
+<p><code>Logical</code>. Replicate the entire training dataset onto every node for faster training on small datasets.
+Defaults to TRUE.</p>
+</td></tr>
+<tr valign="top"><td><code>single_node_mode</code></td>
+<td>
+<p><code>Logical</code>. Run on a single node for fine-tuning of model parameters. Defaults to FALSE.</p>
+</td></tr>
+<tr valign="top"><td><code>shuffle_training_data</code></td>
+<td>
+<p><code>Logical</code>. Enable shuffling of training data (recommended if training data is replicated and
+train_samples_per_iteration is close to #nodes x #rows, of if using balance_classes). Defaults to FALSE.</p>
+</td></tr>
+<tr valign="top"><td><code>missing_values_handling</code></td>
+<td>
+<p>Handling of missing values. Either MeanImputation or Skip. Must be one of: "MeanImputation", "Skip". Defaults
+to MeanImputation.</p>
+</td></tr>
+<tr valign="top"><td><code>quiet_mode</code></td>
+<td>
+<p><code>Logical</code>. Enable quiet mode for less output to standard output. Defaults to FALSE.</p>
+</td></tr>
+<tr valign="top"><td><code>autoencoder</code></td>
+<td>
+<p><code>Logical</code>. Auto-Encoder. Defaults to FALSE.</p>
+</td></tr>
+<tr valign="top"><td><code>sparse</code></td>
+<td>
+<p><code>Logical</code>. Sparse data handling (more efficient for data with lots of 0 values). Defaults to FALSE.</p>
+</td></tr>
+<tr valign="top"><td><code>col_major</code></td>
+<td>
+<p><code>Logical</code>. #DEPRECATED Use a column major weight matrix for input layer. Can speed up forward
+propagation, but might slow down backpropagation. Defaults to FALSE.</p>
+</td></tr>
+<tr valign="top"><td><code>average_activation</code></td>
+<td>
+<p>Average activation for sparse auto-encoder. #Experimental Defaults to 0.</p>
+</td></tr>
+<tr valign="top"><td><code>sparsity_beta</code></td>
+<td>
+<p>Sparsity regularization. #Experimental Defaults to 0.</p>
+</td></tr>
+<tr valign="top"><td><code>max_categorical_features</code></td>
+<td>
+<p>Max. number of categorical features, enforced via hashing. #Experimental Defaults to 2147483647.</p>
+</td></tr>
+<tr valign="top"><td><code>reproducible</code></td>
+<td>
+<p><code>Logical</code>. Force reproducibility on small data (will be slow - only uses 1 thread). Defaults to FALSE.</p>
+</td></tr>
+<tr valign="top"><td><code>export_weights_and_biases</code></td>
+<td>
+<p><code>Logical</code>. Whether to export Neural Network weights and biases to H2O Frames. Defaults to FALSE.</p>
+</td></tr>
+<tr valign="top"><td><code>mini_batch_size</code></td>
+<td>
+<p>Mini-batch size (smaller leads to better fit, larger can speed up and generalize better). Defaults to 1.</p>
+</td></tr>
+<tr valign="top"><td><code>categorical_encoding</code></td>
+<td>
+<p>Encoding scheme for categorical features Must be one of: "AUTO", "Enum", "OneHotInternal", "OneHotExplicit",
+"Binary", "Eigen", "LabelEncoder", "SortByResponse", "EnumLimited". Defaults to AUTO.</p>
+</td></tr>
+<tr valign="top"><td><code>elastic_averaging</code></td>
+<td>
+<p><code>Logical</code>. Elastic averaging between compute nodes can improve distributed model convergence.
+#Experimental Defaults to FALSE.</p>
+</td></tr>
+<tr valign="top"><td><code>elastic_averaging_moving_rate</code></td>
+<td>
+<p>Elastic averaging moving rate (only if elastic averaging is enabled). Defaults to 0.9.</p>
+</td></tr>
+<tr valign="top"><td><code>elastic_averaging_regularization</code></td>
+<td>
+<p>Elastic averaging regularization strength (only if elastic averaging is enabled). Defaults to 0.001.</p>
+</td></tr>
+<tr valign="top"><td><code>export_checkpoints_dir</code></td>
+<td>
+<p>Automatically export generated models to this directory.</p>
+</td></tr>
+<tr valign="top"><td><code>auc_type</code></td>
+<td>
+<p>Set default multinomial AUC type. Must be one of: "AUTO", "NONE", "MACRO_OVR", "WEIGHTED_OVR", "MACRO_OVO",
+"WEIGHTED_OVO". Defaults to AUTO.</p>
+</td></tr>
+<tr valign="top"><td><code>verbose</code></td>
+<td>
+<p><code>Logical</code>. Print scoring history to the console (Metrics per epoch). Defaults to FALSE.</p>
+</td></tr>
+</tbody></table>
+
+
+<h3 class="anchored">See Also</h3>
+
+<p><code>predict.H2OModel</code> for prediction
+</p>
+
+
+<h3 class="anchored">Examples</h3>
+
+<pre>## Not run: 
+library(h2o)
+h2o.init()
+iris_hf &lt;- as.h2o(iris)
+iris_dl &lt;- h2o.deeplearning(x = 1:4, y = 5, training_frame = iris_hf, seed=123456)
+
+# now make a prediction
+predictions &lt;- h2o.predict(iris_dl, iris_hf)
+
+## End(Not run)
+</pre>
+
+<hr><div style="text-align: center;">[Package <em>h2o</em> version 3.38.0.1 ]</div>
+</div>
+</div>
+<p>Здійснимо прогноз на тестовій вибірці (<code>h2o.predict()</code>), а також класифікуємо значення за <code>cutOff = 0.5</code>:</p>
+<div class="cell" data-execution_count="36">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>h2o_predict_prob <span class="ot">&lt;-</span> <span class="fu">h2o.predict</span>(h2o_model, <span class="at">newdata =</span> <span class="fu">as.h2o</span>(test_data[<span class="sc">-</span>(<span class="fu">ncol</span>(test_data))]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  |======================================================================| 100%
+  |======================================================================| 100%</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="37">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>h2o_predict_class <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(h2o_predict_prob <span class="sc">&gt;</span> <span class="fl">0.5</span>, <span class="dv">1</span> , <span class="dv">0</span>)</span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>h2o_predict_class <span class="ot">&lt;-</span> <span class="fu">as.vector</span>(h2o_predict_class)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Побудуємо матрицю Confusion Matrix:</p>
+<div class="cell" data-execution_count="38">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)</span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>caret<span class="sc">::</span><span class="fu">confusionMatrix</span>(<span class="fu">factor</span>(test_data<span class="sc">$</span>Exited), <span class="fu">factor</span>(h2o_predict_class), <span class="at">positive =</span> <span class="st">"1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: lattice
+</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre><code>Confusion Matrix and Statistics
+
+          Reference
+Prediction    0    1
+         0 2282  107
+         1  329  282
+                                          
+               Accuracy : 0.8547          
+                 95% CI : (0.8415, 0.8671)
+    No Information Rate : 0.8703          
+    P-Value [Acc &gt; NIR] : 0.9945          
+                                          
+                  Kappa : 0.4819          
+                                          
+ Mcnemar's Test P-Value : &lt;2e-16          
+                                          
+            Sensitivity : 0.7249          
+            Specificity : 0.8740          
+         Pos Pred Value : 0.4615          
+         Neg Pred Value : 0.9552          
+             Prevalence : 0.1297          
+         Detection Rate : 0.0940          
+   Detection Prevalence : 0.2037          
+      Balanced Accuracy : 0.7995          
+                                          
+       'Positive' Class : 1               
+                                          </code></pre>
+</div>
+</div>
+<p>Побудуємо <code>ROC</code>-криву:</p>
+<div class="cell" data-execution_count="39">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(InformationValue)</span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>InformationValue<span class="sc">::</span><span class="fu">plotROC</span>(test_data<span class="sc">$</span>Exited, <span class="fu">as.vector</span>(h2o_predict_prob))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'InformationValue'
+
+
+The following objects are masked from 'package:caret':
+
+    confusionMatrix, precision, sensitivity, specificity
+
+</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="037-supervised-learning-neural-network-classification_files/figure-html/cell-40-output-2.png" class="img-fluid"></p>
+</div>
+</div>
+<p>Побудуємо модель з більшою кількістю прихованих шарів та нейронів:</p>
+<div class="cell" data-execution_count="40">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>h2o_model2 <span class="ot">&lt;-</span> <span class="fu">h2o.deeplearning</span>(<span class="at">y =</span> <span class="st">'Exited'</span>, </span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>                              <span class="at">training_frame =</span> <span class="fu">as.h2o</span>(train_data),</span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>                              <span class="at">activation =</span> <span class="st">"Rectifier"</span>,</span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>                              <span class="at">hidden =</span> <span class="fu">c</span>(<span class="dv">10</span>,<span class="dv">10</span>),</span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a>                              <span class="at">epochs =</span> <span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  |======================================================================| 100%
+  |======================================================================| 100%</code></pre>
+</div>
+</div>
+<p>Здійснимо прогноз:</p>
+<div class="cell" data-execution_count="41">
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>h2o_predict_prob2 <span class="ot">&lt;-</span> <span class="fu">h2o.predict</span>(h2o_model2, <span class="at">newdata =</span> <span class="fu">as.h2o</span>(test_data[<span class="sc">-</span>(<span class="fu">ncol</span>(test_data))]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  |======================================================================| 100%
+  |======================================================================| 100%</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="42">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>h2o_predict_class2 <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(h2o_predict_prob2 <span class="sc">&gt;</span> <span class="fl">0.5</span>, <span class="dv">1</span> , <span class="dv">0</span>)</span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>h2o_predict_class2 <span class="ot">&lt;-</span> <span class="fu">as.vector</span>(h2o_predict_class2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Confiusion Matrix:</p>
+<div class="cell" data-execution_count="43">
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>caret<span class="sc">::</span><span class="fu">confusionMatrix</span>(<span class="fu">factor</span>(test_data<span class="sc">$</span>Exited), <span class="fu">factor</span>(h2o_predict_class2), <span class="at">positive =</span> <span class="st">"1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>Confusion Matrix and Statistics
+
+          Reference
+Prediction    0    1
+         0 2252  137
+         1  310  301
+                                          
+               Accuracy : 0.851           
+                 95% CI : (0.8377, 0.8636)
+    No Information Rate : 0.854           
+    P-Value [Acc &gt; NIR] : 0.69            
+                                          
+                  Kappa : 0.4866          
+                                          
+ Mcnemar's Test P-Value : 4.108e-16       
+                                          
+            Sensitivity : 0.6872          
+            Specificity : 0.8790          
+         Pos Pred Value : 0.4926          
+         Neg Pred Value : 0.9427          
+             Prevalence : 0.1460          
+         Detection Rate : 0.1003          
+   Detection Prevalence : 0.2037          
+      Balanced Accuracy : 0.7831          
+                                          
+       'Positive' Class : 1               
+                                          </code></pre>
+</div>
+</div>
+<p><code>ROC</code>-крива:</p>
+<div class="cell" data-execution_count="44">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>InformationValue<span class="sc">::</span><span class="fu">plotROC</span>(test_data<span class="sc">$</span>Exited, <span class="fu">as.vector</span>(h2o_predict_prob2))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="037-supervised-learning-neural-network-classification_files/figure-html/cell-45-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<p>Зупинимо двигун <code>h2o</code>:</p>
+<div class="cell" data-execution_count="45">
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">h2o.shutdown</span>(<span class="at">prompt =</span> F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<hr>
 
 
 </section>
@@ -1040,7 +1786,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./036-supervised-learning-desicion-trees-classification.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Дерева рішень. Класифікація. Депозити</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Дерева рішень. Класифікація. Депозити</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
