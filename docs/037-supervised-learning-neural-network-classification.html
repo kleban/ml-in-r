@@ -712,7 +712,7 @@ Total Observations in Table:  10000
 </div>
 <p>Декларативний приклад коду:</p>
 <div class="cell" data-execution_count="22">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(dplyr))</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>customers_tmp <span class="ot">&lt;-</span> customers <span class="sc">|&gt;</span></span>
 <span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">left_join</span>(products <span class="sc">|&gt;</span> </span>
@@ -723,22 +723,6 @@ Total Observations in Table:  10000
 <span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(customers_tmp, <span class="dv">4</span>)</span>
 <span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a><span class="co"># P.S. Це набагато швидше</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'dplyr'
-
-
-The following objects are masked from 'package:stats':
-
-    filter, lag
-
-
-The following objects are masked from 'package:base':
-
-    intersect, setdiff, setequal, union
-
-</code></pre>
-</div>
 <div class="cell-output cell-output-display">
 
 <table class="dataframe table table-sm table-striped">
@@ -761,13 +745,13 @@ The following objects are masked from 'package:base':
 <section id="показник-hascreditcard" class="level3" data-number="9.3.2">
 <h3 data-number="9.3.2" class="anchored" data-anchor-id="показник-hascreditcard"><span class="header-section-number">9.3.2</span> Показник <code>HasCreditCard</code></h3>
 <div class="cell" data-execution_count="23">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>customers <span class="ot">&lt;-</span> customers <span class="sc">|&gt;</span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">left_join</span>(cards <span class="sc">|&gt;</span> </span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>              <span class="fu">group_by</span>(CustomerId) <span class="sc">|&gt;</span> </span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>              <span class="fu">summarise</span>(<span class="at">HasCreditCard =</span> <span class="fu">ifelse</span>(<span class="fu">sum</span>(IsCreditCard) <span class="sc">==</span> <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>              <span class="fu">select</span>(CustomerId, HasCreditCard) <span class="sc">|&gt;</span> <span class="fu">distinct</span>(), <span class="at">by =</span> <span class="st">"CustomerId"</span>)</span>
-<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(customers, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>customers <span class="ot">&lt;-</span> customers <span class="sc">|&gt;</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">left_join</span>(cards <span class="sc">|&gt;</span> </span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>              <span class="fu">group_by</span>(CustomerId) <span class="sc">|&gt;</span> </span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>              <span class="fu">summarise</span>(<span class="at">HasCreditCard =</span> <span class="fu">ifelse</span>(<span class="fu">sum</span>(IsCreditCard) <span class="sc">==</span> <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>              <span class="fu">select</span>(CustomerId, HasCreditCard) <span class="sc">|&gt;</span> <span class="fu">distinct</span>(), <span class="at">by =</span> <span class="st">"CustomerId"</span>)</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(customers, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
 <table class="dataframe table table-sm table-striped">
@@ -790,13 +774,13 @@ The following objects are masked from 'package:base':
 <section id="показник-balance" class="level3" data-number="9.3.3">
 <h3 data-number="9.3.3" class="anchored" data-anchor-id="показник-balance"><span class="header-section-number">9.3.3</span> Показник <code>Balance</code></h3>
 <div class="cell" data-execution_count="24">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>customers <span class="ot">&lt;-</span> customers <span class="sc">|&gt;</span></span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">left_join</span>(cards <span class="sc">|&gt;</span> </span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>              <span class="fu">group_by</span>(CustomerId) <span class="sc">|&gt;</span> </span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>              <span class="fu">mutate</span>(<span class="at">Balance =</span> <span class="fu">round</span>(<span class="fu">sum</span>(Balance))) <span class="sc">|&gt;</span></span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>              <span class="fu">select</span>(CustomerId, Balance) <span class="sc">|&gt;</span> <span class="fu">distinct</span>(), <span class="at">by =</span> <span class="st">"CustomerId"</span>)</span>
-<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(customers, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>customers <span class="ot">&lt;-</span> customers <span class="sc">|&gt;</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">left_join</span>(cards <span class="sc">|&gt;</span> </span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>              <span class="fu">group_by</span>(CustomerId) <span class="sc">|&gt;</span> </span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>              <span class="fu">mutate</span>(<span class="at">Balance =</span> <span class="fu">round</span>(<span class="fu">sum</span>(Balance))) <span class="sc">|&gt;</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>              <span class="fu">select</span>(CustomerId, Balance) <span class="sc">|&gt;</span> <span class="fu">distinct</span>(), <span class="at">by =</span> <span class="st">"CustomerId"</span>)</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(customers, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
 <table class="dataframe table table-sm table-striped">
@@ -820,17 +804,17 @@ The following objects are masked from 'package:base':
 <h3 data-number="9.3.4" class="anchored" data-anchor-id="нормалізація-даних"><span class="header-section-number">9.3.4</span> Нормалізація даних</h3>
 <p>Видалимо зайві покзники, що заважатимуть будувати моделі:</p>
 <div class="cell" data-execution_count="25">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>customers <span class="ot">&lt;-</span> customers <span class="sc">|&gt;</span></span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(RowNumber, CustomerId, Surname))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>customers <span class="ot">&lt;-</span> customers <span class="sc">|&gt;</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(RowNumber, CustomerId, Surname))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Варто звернути увагу, що інженереія нових фіч завершена не до кінця і у нас ще присутні параметри, що мають нечислові значення <code>Geography</code> + <code>Gender</code>. Спробуйте замінити їх, наприклад, на <code>dummy</code>-змінні або використати <code>бінінг</code>.</p>
 <p>Для скорочення часу на вивчення матеріали ми скористаємося звичайним приведенням даних до числового типу:</p>
 <div class="cell" data-execution_count="26">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>customers<span class="sc">$</span>Geography <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">as.factor</span>(customers<span class="sc">$</span>Geography))</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>customers<span class="sc">$</span>Gender <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">as.factor</span>(customers<span class="sc">$</span>Gender))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>customers<span class="sc">$</span>Geography <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">as.factor</span>(customers<span class="sc">$</span>Geography))</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>customers<span class="sc">$</span>Gender <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">as.factor</span>(customers<span class="sc">$</span>Gender))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-execution_count="27">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(customers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(customers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>'data.frame':   10000 obs. of  11 variables:
  $ CreditScore    : int  619 608 502 699 850 645 822 376 501 684 ...
@@ -848,9 +832,9 @@ The following objects are masked from 'package:base':
 </div>
 <p>Використовуючи функцію <code>scale()</code> нормалізуємо дані:</p>
 <div class="cell" data-execution_count="28">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>scaled <span class="ot">&lt;-</span> <span class="fu">scale</span>(customers[<span class="sc">-</span><span class="dv">8</span>], <span class="at">center =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>scaled <span class="ot">&lt;-</span> <span class="fu">cbind</span>(scaled, customers[<span class="dv">8</span>])</span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(scaled,)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>scaled <span class="ot">&lt;-</span> <span class="fu">scale</span>(customers[<span class="sc">-</span><span class="dv">8</span>], <span class="at">center =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>scaled <span class="ot">&lt;-</span> <span class="fu">cbind</span>(scaled, customers[<span class="dv">8</span>])</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(scaled,)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
 <table class="dataframe table table-sm table-striped">
@@ -877,11 +861,11 @@ The following objects are masked from 'package:base':
 <h2 data-number="9.4" class="anchored" data-anchor-id="формування-вибірок"><span class="header-section-number">9.4</span> Формування вибірок</h2>
 <p>Розділимо вибірку на тестову та тренувальну за допомогою пакету <code>caTools</code> та функції <code>sample.split()</code>:</p>
 <div class="cell" data-execution_count="29">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caTools)</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2022</span>)</span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>split <span class="ot">&lt;-</span> <span class="fu">sample.split</span>(scaled<span class="sc">$</span>Exited, <span class="at">SplitRatio =</span> <span class="fl">0.7</span>)</span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>train_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(scaled, split <span class="sc">==</span> <span class="cn">TRUE</span>)</span>
-<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>test_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(scaled, split <span class="sc">==</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caTools)</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2022</span>)</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>split <span class="ot">&lt;-</span> <span class="fu">sample.split</span>(scaled<span class="sc">$</span>Exited, <span class="at">SplitRatio =</span> <span class="fl">0.7</span>)</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>train_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(scaled, split <span class="sc">==</span> <span class="cn">TRUE</span>)</span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>test_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(scaled, split <span class="sc">==</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 </section>
@@ -889,43 +873,10 @@ The following objects are masked from 'package:base':
 <h2 data-number="9.5" class="anchored" data-anchor-id="побудова-deep-learning-моделі"><span class="header-section-number">9.5</span> Побудова Deep Learning моделі</h2>
 <p>Викосритаємо можливості пакету <code>h2o</code> для побудови моделі на основі <code>deep learning</code>. Підключимо пакет.</p>
 <div class="cell" data-execution_count="30">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("h2o")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("h2o")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-execution_count="31">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(h2o)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-----------------------------------------------------------------------
-
-Your next step is to start H2O:
-    &gt; h2o.init()
-
-For H2O package documentation, ask for help:
-    &gt; ??h2o
-
-After starting H2O, you can use the Web UI at http://localhost:54321
-For more information visit https://docs.h2o.ai
-
-----------------------------------------------------------------------
-
-
-
-Attaching package: 'h2o'
-
-
-The following objects are masked from 'package:stats':
-
-    cor, sd, var
-
-
-The following objects are masked from 'package:base':
-
-    %*%, %in%, &amp;&amp;, ||, apply, as.factor, as.numeric, colnames,
-    colnames&lt;-, ifelse, is.character, is.factor, is.numeric, log,
-    log10, log1p, log2, round, signif, trunc
-
-</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(h2o))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout-warning callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -942,32 +893,32 @@ Warning
 </div>
 <p>Запустимо двигун <code>h2o</code>:</p>
 <div class="cell" data-execution_count="32">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Увага, це специфічні налаштуваняя для ПК на якому налагоджувався проєкт</span></span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.setenv</span>(<span class="at">JAVA_HOME =</span> <span class="st">"C:/Program Files/Java/jdk-19/"</span>)</span>
-<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">Sys.getenv</span>(<span class="st">"JAVA_HOME"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Увага, це специфічні налаштуваняя для ПК на якому налагоджувався проєкт</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.setenv</span>(<span class="at">JAVA_HOME =</span> <span class="st">"C:/Program Files/Java/jdk-19/"</span>)</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">Sys.getenv</span>(<span class="st">"JAVA_HOME"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "C:/Program Files/Java/jdk-19/"</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="33">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">h2o.init</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">h2o.init</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 H2O is not running yet, starting it now...
 
 Note:  In case of errors look at the following log files:
-    D:\Temp\RtmpOYzQ2d\file30182abb672c/h2o_yura_started_from_r.out
-    D:\Temp\RtmpOYzQ2d\file3018cb93ee9/h2o_yura_started_from_r.err
+    D:\Temp\RtmpWcfQIa\file86d022e97546/h2o_yura_started_from_r.out
+    D:\Temp\RtmpWcfQIa\file86d01affe0a/h2o_yura_started_from_r.err
 
 
-Starting H2O JVM and connecting:  Connection successful!
+Starting H2O JVM and connecting: . Connection successful!
 
 R is connected to the H2O cluster: 
-    H2O cluster uptime:         3 seconds 419 milliseconds 
+    H2O cluster uptime:         4 seconds 650 milliseconds 
     H2O cluster timezone:       Europe/Kiev 
     H2O data parsing timezone:  UTC 
     H2O cluster version:        3.38.0.1 
-    H2O cluster version age:    13 days  
+    H2O cluster version age:    14 days, 4 hours and 46 minutes  
     H2O cluster name:           H2O_started_from_R_yura_svm422 
     H2O cluster total nodes:    1 
     H2O cluster total memory:   3.95 GB 
@@ -984,11 +935,11 @@ R is connected to the H2O cluster:
 </div>
 <p>Побудуємо математичну модель:</p>
 <div class="cell" data-execution_count="34">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>h2o_model <span class="ot">&lt;-</span> <span class="fu">h2o.deeplearning</span>(<span class="at">y =</span> <span class="st">'Exited'</span>, </span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>                              <span class="at">training_frame =</span> <span class="fu">as.h2o</span>(train_data),</span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>                              <span class="at">activation =</span> <span class="st">"Rectifier"</span>,</span>
-<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>                              <span class="at">hidden =</span> <span class="fu">c</span>(<span class="dv">6</span>,<span class="dv">6</span>),</span>
-<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>                              <span class="at">epochs =</span> <span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>h2o_model <span class="ot">&lt;-</span> <span class="fu">h2o.deeplearning</span>(<span class="at">y =</span> <span class="st">'Exited'</span>, </span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>                              <span class="at">training_frame =</span> <span class="fu">as.h2o</span>(train_data),</span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>                              <span class="at">activation =</span> <span class="st">"Rectifier"</span>,</span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>                              <span class="at">hidden =</span> <span class="fu">c</span>(<span class="dv">6</span>,<span class="dv">6</span>),</span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>                              <span class="at">epochs =</span> <span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  |======================================================================| 100%
   |======================================================================| 100%</code></pre>
@@ -996,597 +947,49 @@ R is connected to the H2O cluster:
 </div>
 <p>Варто перегляднути набір параметрів, що може приймати функція <code>h2o.deeplearning()</code>, адже вона досить складна:</p>
 <div class="cell" data-execution_count="35">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(h2o.deeplearning)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-
-
-<table width="100%" summary="page for h2o.deeplearning {h2o}"><tbody><tr><td>h2o.deeplearning {h2o}</td><td style="text-align: right;">R Documentation</td></tr></tbody></table>
-
-<h2 class="anchored">Build a Deep Neural Network model using CPUs</h2>
-
-<h3 class="anchored">Description</h3>
-
-<p>Builds a feed-forward multilayer artificial neural network on an H2OFrame.
-</p>
-
-
-<h3 class="anchored">Usage</h3>
-
-<pre>h2o.deeplearning(
-  x,
-  y,
-  training_frame,
-  model_id = NULL,
-  validation_frame = NULL,
-  nfolds = 0,
-  keep_cross_validation_models = TRUE,
-  keep_cross_validation_predictions = FALSE,
-  keep_cross_validation_fold_assignment = FALSE,
-  fold_assignment = c("AUTO", "Random", "Modulo", "Stratified"),
-  fold_column = NULL,
-  ignore_const_cols = TRUE,
-  score_each_iteration = FALSE,
-  weights_column = NULL,
-  offset_column = NULL,
-  balance_classes = FALSE,
-  class_sampling_factors = NULL,
-  max_after_balance_size = 5,
-  checkpoint = NULL,
-  pretrained_autoencoder = NULL,
-  overwrite_with_best_model = TRUE,
-  use_all_factor_levels = TRUE,
-  standardize = TRUE,
-  activation = c("Tanh", "TanhWithDropout", "Rectifier", "RectifierWithDropout",
-    "Maxout", "MaxoutWithDropout"),
-  hidden = c(200, 200),
-  epochs = 10,
-  train_samples_per_iteration = -2,
-  target_ratio_comm_to_comp = 0.05,
-  seed = -1,
-  adaptive_rate = TRUE,
-  rho = 0.99,
-  epsilon = 1e-08,
-  rate = 0.005,
-  rate_annealing = 1e-06,
-  rate_decay = 1,
-  momentum_start = 0,
-  momentum_ramp = 1e+06,
-  momentum_stable = 0,
-  nesterov_accelerated_gradient = TRUE,
-  input_dropout_ratio = 0,
-  hidden_dropout_ratios = NULL,
-  l1 = 0,
-  l2 = 0,
-  max_w2 = 3.4028235e+38,
-  initial_weight_distribution = c("UniformAdaptive", "Uniform", "Normal"),
-  initial_weight_scale = 1,
-  initial_weights = NULL,
-  initial_biases = NULL,
-  loss = c("Automatic", "CrossEntropy", "Quadratic", "Huber", "Absolute", "Quantile"),
-  distribution = c("AUTO", "bernoulli", "multinomial", "gaussian", "poisson", "gamma",
-    "tweedie", "laplace", "quantile", "huber"),
-  quantile_alpha = 0.5,
-  tweedie_power = 1.5,
-  huber_alpha = 0.9,
-  score_interval = 5,
-  score_training_samples = 10000,
-  score_validation_samples = 0,
-  score_duty_cycle = 0.1,
-  classification_stop = 0,
-  regression_stop = 1e-06,
-  stopping_rounds = 5,
-  stopping_metric = c("AUTO", "deviance", "logloss", "MSE", "RMSE", "MAE", "RMSLE",
-    "AUC", "AUCPR", "lift_top_group", "misclassification", "mean_per_class_error",
-    "custom", "custom_increasing"),
-  stopping_tolerance = 0,
-  max_runtime_secs = 0,
-  score_validation_sampling = c("Uniform", "Stratified"),
-  diagnostics = TRUE,
-  fast_mode = TRUE,
-  force_load_balance = TRUE,
-  variable_importances = TRUE,
-  replicate_training_data = TRUE,
-  single_node_mode = FALSE,
-  shuffle_training_data = FALSE,
-  missing_values_handling = c("MeanImputation", "Skip"),
-  quiet_mode = FALSE,
-  autoencoder = FALSE,
-  sparse = FALSE,
-  col_major = FALSE,
-  average_activation = 0,
-  sparsity_beta = 0,
-  max_categorical_features = 2147483647,
-  reproducible = FALSE,
-  export_weights_and_biases = FALSE,
-  mini_batch_size = 1,
-  categorical_encoding = c("AUTO", "Enum", "OneHotInternal", "OneHotExplicit",
-    "Binary", "Eigen", "LabelEncoder", "SortByResponse", "EnumLimited"),
-  elastic_averaging = FALSE,
-  elastic_averaging_moving_rate = 0.9,
-  elastic_averaging_regularization = 0.001,
-  export_checkpoints_dir = NULL,
-  auc_type = c("AUTO", "NONE", "MACRO_OVR", "WEIGHTED_OVR", "MACRO_OVO",
-    "WEIGHTED_OVO"),
-  verbose = FALSE
-)
-</pre>
-
-
-<h3 class="anchored">Arguments</h3>
-
-<table summary="R argblock">
-<tbody><tr valign="top"><td><code>x</code></td>
-<td>
-<p>(Optional) A vector containing the names or indices of the predictor variables to use in building the model.
-If x is missing, then all columns except y are used.</p>
-</td></tr>
-<tr valign="top"><td><code>y</code></td>
-<td>
-<p>The name or column index of the response variable in the data. 
-The response must be either a numeric or a categorical/factor variable. 
-If the response is numeric, then a regression model will be trained, otherwise it will train a classification model.</p>
-</td></tr>
-<tr valign="top"><td><code>training_frame</code></td>
-<td>
-<p>Id of the training data frame.</p>
-</td></tr>
-<tr valign="top"><td><code>model_id</code></td>
-<td>
-<p>Destination id for this model; auto-generated if not specified.</p>
-</td></tr>
-<tr valign="top"><td><code>validation_frame</code></td>
-<td>
-<p>Id of the validation data frame.</p>
-</td></tr>
-<tr valign="top"><td><code>nfolds</code></td>
-<td>
-<p>Number of folds for K-fold cross-validation (0 to disable or &gt;= 2). Defaults to 0.</p>
-</td></tr>
-<tr valign="top"><td><code>keep_cross_validation_models</code></td>
-<td>
-<p><code>Logical</code>. Whether to keep the cross-validation models. Defaults to TRUE.</p>
-</td></tr>
-<tr valign="top"><td><code>keep_cross_validation_predictions</code></td>
-<td>
-<p><code>Logical</code>. Whether to keep the predictions of the cross-validation models. Defaults to FALSE.</p>
-</td></tr>
-<tr valign="top"><td><code>keep_cross_validation_fold_assignment</code></td>
-<td>
-<p><code>Logical</code>. Whether to keep the cross-validation fold assignment. Defaults to FALSE.</p>
-</td></tr>
-<tr valign="top"><td><code>fold_assignment</code></td>
-<td>
-<p>Cross-validation fold assignment scheme, if fold_column is not specified. The 'Stratified' option will
-stratify the folds based on the response variable, for classification problems. Must be one of: "AUTO",
-"Random", "Modulo", "Stratified". Defaults to AUTO.</p>
-</td></tr>
-<tr valign="top"><td><code>fold_column</code></td>
-<td>
-<p>Column with cross-validation fold index assignment per observation.</p>
-</td></tr>
-<tr valign="top"><td><code>ignore_const_cols</code></td>
-<td>
-<p><code>Logical</code>. Ignore constant columns. Defaults to TRUE.</p>
-</td></tr>
-<tr valign="top"><td><code>score_each_iteration</code></td>
-<td>
-<p><code>Logical</code>. Whether to score during each iteration of model training. Defaults to FALSE.</p>
-</td></tr>
-<tr valign="top"><td><code>weights_column</code></td>
-<td>
-<p>Column with observation weights. Giving some observation a weight of zero is equivalent to excluding it from
-the dataset; giving an observation a relative weight of 2 is equivalent to repeating that row twice. Negative
-weights are not allowed. Note: Weights are per-row observation weights and do not increase the size of the
-data frame. This is typically the number of times a row is repeated, but non-integer values are supported as
-well. During training, rows with higher weights matter more, due to the larger loss function pre-factor. If
-you set weight = 0 for a row, the returned prediction frame at that row is zero and this is incorrect. To get
-an accurate prediction, remove all rows with weight == 0.</p>
-</td></tr>
-<tr valign="top"><td><code>offset_column</code></td>
-<td>
-<p>Offset column. This will be added to the combination of columns before applying the link function.</p>
-</td></tr>
-<tr valign="top"><td><code>balance_classes</code></td>
-<td>
-<p><code>Logical</code>. Balance training data class counts via over/under-sampling (for imbalanced data). Defaults to
-FALSE.</p>
-</td></tr>
-<tr valign="top"><td><code>class_sampling_factors</code></td>
-<td>
-<p>Desired over/under-sampling ratios per class (in lexicographic order). If not specified, sampling factors will
-be automatically computed to obtain class balance during training. Requires balance_classes.</p>
-</td></tr>
-<tr valign="top"><td><code>max_after_balance_size</code></td>
-<td>
-<p>Maximum relative size of the training data after balancing class counts (can be less than 1.0). Requires
-balance_classes. Defaults to 5.0.</p>
-</td></tr>
-<tr valign="top"><td><code>checkpoint</code></td>
-<td>
-<p>Model checkpoint to resume training with.</p>
-</td></tr>
-<tr valign="top"><td><code>pretrained_autoencoder</code></td>
-<td>
-<p>Pretrained autoencoder model to initialize this model with.</p>
-</td></tr>
-<tr valign="top"><td><code>overwrite_with_best_model</code></td>
-<td>
-<p><code>Logical</code>. If enabled, override the final model with the best model found during training. Defaults to
-TRUE.</p>
-</td></tr>
-<tr valign="top"><td><code>use_all_factor_levels</code></td>
-<td>
-<p><code>Logical</code>. Use all factor levels of categorical variables. Otherwise, the first factor level is omitted
-(without loss of accuracy). Useful for variable importances and auto-enabled for autoencoder. Defaults to
-TRUE.</p>
-</td></tr>
-<tr valign="top"><td><code>standardize</code></td>
-<td>
-<p><code>Logical</code>. If enabled, automatically standardize the data. If disabled, the user must provide properly
-scaled input data. Defaults to TRUE.</p>
-</td></tr>
-<tr valign="top"><td><code>activation</code></td>
-<td>
-<p>Activation function. Must be one of: "Tanh", "TanhWithDropout", "Rectifier", "RectifierWithDropout", "Maxout",
-"MaxoutWithDropout". Defaults to Rectifier.</p>
-</td></tr>
-<tr valign="top"><td><code>hidden</code></td>
-<td>
-<p>Hidden layer sizes (e.g. [100, 100]). Defaults to c(200, 200).</p>
-</td></tr>
-<tr valign="top"><td><code>epochs</code></td>
-<td>
-<p>How many times the dataset should be iterated (streamed), can be fractional. Defaults to 10.</p>
-</td></tr>
-<tr valign="top"><td><code>train_samples_per_iteration</code></td>
-<td>
-<p>Number of training samples (globally) per MapReduce iteration. Special values are 0: one epoch, -1: all
-available data (e.g., replicated training data), -2: automatic. Defaults to -2.</p>
-</td></tr>
-<tr valign="top"><td><code>target_ratio_comm_to_comp</code></td>
-<td>
-<p>Target ratio of communication overhead to computation. Only for multi-node operation and
-train_samples_per_iteration = -2 (auto-tuning). Defaults to 0.05.</p>
-</td></tr>
-<tr valign="top"><td><code>seed</code></td>
-<td>
-<p>Seed for random numbers (affects certain parts of the algo that are stochastic and those might or might not be enabled by default).
-Note: only reproducible when running single threaded.
-Defaults to -1 (time-based random number).</p>
-</td></tr>
-<tr valign="top"><td><code>adaptive_rate</code></td>
-<td>
-<p><code>Logical</code>. Adaptive learning rate. Defaults to TRUE.</p>
-</td></tr>
-<tr valign="top"><td><code>rho</code></td>
-<td>
-<p>Adaptive learning rate time decay factor (similarity to prior updates). Defaults to 0.99.</p>
-</td></tr>
-<tr valign="top"><td><code>epsilon</code></td>
-<td>
-<p>Adaptive learning rate smoothing factor (to avoid divisions by zero and allow progress). Defaults to 1e-08.</p>
-</td></tr>
-<tr valign="top"><td><code>rate</code></td>
-<td>
-<p>Learning rate (higher =&gt; less stable, lower =&gt; slower convergence). Defaults to 0.005.</p>
-</td></tr>
-<tr valign="top"><td><code>rate_annealing</code></td>
-<td>
-<p>Learning rate annealing: rate / (1 + rate_annealing * samples). Defaults to 1e-06.</p>
-</td></tr>
-<tr valign="top"><td><code>rate_decay</code></td>
-<td>
-<p>Learning rate decay factor between layers (N-th layer: rate * rate_decay ^ (n - 1). Defaults to 1.</p>
-</td></tr>
-<tr valign="top"><td><code>momentum_start</code></td>
-<td>
-<p>Initial momentum at the beginning of training (try 0.5). Defaults to 0.</p>
-</td></tr>
-<tr valign="top"><td><code>momentum_ramp</code></td>
-<td>
-<p>Number of training samples for which momentum increases. Defaults to 1000000.</p>
-</td></tr>
-<tr valign="top"><td><code>momentum_stable</code></td>
-<td>
-<p>Final momentum after the ramp is over (try 0.99). Defaults to 0.</p>
-</td></tr>
-<tr valign="top"><td><code>nesterov_accelerated_gradient</code></td>
-<td>
-<p><code>Logical</code>. Use Nesterov accelerated gradient (recommended). Defaults to TRUE.</p>
-</td></tr>
-<tr valign="top"><td><code>input_dropout_ratio</code></td>
-<td>
-<p>Input layer dropout ratio (can improve generalization, try 0.1 or 0.2). Defaults to 0.</p>
-</td></tr>
-<tr valign="top"><td><code>hidden_dropout_ratios</code></td>
-<td>
-<p>Hidden layer dropout ratios (can improve generalization), specify one value per hidden layer, defaults to 0.5.</p>
-</td></tr>
-<tr valign="top"><td><code>l1</code></td>
-<td>
-<p>L1 regularization (can add stability and improve generalization, causes many weights to become 0). Defaults to
-0.</p>
-</td></tr>
-<tr valign="top"><td><code>l2</code></td>
-<td>
-<p>L2 regularization (can add stability and improve generalization, causes many weights to be small. Defaults to
-0.</p>
-</td></tr>
-<tr valign="top"><td><code>max_w2</code></td>
-<td>
-<p>Constraint for squared sum of incoming weights per unit (e.g. for Rectifier). Defaults to 3.4028235e+38.</p>
-</td></tr>
-<tr valign="top"><td><code>initial_weight_distribution</code></td>
-<td>
-<p>Initial weight distribution. Must be one of: "UniformAdaptive", "Uniform", "Normal". Defaults to
-UniformAdaptive.</p>
-</td></tr>
-<tr valign="top"><td><code>initial_weight_scale</code></td>
-<td>
-<p>Uniform: -value...value, Normal: stddev. Defaults to 1.</p>
-</td></tr>
-<tr valign="top"><td><code>initial_weights</code></td>
-<td>
-<p>A list of H2OFrame ids to initialize the weight matrices of this model with.</p>
-</td></tr>
-<tr valign="top"><td><code>initial_biases</code></td>
-<td>
-<p>A list of H2OFrame ids to initialize the bias vectors of this model with.</p>
-</td></tr>
-<tr valign="top"><td><code>loss</code></td>
-<td>
-<p>Loss function. Must be one of: "Automatic", "CrossEntropy", "Quadratic", "Huber", "Absolute", "Quantile".
-Defaults to Automatic.</p>
-</td></tr>
-<tr valign="top"><td><code>distribution</code></td>
-<td>
-<p>Distribution function Must be one of: "AUTO", "bernoulli", "multinomial", "gaussian", "poisson", "gamma",
-"tweedie", "laplace", "quantile", "huber". Defaults to AUTO.</p>
-</td></tr>
-<tr valign="top"><td><code>quantile_alpha</code></td>
-<td>
-<p>Desired quantile for Quantile regression, must be between 0 and 1. Defaults to 0.5.</p>
-</td></tr>
-<tr valign="top"><td><code>tweedie_power</code></td>
-<td>
-<p>Tweedie power for Tweedie regression, must be between 1 and 2. Defaults to 1.5.</p>
-</td></tr>
-<tr valign="top"><td><code>huber_alpha</code></td>
-<td>
-<p>Desired quantile for Huber/M-regression (threshold between quadratic and linear loss, must be between 0 and
-1). Defaults to 0.9.</p>
-</td></tr>
-<tr valign="top"><td><code>score_interval</code></td>
-<td>
-<p>Shortest time interval (in seconds) between model scoring. Defaults to 5.</p>
-</td></tr>
-<tr valign="top"><td><code>score_training_samples</code></td>
-<td>
-<p>Number of training set samples for scoring (0 for all). Defaults to 10000.</p>
-</td></tr>
-<tr valign="top"><td><code>score_validation_samples</code></td>
-<td>
-<p>Number of validation set samples for scoring (0 for all). Defaults to 0.</p>
-</td></tr>
-<tr valign="top"><td><code>score_duty_cycle</code></td>
-<td>
-<p>Maximum duty cycle fraction for scoring (lower: more training, higher: more scoring). Defaults to 0.1.</p>
-</td></tr>
-<tr valign="top"><td><code>classification_stop</code></td>
-<td>
-<p>Stopping criterion for classification error fraction on training data (-1 to disable). Defaults to 0.</p>
-</td></tr>
-<tr valign="top"><td><code>regression_stop</code></td>
-<td>
-<p>Stopping criterion for regression error (MSE) on training data (-1 to disable). Defaults to 1e-06.</p>
-</td></tr>
-<tr valign="top"><td><code>stopping_rounds</code></td>
-<td>
-<p>Early stopping based on convergence of stopping_metric. Stop if simple moving average of length k of the
-stopping_metric does not improve for k:=stopping_rounds scoring events (0 to disable) Defaults to 5.</p>
-</td></tr>
-<tr valign="top"><td><code>stopping_metric</code></td>
-<td>
-<p>Metric to use for early stopping (AUTO: logloss for classification, deviance for regression and
-anonomaly_score for Isolation Forest). Note that custom and custom_increasing can only be used in GBM and DRF
-with the Python client. Must be one of: "AUTO", "deviance", "logloss", "MSE", "RMSE", "MAE", "RMSLE", "AUC",
-"AUCPR", "lift_top_group", "misclassification", "mean_per_class_error", "custom", "custom_increasing".
-Defaults to AUTO.</p>
-</td></tr>
-<tr valign="top"><td><code>stopping_tolerance</code></td>
-<td>
-<p>Relative tolerance for metric-based stopping criterion (stop if relative improvement is not at least this
-much) Defaults to 0.</p>
-</td></tr>
-<tr valign="top"><td><code>max_runtime_secs</code></td>
-<td>
-<p>Maximum allowed runtime in seconds for model training. Use 0 to disable. Defaults to 0.</p>
-</td></tr>
-<tr valign="top"><td><code>score_validation_sampling</code></td>
-<td>
-<p>Method used to sample validation dataset for scoring. Must be one of: "Uniform", "Stratified". Defaults to
-Uniform.</p>
-</td></tr>
-<tr valign="top"><td><code>diagnostics</code></td>
-<td>
-<p><code>Logical</code>. Enable diagnostics for hidden layers. Defaults to TRUE.</p>
-</td></tr>
-<tr valign="top"><td><code>fast_mode</code></td>
-<td>
-<p><code>Logical</code>. Enable fast mode (minor approximation in back-propagation). Defaults to TRUE.</p>
-</td></tr>
-<tr valign="top"><td><code>force_load_balance</code></td>
-<td>
-<p><code>Logical</code>. Force extra load balancing to increase training speed for small datasets (to keep all cores
-busy). Defaults to TRUE.</p>
-</td></tr>
-<tr valign="top"><td><code>variable_importances</code></td>
-<td>
-<p><code>Logical</code>. Compute variable importances for input features (Gedeon method) - can be slow for large
-networks. Defaults to TRUE.</p>
-</td></tr>
-<tr valign="top"><td><code>replicate_training_data</code></td>
-<td>
-<p><code>Logical</code>. Replicate the entire training dataset onto every node for faster training on small datasets.
-Defaults to TRUE.</p>
-</td></tr>
-<tr valign="top"><td><code>single_node_mode</code></td>
-<td>
-<p><code>Logical</code>. Run on a single node for fine-tuning of model parameters. Defaults to FALSE.</p>
-</td></tr>
-<tr valign="top"><td><code>shuffle_training_data</code></td>
-<td>
-<p><code>Logical</code>. Enable shuffling of training data (recommended if training data is replicated and
-train_samples_per_iteration is close to #nodes x #rows, of if using balance_classes). Defaults to FALSE.</p>
-</td></tr>
-<tr valign="top"><td><code>missing_values_handling</code></td>
-<td>
-<p>Handling of missing values. Either MeanImputation or Skip. Must be one of: "MeanImputation", "Skip". Defaults
-to MeanImputation.</p>
-</td></tr>
-<tr valign="top"><td><code>quiet_mode</code></td>
-<td>
-<p><code>Logical</code>. Enable quiet mode for less output to standard output. Defaults to FALSE.</p>
-</td></tr>
-<tr valign="top"><td><code>autoencoder</code></td>
-<td>
-<p><code>Logical</code>. Auto-Encoder. Defaults to FALSE.</p>
-</td></tr>
-<tr valign="top"><td><code>sparse</code></td>
-<td>
-<p><code>Logical</code>. Sparse data handling (more efficient for data with lots of 0 values). Defaults to FALSE.</p>
-</td></tr>
-<tr valign="top"><td><code>col_major</code></td>
-<td>
-<p><code>Logical</code>. #DEPRECATED Use a column major weight matrix for input layer. Can speed up forward
-propagation, but might slow down backpropagation. Defaults to FALSE.</p>
-</td></tr>
-<tr valign="top"><td><code>average_activation</code></td>
-<td>
-<p>Average activation for sparse auto-encoder. #Experimental Defaults to 0.</p>
-</td></tr>
-<tr valign="top"><td><code>sparsity_beta</code></td>
-<td>
-<p>Sparsity regularization. #Experimental Defaults to 0.</p>
-</td></tr>
-<tr valign="top"><td><code>max_categorical_features</code></td>
-<td>
-<p>Max. number of categorical features, enforced via hashing. #Experimental Defaults to 2147483647.</p>
-</td></tr>
-<tr valign="top"><td><code>reproducible</code></td>
-<td>
-<p><code>Logical</code>. Force reproducibility on small data (will be slow - only uses 1 thread). Defaults to FALSE.</p>
-</td></tr>
-<tr valign="top"><td><code>export_weights_and_biases</code></td>
-<td>
-<p><code>Logical</code>. Whether to export Neural Network weights and biases to H2O Frames. Defaults to FALSE.</p>
-</td></tr>
-<tr valign="top"><td><code>mini_batch_size</code></td>
-<td>
-<p>Mini-batch size (smaller leads to better fit, larger can speed up and generalize better). Defaults to 1.</p>
-</td></tr>
-<tr valign="top"><td><code>categorical_encoding</code></td>
-<td>
-<p>Encoding scheme for categorical features Must be one of: "AUTO", "Enum", "OneHotInternal", "OneHotExplicit",
-"Binary", "Eigen", "LabelEncoder", "SortByResponse", "EnumLimited". Defaults to AUTO.</p>
-</td></tr>
-<tr valign="top"><td><code>elastic_averaging</code></td>
-<td>
-<p><code>Logical</code>. Elastic averaging between compute nodes can improve distributed model convergence.
-#Experimental Defaults to FALSE.</p>
-</td></tr>
-<tr valign="top"><td><code>elastic_averaging_moving_rate</code></td>
-<td>
-<p>Elastic averaging moving rate (only if elastic averaging is enabled). Defaults to 0.9.</p>
-</td></tr>
-<tr valign="top"><td><code>elastic_averaging_regularization</code></td>
-<td>
-<p>Elastic averaging regularization strength (only if elastic averaging is enabled). Defaults to 0.001.</p>
-</td></tr>
-<tr valign="top"><td><code>export_checkpoints_dir</code></td>
-<td>
-<p>Automatically export generated models to this directory.</p>
-</td></tr>
-<tr valign="top"><td><code>auc_type</code></td>
-<td>
-<p>Set default multinomial AUC type. Must be one of: "AUTO", "NONE", "MACRO_OVR", "WEIGHTED_OVR", "MACRO_OVO",
-"WEIGHTED_OVO". Defaults to AUTO.</p>
-</td></tr>
-<tr valign="top"><td><code>verbose</code></td>
-<td>
-<p><code>Logical</code>. Print scoring history to the console (Metrics per epoch). Defaults to FALSE.</p>
-</td></tr>
-</tbody></table>
-
-
-<h3 class="anchored">See Also</h3>
-
-<p><code>predict.H2OModel</code> for prediction
-</p>
-
-
-<h3 class="anchored">Examples</h3>
-
-<pre>## Not run: 
-library(h2o)
-h2o.init()
-iris_hf &lt;- as.h2o(iris)
-iris_dl &lt;- h2o.deeplearning(x = 1:4, y = 5, training_frame = iris_hf, seed=123456)
-
-# now make a prediction
-predictions &lt;- h2o.predict(iris_dl, iris_hf)
-
-## End(Not run)
-</pre>
-
-<hr><div style="text-align: center;">[Package <em>h2o</em> version 3.38.0.1 ]</div>
-</div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># help(h2o.deeplearning) # можна переглянути параметри методу</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Здійснимо прогноз на тестовій вибірці (<code>h2o.predict()</code>), а також класифікуємо значення за <code>cutOff = 0.5</code>:</p>
 <div class="cell" data-execution_count="36">
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>h2o_predict_prob <span class="ot">&lt;-</span> <span class="fu">h2o.predict</span>(h2o_model, <span class="at">newdata =</span> <span class="fu">as.h2o</span>(test_data[<span class="sc">-</span>(<span class="fu">ncol</span>(test_data))]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>h2o_predict_prob <span class="ot">&lt;-</span> <span class="fu">h2o.predict</span>(h2o_model, <span class="at">newdata =</span> <span class="fu">as.h2o</span>(test_data[<span class="sc">-</span>(<span class="fu">ncol</span>(test_data))]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  |======================================================================| 100%
   |======================================================================| 100%</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="37">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>h2o_predict_class <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(h2o_predict_prob <span class="sc">&gt;</span> <span class="fl">0.5</span>, <span class="dv">1</span> , <span class="dv">0</span>)</span>
-<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>h2o_predict_class <span class="ot">&lt;-</span> <span class="fu">as.vector</span>(h2o_predict_class)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>h2o_predict_class <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(h2o_predict_prob <span class="sc">&gt;</span> <span class="fl">0.5</span>, <span class="dv">1</span> , <span class="dv">0</span>)</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>h2o_predict_class <span class="ot">&lt;-</span> <span class="fu">as.vector</span>(h2o_predict_class)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Побудуємо матрицю Confusion Matrix:</p>
 <div class="cell" data-execution_count="38">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)</span>
-<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>caret<span class="sc">::</span><span class="fu">confusionMatrix</span>(<span class="fu">factor</span>(test_data<span class="sc">$</span>Exited), <span class="fu">factor</span>(h2o_predict_class), <span class="at">positive =</span> <span class="st">"1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: lattice
-</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(caret))</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>caret<span class="sc">::</span><span class="fu">confusionMatrix</span>(<span class="fu">factor</span>(test_data<span class="sc">$</span>Exited), <span class="fu">factor</span>(h2o_predict_class), <span class="at">positive =</span> <span class="st">"1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>Confusion Matrix and Statistics
 
           Reference
 Prediction    0    1
-         0 2282  107
-         1  329  282
+         0 2285  104
+         1  343  268
                                           
-               Accuracy : 0.8547          
-                 95% CI : (0.8415, 0.8671)
-    No Information Rate : 0.8703          
-    P-Value [Acc &gt; NIR] : 0.9945          
+               Accuracy : 0.851           
+                 95% CI : (0.8377, 0.8636)
+    No Information Rate : 0.876           
+    P-Value [Acc &gt; NIR] : 1               
                                           
-                  Kappa : 0.4819          
+                  Kappa : 0.4624          
                                           
  Mcnemar's Test P-Value : &lt;2e-16          
                                           
-            Sensitivity : 0.7249          
-            Specificity : 0.8740          
-         Pos Pred Value : 0.4615          
-         Neg Pred Value : 0.9552          
-             Prevalence : 0.1297          
-         Detection Rate : 0.0940          
-   Detection Prevalence : 0.2037          
-      Balanced Accuracy : 0.7995          
+            Sensitivity : 0.72043         
+            Specificity : 0.86948         
+         Pos Pred Value : 0.43863         
+         Neg Pred Value : 0.95647         
+             Prevalence : 0.12400         
+         Detection Rate : 0.08933         
+   Detection Prevalence : 0.20367         
+      Balanced Accuracy : 0.79496         
                                           
        'Positive' Class : 1               
                                           </code></pre>
@@ -1594,8 +997,8 @@ Prediction    0    1
 </div>
 <p>Побудуємо <code>ROC</code>-криву:</p>
 <div class="cell" data-execution_count="39">
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(InformationValue)</span>
-<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>InformationValue<span class="sc">::</span><span class="fu">plotROC</span>(test_data<span class="sc">$</span>Exited, <span class="fu">as.vector</span>(h2o_predict_prob))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(InformationValue)</span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>InformationValue<span class="sc">::</span><span class="fu">plotROC</span>(test_data<span class="sc">$</span>Exited, <span class="fu">as.vector</span>(h2o_predict_prob))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>
 Attaching package: 'InformationValue'
@@ -1613,11 +1016,11 @@ The following objects are masked from 'package:caret':
 </div>
 <p>Побудуємо модель з більшою кількістю прихованих шарів та нейронів:</p>
 <div class="cell" data-execution_count="40">
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>h2o_model2 <span class="ot">&lt;-</span> <span class="fu">h2o.deeplearning</span>(<span class="at">y =</span> <span class="st">'Exited'</span>, </span>
-<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>                              <span class="at">training_frame =</span> <span class="fu">as.h2o</span>(train_data),</span>
-<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>                              <span class="at">activation =</span> <span class="st">"Rectifier"</span>,</span>
-<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>                              <span class="at">hidden =</span> <span class="fu">c</span>(<span class="dv">10</span>,<span class="dv">10</span>),</span>
-<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a>                              <span class="at">epochs =</span> <span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>h2o_model2 <span class="ot">&lt;-</span> <span class="fu">h2o.deeplearning</span>(<span class="at">y =</span> <span class="st">'Exited'</span>, </span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>                              <span class="at">training_frame =</span> <span class="fu">as.h2o</span>(train_data),</span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>                              <span class="at">activation =</span> <span class="st">"Rectifier"</span>,</span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>                              <span class="at">hidden =</span> <span class="fu">c</span>(<span class="dv">10</span>,<span class="dv">10</span>),</span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>                              <span class="at">epochs =</span> <span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  |======================================================================| 100%
   |======================================================================| 100%</code></pre>
@@ -1625,59 +1028,59 @@ The following objects are masked from 'package:caret':
 </div>
 <p>Здійснимо прогноз:</p>
 <div class="cell" data-execution_count="41">
-<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>h2o_predict_prob2 <span class="ot">&lt;-</span> <span class="fu">h2o.predict</span>(h2o_model2, <span class="at">newdata =</span> <span class="fu">as.h2o</span>(test_data[<span class="sc">-</span>(<span class="fu">ncol</span>(test_data))]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>h2o_predict_prob2 <span class="ot">&lt;-</span> <span class="fu">h2o.predict</span>(h2o_model2, <span class="at">newdata =</span> <span class="fu">as.h2o</span>(test_data[<span class="sc">-</span>(<span class="fu">ncol</span>(test_data))]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  |======================================================================| 100%
   |======================================================================| 100%</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="42">
-<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>h2o_predict_class2 <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(h2o_predict_prob2 <span class="sc">&gt;</span> <span class="fl">0.5</span>, <span class="dv">1</span> , <span class="dv">0</span>)</span>
-<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>h2o_predict_class2 <span class="ot">&lt;-</span> <span class="fu">as.vector</span>(h2o_predict_class2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>h2o_predict_class2 <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(h2o_predict_prob2 <span class="sc">&gt;</span> <span class="fl">0.5</span>, <span class="dv">1</span> , <span class="dv">0</span>)</span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>h2o_predict_class2 <span class="ot">&lt;-</span> <span class="fu">as.vector</span>(h2o_predict_class2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Confiusion Matrix:</p>
 <div class="cell" data-execution_count="43">
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>caret<span class="sc">::</span><span class="fu">confusionMatrix</span>(<span class="fu">factor</span>(test_data<span class="sc">$</span>Exited), <span class="fu">factor</span>(h2o_predict_class2), <span class="at">positive =</span> <span class="st">"1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>caret<span class="sc">::</span><span class="fu">confusionMatrix</span>(<span class="fu">factor</span>(test_data<span class="sc">$</span>Exited), <span class="fu">factor</span>(h2o_predict_class2), <span class="at">positive =</span> <span class="st">"1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>Confusion Matrix and Statistics
 
           Reference
 Prediction    0    1
-         0 2252  137
-         1  310  301
-                                          
-               Accuracy : 0.851           
-                 95% CI : (0.8377, 0.8636)
-    No Information Rate : 0.854           
-    P-Value [Acc &gt; NIR] : 0.69            
-                                          
-                  Kappa : 0.4866          
-                                          
- Mcnemar's Test P-Value : 4.108e-16       
-                                          
-            Sensitivity : 0.6872          
-            Specificity : 0.8790          
-         Pos Pred Value : 0.4926          
-         Neg Pred Value : 0.9427          
-             Prevalence : 0.1460          
-         Detection Rate : 0.1003          
-   Detection Prevalence : 0.2037          
-      Balanced Accuracy : 0.7831          
-                                          
-       'Positive' Class : 1               
-                                          </code></pre>
+         0 2302   87
+         1  343  268
+                                         
+               Accuracy : 0.8567         
+                 95% CI : (0.8436, 0.869)
+    No Information Rate : 0.8817         
+    P-Value [Acc &gt; NIR] : 1              
+                                         
+                  Kappa : 0.4765         
+                                         
+ Mcnemar's Test P-Value : &lt;2e-16         
+                                         
+            Sensitivity : 0.75493        
+            Specificity : 0.87032        
+         Pos Pred Value : 0.43863        
+         Neg Pred Value : 0.96358        
+             Prevalence : 0.11833        
+         Detection Rate : 0.08933        
+   Detection Prevalence : 0.20367        
+      Balanced Accuracy : 0.81263        
+                                         
+       'Positive' Class : 1              
+                                         </code></pre>
 </div>
 </div>
 <p><code>ROC</code>-крива:</p>
 <div class="cell" data-execution_count="44">
-<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>InformationValue<span class="sc">::</span><span class="fu">plotROC</span>(test_data<span class="sc">$</span>Exited, <span class="fu">as.vector</span>(h2o_predict_prob2))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>InformationValue<span class="sc">::</span><span class="fu">plotROC</span>(test_data<span class="sc">$</span>Exited, <span class="fu">as.vector</span>(h2o_predict_prob2))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="037-supervised-learning-neural-network-classification_files/figure-html/cell-45-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p>Зупинимо двигун <code>h2o</code>:</p>
 <div class="cell" data-execution_count="45">
-<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">h2o.shutdown</span>(<span class="at">prompt =</span> F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">h2o.shutdown</span>(<span class="at">prompt =</span> F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 

@@ -2,50 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://kleban.github.io/ml-in-r/index.html</loc>
-    <lastmod>2022-10-03T07:15:03.353Z</lastmod>
+    <lastmod>2022-10-03T16:00:21.168Z</lastmod>
   </url>
   <url>
     <loc>https://kleban.github.io/ml-in-r/010-intro.html</loc>
-    <lastmod>2022-10-03T07:15:03.356Z</lastmod>
+    <lastmod>2022-10-03T16:00:21.169Z</lastmod>
   </url>
   <url>
     <loc>https://kleban.github.io/ml-in-r/020-feature-engeneering.html</loc>
-    <lastmod>2022-10-03T07:15:03.358Z</lastmod>
+    <lastmod>2022-10-03T16:00:21.170Z</lastmod>
   </url>
   <url>
     <loc>https://kleban.github.io/ml-in-r/023-feature-engeneering-woe-binning.html</loc>
-    <lastmod>2022-10-03T07:15:03.368Z</lastmod>
+    <lastmod>2022-10-03T16:00:21.176Z</lastmod>
   </url>
   <url>
     <loc>https://kleban.github.io/ml-in-r/030-supervised-learning.html</loc>
-    <lastmod>2022-10-03T07:15:03.371Z</lastmod>
+    <lastmod>2022-10-03T16:00:21.177Z</lastmod>
   </url>
   <url>
     <loc>https://kleban.github.io/ml-in-r/031-supervised-learning-linear-regression-1.html</loc>
-    <lastmod>2022-10-03T07:15:03.383Z</lastmod>
+    <lastmod>2022-10-03T16:00:21.189Z</lastmod>
   </url>
   <url>
     <loc>https://kleban.github.io/ml-in-r/032-supervised-learning-linear-regression-2.html</loc>
-    <lastmod>2022-10-03T07:15:03.400Z</lastmod>
+    <lastmod>2022-10-03T16:00:21.201Z</lastmod>
   </url>
   <url>
     <loc>https://kleban.github.io/ml-in-r/033-supervised-learning-desicion-trees-regression.html</loc>
-    <lastmod>2022-10-03T07:15:03.411Z</lastmod>
+    <lastmod>2022-10-03T16:00:21.213Z</lastmod>
   </url>
   <url>
     <loc>https://kleban.github.io/ml-in-r/034-supervised-learning-neutal-networks-regression.html</loc>
-    <lastmod>2022-10-03T07:15:03.433Z</lastmod>
+    <lastmod>2022-10-03T16:00:21.327Z</lastmod>
   </url>
   <url>
     <loc>https://kleban.github.io/ml-in-r/035-supervised-learning-logistic-regression.html</loc>
-    <lastmod>2022-10-03T07:15:03.452Z</lastmod>
+    <lastmod>2022-10-03T16:00:21.340Z</lastmod>
   </url>
   <url>
     <loc>https://kleban.github.io/ml-in-r/036-supervised-learning-desicion-trees-classification.html</loc>
-    <lastmod>2022-10-03T07:15:03.465Z</lastmod>
+    <lastmod>2022-10-03T16:00:21.359Z</lastmod>
   </url>
   <url>
     <loc>https://kleban.github.io/ml-in-r/037-supervised-learning-neural-network-classification.html</loc>
-    <lastmod>2022-10-03T07:15:03.482Z</lastmod>
+    <lastmod>2022-10-03T16:00:21.369Z</lastmod>
   </url>
 </urlset>

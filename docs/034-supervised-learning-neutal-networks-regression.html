@@ -492,14 +492,10 @@ New York: Wiley.
 </div>
 <p>Let’s check a correlation between parameters:</p>
 <div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(corrplot)</span>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(corrplot))</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">corrplot</span>(<span class="fu">cor</span>(data))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>corrplot 0.92 loaded
-</code></pre>
-</div>
 <div class="cell-output cell-output-display">
-<p><img src="034-supervised-learning-neutal-networks-regression_files/figure-html/cell-7-output-2.png" class="img-fluid"></p>
+<p><img src="034-supervised-learning-neutal-networks-regression_files/figure-html/cell-7-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p>Rad and tax has highest correlation: 0.91</p>
@@ -508,119 +504,119 @@ New York: Wiley.
 <li><input type="checkbox" disabled="" checked=""><code>tax</code> - full-value property-tax rate per $10,000.</li>
 </ul>
 <div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(medv)) <span class="sc">+</span> </span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">25</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(medv)) <span class="sc">+</span> </span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">25</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="034-supervised-learning-neutal-networks-regression_files/figure-html/cell-8-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#crim</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(crim)) <span class="sc">+</span> </span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">25</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#crim</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(crim)) <span class="sc">+</span> </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">25</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="034-supervised-learning-neutal-networks-regression_files/figure-html/cell-9-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#zn</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(zn)) <span class="sc">+</span> </span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">25</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#zn</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(zn)) <span class="sc">+</span> </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">25</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="034-supervised-learning-neutal-networks-regression_files/figure-html/cell-10-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#indus</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(indus)) <span class="sc">+</span> </span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">25</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#indus</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(indus)) <span class="sc">+</span> </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">25</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="034-supervised-learning-neutal-networks-regression_files/figure-html/cell-11-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#chas </span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(chas)) <span class="sc">+</span> </span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">fill =</span> chas)) <span class="sc">+</span> </span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#chas </span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(chas)) <span class="sc">+</span> </span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">fill =</span> chas)) <span class="sc">+</span> </span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="034-supervised-learning-neutal-networks-regression_files/figure-html/cell-12-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># nox</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(nox)) <span class="sc">+</span> </span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">10</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># nox</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(nox)) <span class="sc">+</span> </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">10</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="034-supervised-learning-neutal-networks-regression_files/figure-html/cell-13-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># rm</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(rm)) <span class="sc">+</span> </span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">10</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># rm</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(rm)) <span class="sc">+</span> </span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">10</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="034-supervised-learning-neutal-networks-regression_files/figure-html/cell-14-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="14">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># age</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(age)) <span class="sc">+</span> </span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">15</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># age</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(age)) <span class="sc">+</span> </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">15</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="034-supervised-learning-neutal-networks-regression_files/figure-html/cell-15-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="15">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dis</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(dis)) <span class="sc">+</span> </span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">15</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dis</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(dis)) <span class="sc">+</span> </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">15</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="034-supervised-learning-neutal-networks-regression_files/figure-html/cell-16-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="16">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#rad</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(ptratio)) <span class="sc">+</span> </span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">10</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">#rad</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(ptratio)) <span class="sc">+</span> </span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">10</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="034-supervised-learning-neutal-networks-regression_files/figure-html/cell-17-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="17">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># black</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(black)) <span class="sc">+</span> </span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">10</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># black</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(black)) <span class="sc">+</span> </span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">10</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="034-supervised-learning-neutal-networks-regression_files/figure-html/cell-18-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="18">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># lstat</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(lstat)) <span class="sc">+</span> </span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">25</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># lstat</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(lstat)) <span class="sc">+</span> </span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">25</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="034-supervised-learning-neutal-networks-regression_files/figure-html/cell-19-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="19">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># nox</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(nox)) <span class="sc">+</span> </span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">25</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># nox</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(nox)) <span class="sc">+</span> </span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">25</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="034-supervised-learning-neutal-networks-regression_files/figure-html/cell-20-output-1.png" class="img-fluid"></p>
 </div>
@@ -632,41 +628,20 @@ New York: Wiley.
 <p>Для роботи з нейромережами хорошою практикою є нормалізація даних перед використанням. Скористаємося формулою <span class="math inline">\((X-Xmin)/(Xmax-Xmin)\)</span>.</p>
 <p>Визначимо мінімальні та максимальні значення по факторах:</p>
 <div class="cell" data-execution_count="20">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'dplyr'
-
-
-The following object is masked from 'package:MASS':
-
-    select
-
-
-The following objects are masked from 'package:stats':
-
-    filter, lag
-
-
-The following objects are masked from 'package:base':
-
-    intersect, setdiff, setequal, union
-
-</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(dplyr))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-execution_count="21">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>normalizeData <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span> ((x <span class="sc">-</span> <span class="fu">min</span>(x)) <span class="sc">/</span> (<span class="fu">max</span>(x) <span class="sc">-</span> <span class="fu">min</span>(x)))</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>normalizeData <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span> ((x <span class="sc">-</span> <span class="fu">min</span>(x)) <span class="sc">/</span> (<span class="fu">max</span>(x) <span class="sc">-</span> <span class="fu">min</span>(x)))</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-execution_count="22">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>revertData <span class="ot">&lt;-</span> <span class="cf">function</span>(scaled, original) {</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span> (scaled <span class="sc">*</span> (<span class="fu">max</span>(original) <span class="sc">-</span> <span class="fu">min</span>(original)) <span class="sc">+</span> <span class="fu">min</span>(original))    </span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>revertData <span class="ot">&lt;-</span> <span class="cf">function</span>(scaled, original) {</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span> (scaled <span class="sc">*</span> (<span class="fu">max</span>(original) <span class="sc">-</span> <span class="fu">min</span>(original)) <span class="sc">+</span> <span class="fu">min</span>(original))    </span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-execution_count="23">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
 <table class="dataframe table table-sm table-striped">
@@ -689,8 +664,8 @@ The following objects are masked from 'package:base':
 <p>Нормалізуємо значення за один раз у всьому датафреймі.</p>
 <p>Переглянемо як змінився вигляд значень:</p>
 <div class="cell" data-execution_count="24">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>scaled_data <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="at">X =</span> data, <span class="at">FUN =</span> normalizeData) <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>() </span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>scaled_data <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>scaled_data <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="at">X =</span> data, <span class="at">FUN =</span> normalizeData) <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>() </span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>scaled_data <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
 <table class="dataframe table table-sm table-striped">
@@ -711,8 +686,8 @@ The following objects are masked from 'package:base':
 </div>
 </div>
 <div class="cell" data-execution_count="25">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>re_data <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="at">X =</span> scaled_data<span class="sc">$</span>medv, <span class="at">original =</span> data<span class="sc">$</span>medv, <span class="at">FUN =</span> revertData) <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>() </span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>re_data <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>re_data <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="at">X =</span> scaled_data<span class="sc">$</span>medv, <span class="at">original =</span> data<span class="sc">$</span>medv, <span class="at">FUN =</span> revertData) <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>() </span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>re_data <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
 <table class="dataframe table table-sm table-striped">
@@ -738,27 +713,27 @@ The following objects are masked from 'package:base':
 <h2 data-number="6.4" class="anchored" data-anchor-id="traintest-split"><span class="header-section-number">6.4</span> Train/test split</h2>
 <p>Сформуємо вибірки з пропорцією 70/30 % значень:</p>
 <div class="cell" data-execution_count="26">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caTools)</span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2023</span>)</span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>split <span class="ot">&lt;-</span> <span class="fu">sample.split</span>(scaled_data<span class="sc">$</span>medv, <span class="at">SplitRatio =</span> <span class="fl">0.7</span>)</span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>train_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(scaled_data, split)</span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>test_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(scaled_data, <span class="sc">!</span>split)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caTools)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2023</span>)</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>split <span class="ot">&lt;-</span> <span class="fu">sample.split</span>(scaled_data<span class="sc">$</span>medv, <span class="at">SplitRatio =</span> <span class="fl">0.7</span>)</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>train_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(scaled_data, split)</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>test_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(scaled_data, <span class="sc">!</span>split)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Let’s check how target’s are distrubuted in both samples:</p>
 <div class="cell" data-execution_count="27">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># train</span></span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(train_data, <span class="fu">aes</span>(medv)) <span class="sc">+</span> </span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">25</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># train</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(train_data, <span class="fu">aes</span>(medv)) <span class="sc">+</span> </span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">25</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="034-supervised-learning-neutal-networks-regression_files/figure-html/cell-28-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="28">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># test</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(test_data, <span class="fu">aes</span>(medv)) <span class="sc">+</span> </span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">25</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># test</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(test_data, <span class="fu">aes</span>(medv)) <span class="sc">+</span> </span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">25</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">'blue'</span>, <span class="at">color=</span><span class="st">'black'</span>)  <span class="sc">+</span> </span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="034-supervised-learning-neutal-networks-regression_files/figure-html/cell-29-output-1.png" class="img-fluid"></p>
 </div>
@@ -769,8 +744,8 @@ The following objects are masked from 'package:base':
 <h2 data-number="6.5" class="anchored" data-anchor-id="baseline-linear-regression"><span class="header-section-number">6.5</span> Baseline (Linear regression)</h2>
 <p>Для порівняння ефективності використання нейронних мереж скористаємося для початку лінійною регресією:</p>
 <div class="cell" data-execution_count="29">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>lm_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(medv <span class="sc">~</span> ., <span class="at">data =</span> train_data)</span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>lm_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(medv <span class="sc">~</span> ., <span class="at">data =</span> train_data)</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>
 Call:
@@ -806,8 +781,8 @@ F-statistic: 84.42 on 13 and 353 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 <p>Здійснимо прогноз тестових значень:</p>
 <div class="cell" data-execution_count="30">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>test_lm_predicted_scaled <span class="ot">&lt;-</span> <span class="fu">predict</span>(lm_model, test_data)</span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test_lm_predicted_scaled)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>test_lm_predicted_scaled <span class="ot">&lt;-</span> <span class="fu">predict</span>(lm_model, test_data)</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test_lm_predicted_scaled)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <style>
 .dl-inline {width: auto; margin:0; padding: 0}
@@ -818,8 +793,8 @@ F-statistic: 84.42 on 13 and 353 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="31">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>test_lm_predicted <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="at">X =</span> test_lm_predicted_scaled, <span class="at">original =</span> data<span class="sc">$</span>medv, <span class="at">FUN =</span> revertData) <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test_lm_predicted)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>test_lm_predicted <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="at">X =</span> test_lm_predicted_scaled, <span class="at">original =</span> data<span class="sc">$</span>medv, <span class="at">FUN =</span> revertData) <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test_lm_predicted)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
 <table class="dataframe table table-sm table-striped">
@@ -841,17 +816,17 @@ F-statistic: 84.42 on 13 and 353 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 <p>Let’s check errors and R^2:</p>
 <div class="cell" data-execution_count="32">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelr)</span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="co"># need for next comparison</span></span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>linear_err <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(  </span>
-<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">R2_train =</span> <span class="fu">round</span>(<span class="fu">rsquare</span>(lm_model, <span class="at">data =</span> train_data), <span class="dv">4</span>),</span>
-<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">R2_test =</span> <span class="fu">round</span>(<span class="fu">rsquare</span>(lm_model, <span class="at">data =</span> test_data), <span class="dv">4</span>),</span>
-<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">MSE_test =</span> <span class="fu">round</span>(<span class="fu">mse</span>(lm_model, <span class="at">data =</span> test_data), <span class="dv">4</span>),</span>
-<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">RMSE_test =</span> <span class="fu">round</span>(<span class="fu">rmse</span>(lm_model, <span class="at">data =</span> test_data), <span class="dv">4</span>) </span>
-<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-10"><a href="#cb36-10" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(linear_err) <span class="ot">&lt;-</span> <span class="st">"linear"</span></span>
-<span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a>linear_err</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelr)</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="co"># need for next comparison</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>linear_err <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(  </span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">R2_train =</span> <span class="fu">round</span>(modelr<span class="sc">::</span><span class="fu">rsquare</span>(lm_model, <span class="at">data =</span> train_data), <span class="dv">4</span>),</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">R2_test =</span> <span class="fu">round</span>(modelr<span class="sc">::</span><span class="fu">rsquare</span>(lm_model, <span class="at">data =</span> test_data), <span class="dv">4</span>),</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">MSE_test =</span> <span class="fu">round</span>(modelr<span class="sc">::</span><span class="fu">mse</span>(lm_model, <span class="at">data =</span> test_data), <span class="dv">4</span>),</span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">RMSE_test =</span> <span class="fu">round</span>(modelr<span class="sc">::</span><span class="fu">rmse</span>(lm_model, <span class="at">data =</span> test_data), <span class="dv">4</span>) </span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(linear_err) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"linear"</span>)</span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a>linear_err</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
 <table class="dataframe table table-sm table-striped">
@@ -872,7 +847,7 @@ F-statistic: 84.42 on 13 and 353 DF,  p-value: &lt; 2.2e-16</code></pre>
 <h2 data-number="6.6" class="anchored" data-anchor-id="побудова-нейромережі-за-допомогою-neuralnet"><span class="header-section-number">6.6</span> Побудова нейромережі за допомогою <code>neuralnet</code></h2>
 <p>Підключаємо пакет neuralnet:</p>
 <div class="cell" data-execution_count="33">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(neuralnet)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(neuralnet))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>
 Attaching package: 'neuralnet'
@@ -887,10 +862,10 @@ The following object is masked from 'package:dplyr':
 </div>
 <p>Для побудови моделі потрібно згенерувати формулу у форматі <span class="math inline">\(y ~ x_1 + x_2 + ... + x_n\)</span></p>
 <div class="cell" data-execution_count="34">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">colnames</span>(data)</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> n[<span class="sc">!</span>n <span class="sc">%in%</span> <span class="st">"medv"</span>]</span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>formula <span class="ot">&lt;-</span> <span class="fu">as.formula</span>(<span class="fu">paste</span>(<span class="st">"medv ~"</span>, <span class="fu">paste</span>(n, <span class="at">collapse =</span> <span class="st">" + "</span>)))</span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>formula</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">colnames</span>(data)</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> n[<span class="sc">!</span>n <span class="sc">%in%</span> <span class="st">"medv"</span>]</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>formula <span class="ot">&lt;-</span> <span class="fu">as.formula</span>(<span class="fu">paste</span>(<span class="st">"medv ~"</span>, <span class="fu">paste</span>(n, <span class="at">collapse =</span> <span class="st">" + "</span>)))</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>formula</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>medv ~ crim + zn + indus + chas + nox + rm + age + dis + rad + 
     tax + ptratio + black + lstat</code></pre>
@@ -899,14 +874,14 @@ The following object is masked from 'package:dplyr':
 <p>Будуємо модель за допомогою фунуції <code>neuralnet()</code>:</p>
 <p><code>hidden = c(3,4)</code> - перший прихований шар буде мати 3 нейрони, другий 4 <code>linear.output</code> - вихідний показник неперервне число. Не класифікація</p>
 <div class="cell" data-execution_count="35">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>nn_model <span class="ot">&lt;-</span> <span class="fu">neuralnet</span>(<span class="at">formula =</span> formula, <span class="at">data =</span> train_data, <span class="at">hidden =</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">4</span>), <span class="at">linear.output =</span> <span class="cn">TRUE</span>, <span class="at">rep =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>nn_model <span class="ot">&lt;-</span> <span class="fu">neuralnet</span>(<span class="at">formula =</span> formula, <span class="at">data =</span> train_data, <span class="at">hidden =</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">4</span>), <span class="at">linear.output =</span> <span class="cn">TRUE</span>, <span class="at">rep =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Візуалізуємо модель:</p>
 <div class="cell" data-execution_count="36">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(nn_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(nn_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-execution_count="37">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>train_data <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>train_data <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
 <table class="dataframe table table-sm table-striped">
@@ -928,45 +903,23 @@ The following object is masked from 'package:dplyr':
 </div>
 <p>Також для візуалізація можна скористатися функцією <code>plot.nnet()</code>, опубілкованою на відкритому ресурсі одним із користувачів мережі Інтернет:</p>
 <div class="cell" data-execution_count="38">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(devtools)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: usethis
-</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(devtools))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-execution_count="39">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(clusterGeneration)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(clusterGeneration)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-execution_count="40">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source_url</span>(<span class="st">'https://gist.githubusercontent.com/fawda123/7471137/raw/466c1474d0a505ff044412703516c34f1a4684a5/nnet_plot_update.r'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>i SHA-1 hash of file is "74c80bd5ddbc17ab3ae5ece9c0ed9beb612e87ef"</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">source_url</span>(<span class="st">'https://gist.githubusercontent.com/fawda123/7471137/raw/466c1474d0a505ff044412703516c34f1a4684a5/nnet_plot_update.r'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-execution_count="41">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot.nnet</span>(nn_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: scales
-
-Loading required package: reshape
-
-
-Attaching package: 'reshape'
-
-
-The following object is masked from 'package:dplyr':
-
-    rename
-
-</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">plot.nnet</span>(nn_model))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="034-supervised-learning-neutal-networks-regression_files/figure-html/cell-42-output-2.png" class="img-fluid"></p>
+<p><img src="034-supervised-learning-neutal-networks-regression_files/figure-html/cell-42-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p>Preview neural network matrix as text:</p>
 <div class="cell" data-execution_count="42">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>nn_model<span class="sc">$</span>result.matrix <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>nn_model<span class="sc">$</span>result.matrix <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
 <table class="dataframe table table-sm table-striped">
@@ -984,12 +937,12 @@ The following object is masked from 'package:dplyr':
 </div>
 <p>Здійснимо прогноз для тестової вибірки та повернемо значення до базового виміру:</p>
 <div class="cell" data-execution_count="43">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>test_predicted_scaled <span class="ot">&lt;-</span> <span class="fu">compute</span>(nn_model, test_data<span class="sc">%&gt;%</span><span class="fu">select</span>(<span class="sc">-</span>medv))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>test_predicted_scaled <span class="ot">&lt;-</span> <span class="fu">compute</span>(nn_model, test_data<span class="sc">%&gt;%</span><span class="fu">select</span>(<span class="sc">-</span>medv))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Convert <code>$net.result</code> to original form:</p>
 <div class="cell" data-execution_count="44">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>test_nn_predicted <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="at">X =</span> test_predicted_scaled<span class="sc">$</span>net.result, <span class="at">original =</span> data<span class="sc">$</span>medv, <span class="at">FUN =</span> revertData) <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span>
-<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test_nn_predicted)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>test_nn_predicted <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="at">X =</span> test_predicted_scaled<span class="sc">$</span>net.result, <span class="at">original =</span> data<span class="sc">$</span>medv, <span class="at">FUN =</span> revertData) <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test_nn_predicted)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
 <table class="dataframe table table-sm table-striped">
@@ -1011,7 +964,7 @@ The following object is masked from 'package:dplyr':
 </div>
 <p>Порівняємо похибки та <span class="math inline">\(R^2\)</span> по лінійній регресії та першій нейронній мережі:</p>
 <div class="cell" data-execution_count="45">
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
 <table class="dataframe table table-sm table-striped">
@@ -1032,32 +985,21 @@ The following object is masked from 'package:dplyr':
 </div>
 </div>
 <div class="cell" data-execution_count="46">
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Metrics)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'Metrics'
-
-
-The following objects are masked from 'package:modelr':
-
-    mae, mape, mse, rmse
-
-</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(Metrics))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-execution_count="47">
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Metrics) <span class="co"># for rmse function</span></span>
-<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>neuralnet_err <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">R2_train =</span> <span class="fu">round</span>(<span class="fu">cor</span>(train_data<span class="sc">$</span>medv, nn_model<span class="sc">$</span>response[,<span class="st">"medv"</span>])<span class="sc">^</span><span class="dv">2</span>, <span class="dv">4</span>),</span>
-<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">R2_test =</span> <span class="fu">round</span>(<span class="fu">cor</span>(test_data<span class="sc">$</span>medv, test_predicted_scaled<span class="sc">$</span>net.result)<span class="sc">^</span><span class="dv">2</span>, <span class="dv">4</span>),</span>
-<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">MSE_test =</span> <span class="fu">round</span>(<span class="fu">mse</span>(test_data<span class="sc">$</span>medv, test_predicted_scaled<span class="sc">$</span>net.result), <span class="dv">4</span>),</span>
-<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">RMSE_test =</span> <span class="fu">round</span>(<span class="fu">rmse</span>(test_data<span class="sc">$</span>medv, test_predicted_scaled<span class="sc">$</span>net.result), <span class="dv">4</span>)  </span>
-<span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb57-8"><a href="#cb57-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb57-9"><a href="#cb57-9" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(neuralnet_err) <span class="ot">&lt;-</span> <span class="st">"neuralnet"</span></span>
-<span id="cb57-10"><a href="#cb57-10" aria-hidden="true" tabindex="-1"></a>linear_err <span class="sc">|&gt;</span> <span class="fu">bind_rows</span>(neuralnet_err)</span>
-<span id="cb57-11"><a href="#cb57-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb57-12"><a href="#cb57-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Model is much better by all metrics but overfitted on train</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Metrics) <span class="co"># for rmse function</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>neuralnet_err <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">R2_train =</span> <span class="fu">round</span>(<span class="fu">cor</span>(train_data<span class="sc">$</span>medv, nn_model<span class="sc">$</span>response[,<span class="st">"medv"</span>])<span class="sc">^</span><span class="dv">2</span>, <span class="dv">4</span>),</span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">R2_test =</span> <span class="fu">round</span>(<span class="fu">cor</span>(test_data<span class="sc">$</span>medv, test_predicted_scaled<span class="sc">$</span>net.result)<span class="sc">^</span><span class="dv">2</span>, <span class="dv">4</span>),</span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">MSE_test =</span> <span class="fu">round</span>(<span class="fu">mse</span>(test_data<span class="sc">$</span>medv, test_predicted_scaled<span class="sc">$</span>net.result), <span class="dv">4</span>),</span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">RMSE_test =</span> <span class="fu">round</span>(<span class="fu">rmse</span>(test_data<span class="sc">$</span>medv, test_predicted_scaled<span class="sc">$</span>net.result), <span class="dv">4</span>)  </span>
+<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-9"><a href="#cb51-9" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(neuralnet_err) <span class="ot">&lt;-</span> <span class="st">"neuralnet"</span></span>
+<span id="cb51-10"><a href="#cb51-10" aria-hidden="true" tabindex="-1"></a>linear_err <span class="sc">|&gt;</span> <span class="fu">bind_rows</span>(neuralnet_err)</span>
+<span id="cb51-11"><a href="#cb51-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-12"><a href="#cb51-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Model is much better by all metrics but overfitted on train</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
 <table class="dataframe table table-sm table-striped">
@@ -1077,30 +1019,18 @@ The following objects are masked from 'package:modelr':
 <section id="neuralnet-caret" class="level2" data-number="6.7">
 <h2 data-number="6.7" class="anchored" data-anchor-id="neuralnet-caret"><span class="header-section-number">6.7</span> <code>neuralnet</code> + <code>caret</code></h2>
 <div class="cell" data-execution_count="48">
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: lattice
-
-
-Attaching package: 'caret'
-
-
-The following objects are masked from 'package:Metrics':
-
-    precision, recall
-
-</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(caret))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-execution_count="49">
-<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>ctrl<span class="ot">&lt;-</span> <span class="fu">trainControl</span>(<span class="at">method=</span><span class="st">"cv"</span>, <span class="at">number=</span><span class="dv">1</span>, <span class="at">search=</span><span class="st">"random"</span>)</span>
-<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a>nn2_model <span class="ot">&lt;-</span> <span class="fu">train</span>(formula, </span>
-<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a>             <span class="at">data =</span> train_data, </span>
-<span id="cb60-5"><a href="#cb60-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">trControl =</span> ctrl,</span>
-<span id="cb60-6"><a href="#cb60-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">metric =</span> <span class="st">"RMSE"</span>,</span>
-<span id="cb60-7"><a href="#cb60-7" aria-hidden="true" tabindex="-1"></a>             <span class="at">method =</span> <span class="st">"neuralnet"</span>)</span>
-<span id="cb60-8"><a href="#cb60-8" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(nn2_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>ctrl<span class="ot">&lt;-</span> <span class="fu">trainControl</span>(<span class="at">method=</span><span class="st">"cv"</span>, <span class="at">number=</span><span class="dv">1</span>, <span class="at">search=</span><span class="st">"random"</span>)</span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(nn2_model <span class="ot">&lt;-</span> <span class="fu">train</span>(formula, </span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>             <span class="at">data =</span> train_data, </span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">trControl =</span> ctrl,</span>
+<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">metric =</span> <span class="st">"RMSE"</span>,</span>
+<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a>             <span class="at">method =</span> <span class="st">"neuralnet"</span>))</span>
+<span id="cb53-8"><a href="#cb53-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-9"><a href="#cb53-9" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(nn2_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning message in cbind(intercept = 1, as.matrix(data[, model.list$variables])):
 "number of rows of result is not a multiple of vector length (arg 1)"
@@ -1242,10 +1172,10 @@ x[order(x$layer1, x$layer2, x$layer3), ]</code></pre></dd>
 </div>
 </div>
 <div class="cell" data-execution_count="50">
-<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>test_predicted_scaled <span class="ot">&lt;-</span> <span class="fu">predict</span>(nn2_model, test_data<span class="sc">%&gt;%</span><span class="fu">select</span>(<span class="sc">-</span>medv))</span>
-<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test_predicted_scaled)</span>
-<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>train_predicted_scaled <span class="ot">&lt;-</span> <span class="fu">predict</span>(nn2_model, train_data<span class="sc">%&gt;%</span><span class="fu">select</span>(<span class="sc">-</span>medv))</span>
-<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(train_predicted_scaled)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>test_predicted_scaled <span class="ot">&lt;-</span> <span class="fu">predict</span>(nn2_model, test_data<span class="sc">%&gt;%</span><span class="fu">select</span>(<span class="sc">-</span>medv))</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test_predicted_scaled)</span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>train_predicted_scaled <span class="ot">&lt;-</span> <span class="fu">predict</span>(nn2_model, train_data<span class="sc">%&gt;%</span><span class="fu">select</span>(<span class="sc">-</span>medv))</span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(train_predicted_scaled)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <style>
 .dl-inline {width: auto; margin:0; padding: 0}
@@ -1264,8 +1194,8 @@ x[order(x$layer1, x$layer2, x$layer3), ]</code></pre></dd>
 </div>
 </div>
 <div class="cell" data-execution_count="51">
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>test_nn2_predicted <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="at">X =</span> test_predicted_scaled, <span class="at">original =</span> data<span class="sc">$</span>medv, <span class="at">FUN =</span> revertData) <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span>
-<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test_nn2_predicted)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>test_nn2_predicted <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="at">X =</span> test_predicted_scaled, <span class="at">original =</span> data<span class="sc">$</span>medv, <span class="at">FUN =</span> revertData) <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test_nn2_predicted)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
 <table class="dataframe table table-sm table-striped">
@@ -1286,15 +1216,15 @@ x[order(x$layer1, x$layer2, x$layer3), ]</code></pre></dd>
 </div>
 </div>
 <div class="cell" data-execution_count="52">
-<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>neuralnet2_err <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">R2_train =</span> <span class="fu">round</span>(<span class="fu">cor</span>(train_data<span class="sc">$</span>medv, train_predicted_scaled)<span class="sc">^</span><span class="dv">2</span>, <span class="dv">4</span>),</span>
-<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">R2_test =</span> <span class="fu">round</span>(<span class="fu">cor</span>(test_data<span class="sc">$</span>medv, test_predicted_scaled)<span class="sc">^</span><span class="dv">2</span>, <span class="dv">4</span>),</span>
-<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">MSE_test =</span> <span class="fu">round</span>(<span class="fu">mse</span>(test_data<span class="sc">$</span>medv, test_predicted_scaled), <span class="dv">4</span>),</span>
-<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">RMSE_test =</span> <span class="fu">round</span>(<span class="fu">rmse</span>(test_data<span class="sc">$</span>medv, test_predicted_scaled), <span class="dv">4</span>)  </span>
-<span id="cb64-6"><a href="#cb64-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb64-7"><a href="#cb64-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb64-8"><a href="#cb64-8" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(neuralnet2_err) <span class="ot">&lt;-</span> <span class="st">"neuralnet_caret"</span></span>
-<span id="cb64-9"><a href="#cb64-9" aria-hidden="true" tabindex="-1"></a>linear_err <span class="sc">|&gt;</span> <span class="fu">bind_rows</span>(neuralnet_err) <span class="sc">|&gt;</span> <span class="fu">bind_rows</span>(neuralnet2_err)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>neuralnet2_err <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">R2_train =</span> <span class="fu">round</span>(<span class="fu">cor</span>(train_data<span class="sc">$</span>medv, train_predicted_scaled)<span class="sc">^</span><span class="dv">2</span>, <span class="dv">4</span>),</span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">R2_test =</span> <span class="fu">round</span>(<span class="fu">cor</span>(test_data<span class="sc">$</span>medv, test_predicted_scaled)<span class="sc">^</span><span class="dv">2</span>, <span class="dv">4</span>),</span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">MSE_test =</span> <span class="fu">round</span>(<span class="fu">mse</span>(test_data<span class="sc">$</span>medv, test_predicted_scaled), <span class="dv">4</span>),</span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">RMSE_test =</span> <span class="fu">round</span>(<span class="fu">rmse</span>(test_data<span class="sc">$</span>medv, test_predicted_scaled), <span class="dv">4</span>)  </span>
+<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-8"><a href="#cb57-8" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(neuralnet2_err) <span class="ot">&lt;-</span> <span class="st">"neuralnet_caret"</span></span>
+<span id="cb57-9"><a href="#cb57-9" aria-hidden="true" tabindex="-1"></a>linear_err <span class="sc">|&gt;</span> <span class="fu">bind_rows</span>(neuralnet_err) <span class="sc">|&gt;</span> <span class="fu">bind_rows</span>(neuralnet2_err)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
 <table class="dataframe table table-sm table-striped">
@@ -1317,15 +1247,15 @@ x[order(x$layer1, x$layer2, x$layer3), ]</code></pre></dd>
 <h2 data-number="6.8" class="anchored" data-anchor-id="neural-network-with-nnet"><span class="header-section-number">6.8</span> Neural network with <code>nnet</code></h2>
 <p>Підключаємо пакет <code>nnet</code> для побудови нейромережі із <code>2-ма</code> прихованими шарами, для прикладу.</p>
 <div class="cell" data-execution_count="53">
-<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(nnet)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(nnet)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Будуємо модель на основі формули створеної для попередньої моделі:</p>
 <ul>
 <li><code>size</code> - кількість нейронів у прихованому шарі</li>
 </ul>
 <div class="cell" data-execution_count="54">
-<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>nnet_model <span class="ot">&lt;-</span> <span class="fu">nnet</span>(formula, <span class="at">data =</span> train_data, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">maxit =</span> <span class="dv">100</span>)</span>
-<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Не забудьте поекспериментувати зі зміною кількості вузлів</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>nnet_model <span class="ot">&lt;-</span> <span class="fu">nnet</span>(formula, <span class="at">data =</span> train_data, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">maxit =</span> <span class="dv">100</span>)</span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Не забудьте поекспериментувати зі зміною кількості вузлів</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Your code contains a unicode char which cannot be displayed in your
 current locale and R will silently convert it to an escaped form when the
@@ -1351,7 +1281,7 @@ stopped after 100 iterations</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="55">
-<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(nnet_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(nnet_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>a 13-2-1 network with 31 weights
 options were -
@@ -1369,16 +1299,16 @@ i10-&gt;h2 i11-&gt;h2 i12-&gt;h2 i13-&gt;h2
 </div>
 <p>Візуалізуємо модель:</p>
 <div class="cell" data-execution_count="56">
-<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot.nnet</span>(nnet_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot.nnet</span>(nnet_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="034-supervised-learning-neutal-networks-regression_files/figure-html/cell-57-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p>Здійснимо прогноз для тестової вибірки та повернемо значення до базового виміру:</p>
 <div class="cell" data-execution_count="57">
-<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>test_predicted_scaled <span class="ot">&lt;-</span> <span class="fu">predict</span>(nnet_model, test_data)</span>
-<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test_predicted_scaled)</span>
-<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a>test_nnet_predicted <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="at">X =</span> test_predicted_scaled, <span class="at">original =</span> data<span class="sc">$</span>medv, <span class="at">FUN =</span> revertData) <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>test_predicted_scaled <span class="ot">&lt;-</span> <span class="fu">predict</span>(nnet_model, test_data)</span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test_predicted_scaled)</span>
+<span id="cb65-3"><a href="#cb65-3" aria-hidden="true" tabindex="-1"></a>test_nnet_predicted <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="at">X =</span> test_predicted_scaled, <span class="at">original =</span> data<span class="sc">$</span>medv, <span class="at">FUN =</span> revertData) <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
 <table class="dataframe table table-sm table-striped">
@@ -1395,7 +1325,7 @@ i10-&gt;h2 i11-&gt;h2 i12-&gt;h2 i13-&gt;h2
 </div>
 </div>
 <div class="cell" data-execution_count="58">
-<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>nnet_model</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>nnet_model</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>a 13-2-1 network with 31 weights
 inputs: crim zn indus chas nox rm age dis rad tax ptratio black lstat 
@@ -1405,17 +1335,17 @@ options were -</code></pre>
 </div>
 <p>Порівняємо похибки по лінійній регресії та нейронних мереж:</p>
 <div class="cell" data-execution_count="59">
-<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>nnet_err <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">R2_train =</span> <span class="fu">round</span>(<span class="fu">cor</span>(train_data<span class="sc">$</span>medv, <span class="fu">predict</span>(nnet_model, <span class="at">new=</span>train_data))<span class="sc">^</span><span class="dv">2</span>, <span class="dv">4</span>),</span>
-<span id="cb75-3"><a href="#cb75-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">R2_test =</span> <span class="fu">round</span>(<span class="fu">cor</span>(test_data<span class="sc">$</span>medv, test_predicted_scaled)<span class="sc">^</span><span class="dv">2</span>, <span class="dv">4</span>),</span>
-<span id="cb75-4"><a href="#cb75-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">MSE_test =</span> <span class="fu">round</span>(<span class="fu">mse</span>(test_data<span class="sc">$</span>medv, test_predicted_scaled), <span class="dv">4</span>),</span>
-<span id="cb75-5"><a href="#cb75-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">RMSE_test =</span> <span class="fu">round</span>(<span class="fu">rmse</span>(test_data<span class="sc">$</span>medv, test_predicted_scaled), <span class="dv">4</span>)  </span>
-<span id="cb75-6"><a href="#cb75-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb75-7"><a href="#cb75-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb75-8"><a href="#cb75-8" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(nnet_err) <span class="ot">&lt;-</span> <span class="st">"nnet"</span></span>
-<span id="cb75-9"><a href="#cb75-9" aria-hidden="true" tabindex="-1"></a>linear_err <span class="sc">|&gt;</span> <span class="fu">bind_rows</span>(neuralnet_err) <span class="sc">|&gt;</span> <span class="fu">bind_rows</span>(neuralnet2_err) <span class="sc">|&gt;</span> <span class="fu">bind_rows</span>(nnet_err)</span>
-<span id="cb75-10"><a href="#cb75-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb75-11"><a href="#cb75-11" aria-hidden="true" tabindex="-1"></a><span class="co"># neuralnet wins! but remember it has more layers</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>nnet_err <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">R2_train =</span> <span class="fu">round</span>(<span class="fu">cor</span>(train_data<span class="sc">$</span>medv, <span class="fu">predict</span>(nnet_model, <span class="at">new=</span>train_data))<span class="sc">^</span><span class="dv">2</span>, <span class="dv">4</span>),</span>
+<span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">R2_test =</span> <span class="fu">round</span>(<span class="fu">cor</span>(test_data<span class="sc">$</span>medv, test_predicted_scaled)<span class="sc">^</span><span class="dv">2</span>, <span class="dv">4</span>),</span>
+<span id="cb68-4"><a href="#cb68-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">MSE_test =</span> <span class="fu">round</span>(<span class="fu">mse</span>(test_data<span class="sc">$</span>medv, test_predicted_scaled), <span class="dv">4</span>),</span>
+<span id="cb68-5"><a href="#cb68-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">RMSE_test =</span> <span class="fu">round</span>(<span class="fu">rmse</span>(test_data<span class="sc">$</span>medv, test_predicted_scaled), <span class="dv">4</span>)  </span>
+<span id="cb68-6"><a href="#cb68-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb68-7"><a href="#cb68-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-8"><a href="#cb68-8" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(nnet_err) <span class="ot">&lt;-</span> <span class="st">"nnet"</span></span>
+<span id="cb68-9"><a href="#cb68-9" aria-hidden="true" tabindex="-1"></a>linear_err <span class="sc">|&gt;</span> <span class="fu">bind_rows</span>(neuralnet_err) <span class="sc">|&gt;</span> <span class="fu">bind_rows</span>(neuralnet2_err) <span class="sc">|&gt;</span> <span class="fu">bind_rows</span>(nnet_err)</span>
+<span id="cb68-10"><a href="#cb68-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-11"><a href="#cb68-11" aria-hidden="true" tabindex="-1"></a><span class="co"># neuralnet wins! but remember it has more layers</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
 <table class="dataframe table table-sm table-striped">
@@ -1439,9 +1369,9 @@ options were -</code></pre>
 <h2 data-number="6.9" class="anchored" data-anchor-id="final-models-compare"><span class="header-section-number">6.9</span> Final models compare</h2>
 <p>Побудуємо графік розподілу пронозованих значень показників по усх моделях:</p>
 <div class="cell" data-execution_count="60">
-<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test_lm_predicted)</span>
-<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test_nn_predicted)</span>
-<span id="cb76-3"><a href="#cb76-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test_nnet_predicted)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test_lm_predicted)</span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test_nn_predicted)</span>
+<span id="cb69-3"><a href="#cb69-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test_nnet_predicted)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
 <table class="dataframe table table-sm table-striped">
@@ -1498,8 +1428,8 @@ options were -</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="61">
-<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>test_medv <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="sc">!</span>split) <span class="sc">|&gt;</span> <span class="fu">select</span>(medv) <span class="sc">|&gt;</span> <span class="fu">unlist</span>()</span>
-<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test_medv)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>test_medv <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="sc">!</span>split) <span class="sc">|&gt;</span> <span class="fu">select</span>(medv) <span class="sc">|&gt;</span> <span class="fu">unlist</span>()</span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test_medv)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <style>
 .dl-inline {width: auto; margin:0; padding: 0}
@@ -1510,7 +1440,7 @@ options were -</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="62">
-<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
 <table class="dataframe table table-sm table-striped">
@@ -1531,23 +1461,23 @@ options were -</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="63">
-<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Однакові межі для усіх графіків по Y</span></span>
-<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a>plot_ylim <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">40</span>)</span>
-<span id="cb79-3"><a href="#cb79-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb79-4"><a href="#cb79-4" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)) <span class="co"># три стовпці, 1 рядок</span></span>
-<span id="cb79-5"><a href="#cb79-5" aria-hidden="true" tabindex="-1"></a><span class="co"># pch  - тип точки для графіку</span></span>
-<span id="cb79-6"><a href="#cb79-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(test_medv, test_lm_predicted[,<span class="dv">1</span>], <span class="at">col=</span><span class="st">'black'</span>, <span class="at">ylim=</span>plot_ylim, <span class="at">main=</span><span class="st">'Real vs predicted LM'</span>, <span class="at">pch=</span><span class="dv">25</span>, <span class="at">cex=</span><span class="fl">0.7</span>)</span>
-<span id="cb79-7"><a href="#cb79-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="at">lwd=</span><span class="dv">2</span>)</span>
-<span id="cb79-8"><a href="#cb79-8" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">'bottomright'</span>,<span class="at">legend=</span><span class="st">'LM'</span>,<span class="at">pch=</span><span class="dv">25</span>,<span class="at">col=</span><span class="st">'black'</span>, <span class="at">bty=</span><span class="st">'n'</span>)</span>
-<span id="cb79-9"><a href="#cb79-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb79-10"><a href="#cb79-10" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(test_medv,test_nn_predicted[,<span class="dv">1</span>], <span class="at">col=</span><span class="st">'red'</span>, <span class="at">ylim=</span>plot_ylim, <span class="at">main=</span><span class="st">'Real vs predicted NN'</span>,<span class="at">pch=</span><span class="dv">18</span>,<span class="at">cex=</span><span class="fl">0.7</span>)</span>
-<span id="cb79-11"><a href="#cb79-11" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="at">lwd=</span><span class="dv">2</span>)</span>
-<span id="cb79-12"><a href="#cb79-12" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">'bottomright'</span>,<span class="at">legend=</span><span class="st">'NN'</span>,<span class="at">pch=</span><span class="dv">18</span>,<span class="at">col=</span><span class="st">'red'</span>, <span class="at">bty=</span><span class="st">'n'</span>)</span>
-<span id="cb79-13"><a href="#cb79-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb79-14"><a href="#cb79-14" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(test_medv,test_nnet_predicted[,<span class="dv">1</span>], <span class="at">col=</span><span class="st">'blue'</span>, <span class="at">ylim=</span>plot_ylim, <span class="at">main=</span><span class="st">'Real vs predicted NNET'</span>,<span class="at">pch=</span><span class="dv">18</span>,<span class="at">cex=</span><span class="fl">0.7</span>)</span>
-<span id="cb79-15"><a href="#cb79-15" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="at">lwd=</span><span class="dv">2</span>)</span>
-<span id="cb79-16"><a href="#cb79-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb79-17"><a href="#cb79-17" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">'bottomright'</span>,<span class="at">legend=</span><span class="st">'NNET'</span>,<span class="at">pch=</span><span class="dv">18</span>, <span class="at">col=</span><span class="st">'black'</span>, <span class="at">bty=</span><span class="st">'n'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Однакові межі для усіх графіків по Y</span></span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>plot_ylim <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">40</span>)</span>
+<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)) <span class="co"># три стовпці, 1 рядок</span></span>
+<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a><span class="co"># pch  - тип точки для графіку</span></span>
+<span id="cb72-6"><a href="#cb72-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(test_medv, test_lm_predicted[,<span class="dv">1</span>], <span class="at">col=</span><span class="st">'black'</span>, <span class="at">ylim=</span>plot_ylim, <span class="at">main=</span><span class="st">'Real vs predicted LM'</span>, <span class="at">pch=</span><span class="dv">25</span>, <span class="at">cex=</span><span class="fl">0.7</span>)</span>
+<span id="cb72-7"><a href="#cb72-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb72-8"><a href="#cb72-8" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">'bottomright'</span>,<span class="at">legend=</span><span class="st">'LM'</span>,<span class="at">pch=</span><span class="dv">25</span>,<span class="at">col=</span><span class="st">'black'</span>, <span class="at">bty=</span><span class="st">'n'</span>)</span>
+<span id="cb72-9"><a href="#cb72-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-10"><a href="#cb72-10" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(test_medv,test_nn_predicted[,<span class="dv">1</span>], <span class="at">col=</span><span class="st">'red'</span>, <span class="at">ylim=</span>plot_ylim, <span class="at">main=</span><span class="st">'Real vs predicted NN'</span>,<span class="at">pch=</span><span class="dv">18</span>,<span class="at">cex=</span><span class="fl">0.7</span>)</span>
+<span id="cb72-11"><a href="#cb72-11" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb72-12"><a href="#cb72-12" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">'bottomright'</span>,<span class="at">legend=</span><span class="st">'NN'</span>,<span class="at">pch=</span><span class="dv">18</span>,<span class="at">col=</span><span class="st">'red'</span>, <span class="at">bty=</span><span class="st">'n'</span>)</span>
+<span id="cb72-13"><a href="#cb72-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-14"><a href="#cb72-14" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(test_medv,test_nnet_predicted[,<span class="dv">1</span>], <span class="at">col=</span><span class="st">'blue'</span>, <span class="at">ylim=</span>plot_ylim, <span class="at">main=</span><span class="st">'Real vs predicted NNET'</span>,<span class="at">pch=</span><span class="dv">18</span>,<span class="at">cex=</span><span class="fl">0.7</span>)</span>
+<span id="cb72-15"><a href="#cb72-15" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb72-16"><a href="#cb72-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-17"><a href="#cb72-17" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">'bottomright'</span>,<span class="at">legend=</span><span class="st">'NNET'</span>,<span class="at">pch=</span><span class="dv">18</span>, <span class="at">col=</span><span class="st">'black'</span>, <span class="at">bty=</span><span class="st">'n'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Your code contains a unicode char which cannot be displayed in your
 current locale and R will silently convert it to an escaped form when the
@@ -1561,13 +1491,13 @@ https://github.com/IRkernel/repr/wiki/Problems-with-unicode-on-windows</code></p
 </div>
 <p>Combine all to one chart:</p>
 <div class="cell" data-execution_count="64">
-<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span>
-<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(test_medv,test_lm_predicted[,<span class="dv">1</span>],<span class="at">col=</span><span class="st">'black'</span>,<span class="at">main=</span><span class="st">'Real vs predicted NN + LM'</span>,<span class="at">pch=</span><span class="dv">25</span>,<span class="at">cex=</span><span class="fl">0.7</span>)</span>
-<span id="cb81-4"><a href="#cb81-4" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(test_medv,test_nn_predicted[,<span class="dv">1</span>],<span class="at">col=</span><span class="st">'red'</span>,<span class="at">pch=</span><span class="dv">19</span>,<span class="at">cex=</span><span class="fl">0.7</span>)</span>
-<span id="cb81-5"><a href="#cb81-5" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(test_medv,test_nnet_predicted[,<span class="dv">1</span>],<span class="at">col=</span><span class="st">'blue'</span>,<span class="at">pch=</span><span class="dv">18</span>,<span class="at">cex=</span><span class="fl">0.7</span>)</span>
-<span id="cb81-6"><a href="#cb81-6" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="at">lwd=</span><span class="dv">2</span>)</span>
-<span id="cb81-7"><a href="#cb81-7" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">'bottomright'</span>,<span class="at">legend=</span><span class="fu">c</span>(<span class="st">'lm'</span>,<span class="st">'neuralnet'</span>,<span class="st">'nnet'</span>),<span class="at">pch=</span><span class="fu">c</span>(<span class="dv">25</span>,<span class="dv">19</span>,<span class="dv">18</span>),<span class="at">col=</span><span class="fu">c</span>(<span class="st">'black'</span>, <span class="st">'red'</span>,<span class="st">'blue'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span>
+<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(test_medv,test_lm_predicted[,<span class="dv">1</span>],<span class="at">col=</span><span class="st">'black'</span>,<span class="at">main=</span><span class="st">'Real vs predicted NN + LM'</span>,<span class="at">pch=</span><span class="dv">25</span>,<span class="at">cex=</span><span class="fl">0.7</span>)</span>
+<span id="cb74-4"><a href="#cb74-4" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(test_medv,test_nn_predicted[,<span class="dv">1</span>],<span class="at">col=</span><span class="st">'red'</span>,<span class="at">pch=</span><span class="dv">19</span>,<span class="at">cex=</span><span class="fl">0.7</span>)</span>
+<span id="cb74-5"><a href="#cb74-5" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(test_medv,test_nnet_predicted[,<span class="dv">1</span>],<span class="at">col=</span><span class="st">'blue'</span>,<span class="at">pch=</span><span class="dv">18</span>,<span class="at">cex=</span><span class="fl">0.7</span>)</span>
+<span id="cb74-6"><a href="#cb74-6" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb74-7"><a href="#cb74-7" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">'bottomright'</span>,<span class="at">legend=</span><span class="fu">c</span>(<span class="st">'lm'</span>,<span class="st">'neuralnet'</span>,<span class="st">'nnet'</span>),<span class="at">pch=</span><span class="fu">c</span>(<span class="dv">25</span>,<span class="dv">19</span>,<span class="dv">18</span>),<span class="at">col=</span><span class="fu">c</span>(<span class="st">'black'</span>, <span class="st">'red'</span>,<span class="st">'blue'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="034-supervised-learning-neutal-networks-regression_files/figure-html/cell-65-output-1.png" class="img-fluid"></p>
 </div>
@@ -1577,32 +1507,32 @@ https://github.com/IRkernel/repr/wiki/Problems-with-unicode-on-windows</code></p
 <section id="валідація-моделі-на-різних-розмірах-вибірки" class="level2" data-number="6.10">
 <h2 data-number="6.10" class="anchored" data-anchor-id="валідація-моделі-на-різних-розмірах-вибірки"><span class="header-section-number">6.10</span> Валідація моделі на різних розмірах вибірки</h2>
 <div class="cell" data-execution_count="65">
-<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(boot)</span>
-<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plyr)</span>
-<span id="cb82-3"><a href="#cb82-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DMwR)</span>
-<span id="cb82-4"><a href="#cb82-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb82-5"><a href="#cb82-5" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2023</span>)</span>
-<span id="cb82-6"><a href="#cb82-6" aria-hidden="true" tabindex="-1"></a>errors <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">TrainSize =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">90</span>), <span class="at">RMSE1 =</span> <span class="fu">c</span>(<span class="dv">0</span>), <span class="at">RMSE2 =</span> <span class="fu">c</span>(<span class="dv">0</span>))</span>
-<span id="cb82-7"><a href="#cb82-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb82-8"><a href="#cb82-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) {</span>
-<span id="cb82-9"><a href="#cb82-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb82-10"><a href="#cb82-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">90</span>){</span>
-<span id="cb82-11"><a href="#cb82-11" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb82-12"><a href="#cb82-12" aria-hidden="true" tabindex="-1"></a>      split <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>(<span class="fu">nrow</span>(scaled_data)<span class="sc">*</span>j<span class="sc">/</span><span class="dv">100</span>))</span>
-<span id="cb82-13"><a href="#cb82-13" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb82-14"><a href="#cb82-14" aria-hidden="true" tabindex="-1"></a>      train_data <span class="ot">&lt;-</span> scaled_data[split,]</span>
-<span id="cb82-15"><a href="#cb82-15" aria-hidden="true" tabindex="-1"></a>      test_data <span class="ot">&lt;-</span> scaled_data[<span class="sc">-</span>split,]</span>
-<span id="cb82-16"><a href="#cb82-16" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb82-17"><a href="#cb82-17" aria-hidden="true" tabindex="-1"></a>      nnet_model <span class="ot">&lt;-</span> <span class="fu">nnet</span>(formula, <span class="at">data =</span> train_data,  <span class="at">size =</span> <span class="dv">3</span>, <span class="at">maxit =</span> <span class="dv">100</span>, <span class="at">trace =</span> F)</span>
-<span id="cb82-18"><a href="#cb82-18" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb82-19"><a href="#cb82-19" aria-hidden="true" tabindex="-1"></a>      nnet_predicted_prob_scaled <span class="ot">&lt;-</span> <span class="fu">predict</span>(nnet_model, test_data)</span>
-<span id="cb82-20"><a href="#cb82-20" aria-hidden="true" tabindex="-1"></a>      nnet_predicted <span class="ot">&lt;-</span> nnet_predicted_prob_scaled <span class="sc">*</span> (<span class="fu">max</span>(data<span class="sc">$</span>medv) <span class="sc">-</span> <span class="fu">min</span>(data<span class="sc">$</span>medv)) <span class="sc">+</span> <span class="fu">min</span>(data<span class="sc">$</span>medv)</span>
-<span id="cb82-21"><a href="#cb82-21" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb82-22"><a href="#cb82-22" aria-hidden="true" tabindex="-1"></a>      errors_list <span class="ot">&lt;-</span> <span class="fu">regr.eval</span>(test_data<span class="sc">$</span>medv, nnet_predicted)</span>
-<span id="cb82-23"><a href="#cb82-23" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb82-24"><a href="#cb82-24" aria-hidden="true" tabindex="-1"></a>      errors[errors<span class="sc">$</span>TrainSize <span class="sc">==</span> j, ]<span class="sc">$</span>RMSE1 <span class="ot">&lt;-</span> errors[errors<span class="sc">$</span>TrainSize <span class="sc">==</span> j, ]<span class="sc">$</span>RMSE1 <span class="sc">+</span> errors_list[<span class="dv">3</span>]</span>
-<span id="cb82-25"><a href="#cb82-25" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb82-26"><a href="#cb82-26" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(boot))</span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(plyr))</span>
+<span id="cb75-3"><a href="#cb75-3" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(DMwR))</span>
+<span id="cb75-4"><a href="#cb75-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb75-5"><a href="#cb75-5" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2023</span>)</span>
+<span id="cb75-6"><a href="#cb75-6" aria-hidden="true" tabindex="-1"></a>errors <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">TrainSize =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">90</span>), <span class="at">RMSE1 =</span> <span class="fu">c</span>(<span class="dv">0</span>), <span class="at">RMSE2 =</span> <span class="fu">c</span>(<span class="dv">0</span>))</span>
+<span id="cb75-7"><a href="#cb75-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb75-8"><a href="#cb75-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) {</span>
+<span id="cb75-9"><a href="#cb75-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb75-10"><a href="#cb75-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">90</span>){</span>
+<span id="cb75-11"><a href="#cb75-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb75-12"><a href="#cb75-12" aria-hidden="true" tabindex="-1"></a>      split <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>(<span class="fu">nrow</span>(scaled_data)<span class="sc">*</span>j<span class="sc">/</span><span class="dv">100</span>))</span>
+<span id="cb75-13"><a href="#cb75-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb75-14"><a href="#cb75-14" aria-hidden="true" tabindex="-1"></a>      train_data <span class="ot">&lt;-</span> scaled_data[split,]</span>
+<span id="cb75-15"><a href="#cb75-15" aria-hidden="true" tabindex="-1"></a>      test_data <span class="ot">&lt;-</span> scaled_data[<span class="sc">-</span>split,]</span>
+<span id="cb75-16"><a href="#cb75-16" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb75-17"><a href="#cb75-17" aria-hidden="true" tabindex="-1"></a>      nnet_model <span class="ot">&lt;-</span> <span class="fu">nnet</span>(formula, <span class="at">data =</span> train_data,  <span class="at">size =</span> <span class="dv">3</span>, <span class="at">maxit =</span> <span class="dv">100</span>, <span class="at">trace =</span> F)</span>
+<span id="cb75-18"><a href="#cb75-18" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb75-19"><a href="#cb75-19" aria-hidden="true" tabindex="-1"></a>      nnet_predicted_prob_scaled <span class="ot">&lt;-</span> <span class="fu">predict</span>(nnet_model, test_data)</span>
+<span id="cb75-20"><a href="#cb75-20" aria-hidden="true" tabindex="-1"></a>      nnet_predicted <span class="ot">&lt;-</span> nnet_predicted_prob_scaled <span class="sc">*</span> (<span class="fu">max</span>(data<span class="sc">$</span>medv) <span class="sc">-</span> <span class="fu">min</span>(data<span class="sc">$</span>medv)) <span class="sc">+</span> <span class="fu">min</span>(data<span class="sc">$</span>medv)</span>
+<span id="cb75-21"><a href="#cb75-21" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb75-22"><a href="#cb75-22" aria-hidden="true" tabindex="-1"></a>      errors_list <span class="ot">&lt;-</span> <span class="fu">regr.eval</span>(test_data<span class="sc">$</span>medv, nnet_predicted)</span>
+<span id="cb75-23"><a href="#cb75-23" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb75-24"><a href="#cb75-24" aria-hidden="true" tabindex="-1"></a>      errors[errors<span class="sc">$</span>TrainSize <span class="sc">==</span> j, ]<span class="sc">$</span>RMSE1 <span class="ot">&lt;-</span> errors[errors<span class="sc">$</span>TrainSize <span class="sc">==</span> j, ]<span class="sc">$</span>RMSE1 <span class="sc">+</span> errors_list[<span class="dv">3</span>]</span>
+<span id="cb75-25"><a href="#cb75-25" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb75-26"><a href="#cb75-26" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>
 Attaching package: 'boot'
@@ -1659,56 +1589,56 @@ The following object is masked from 'package:modelr':
 </div>
 </div>
 <div class="cell" data-execution_count="66">
-<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>errors<span class="sc">$</span>RMSE1 <span class="ot">&lt;-</span> errors<span class="sc">$</span>RMSE1<span class="sc">/</span><span class="dv">10</span></span>
-<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span> (<span class="at">x =</span> errors<span class="sc">$</span>TrainSize, </span>
-<span id="cb84-3"><a href="#cb84-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> errors<span class="sc">$</span>RMSE1, </span>
-<span id="cb84-4"><a href="#cb84-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">ylim =</span> <span class="fu">c</span>(<span class="fu">min</span>(errors<span class="sc">$</span>RMSE1), </span>
-<span id="cb84-5"><a href="#cb84-5" aria-hidden="true" tabindex="-1"></a>               <span class="fu">max</span>(errors<span class="sc">$</span>RMSE1)), </span>
-<span id="cb84-6"><a href="#cb84-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">type =</span> <span class="st">"l"</span>, </span>
-<span id="cb84-7"><a href="#cb84-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">xlab =</span> <span class="st">"length of training set"</span>, </span>
-<span id="cb84-8"><a href="#cb84-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">ylab =</span> <span class="st">"mean RMSE"</span>, </span>
-<span id="cb84-9"><a href="#cb84-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">main =</span> <span class="st">"Variation of RMSE with length of training set"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>errors<span class="sc">$</span>RMSE1 <span class="ot">&lt;-</span> errors<span class="sc">$</span>RMSE1<span class="sc">/</span><span class="dv">10</span></span>
+<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span> (<span class="at">x =</span> errors<span class="sc">$</span>TrainSize, </span>
+<span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> errors<span class="sc">$</span>RMSE1, </span>
+<span id="cb77-4"><a href="#cb77-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">ylim =</span> <span class="fu">c</span>(<span class="fu">min</span>(errors<span class="sc">$</span>RMSE1), </span>
+<span id="cb77-5"><a href="#cb77-5" aria-hidden="true" tabindex="-1"></a>               <span class="fu">max</span>(errors<span class="sc">$</span>RMSE1)), </span>
+<span id="cb77-6"><a href="#cb77-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">type =</span> <span class="st">"l"</span>, </span>
+<span id="cb77-7"><a href="#cb77-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">xlab =</span> <span class="st">"length of training set"</span>, </span>
+<span id="cb77-8"><a href="#cb77-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">ylab =</span> <span class="st">"mean RMSE"</span>, </span>
+<span id="cb77-9"><a href="#cb77-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">main =</span> <span class="st">"Variation of RMSE with length of training set"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="034-supervised-learning-neutal-networks-regression_files/figure-html/cell-67-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="67">
-<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) {</span>
-<span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb85-3"><a href="#cb85-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">90</span>){</span>
-<span id="cb85-4"><a href="#cb85-4" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb85-5"><a href="#cb85-5" aria-hidden="true" tabindex="-1"></a>    split <span class="ot">&lt;-</span> <span class="fu">sample.split</span>(scaled_data<span class="sc">$</span>medv, <span class="at">SplitRatio =</span> j<span class="sc">/</span><span class="dv">100</span>)</span>
-<span id="cb85-6"><a href="#cb85-6" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb85-7"><a href="#cb85-7" aria-hidden="true" tabindex="-1"></a>    train_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(scaled_data, split <span class="sc">==</span> <span class="cn">TRUE</span>)</span>
-<span id="cb85-8"><a href="#cb85-8" aria-hidden="true" tabindex="-1"></a>    test_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(scaled_data, split <span class="sc">==</span> <span class="cn">FALSE</span>)</span>
-<span id="cb85-9"><a href="#cb85-9" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb85-10"><a href="#cb85-10" aria-hidden="true" tabindex="-1"></a>    nnet_model <span class="ot">&lt;-</span> <span class="fu">nnet</span>(formula, <span class="at">data =</span> train_data,  <span class="at">size =</span> <span class="dv">3</span>, <span class="at">maxit =</span> <span class="dv">100</span>, <span class="at">trace =</span> F)</span>
-<span id="cb85-11"><a href="#cb85-11" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb85-12"><a href="#cb85-12" aria-hidden="true" tabindex="-1"></a>    nnet_predicted_prob_scaled <span class="ot">&lt;-</span> <span class="fu">predict</span>(nnet_model, test_data)</span>
-<span id="cb85-13"><a href="#cb85-13" aria-hidden="true" tabindex="-1"></a>    nnet_predicted <span class="ot">&lt;-</span> nnet_predicted_prob_scaled <span class="sc">*</span> (<span class="fu">max</span>(data<span class="sc">$</span>medv) <span class="sc">-</span> <span class="fu">min</span>(data<span class="sc">$</span>medv)) <span class="sc">+</span> <span class="fu">min</span>(data<span class="sc">$</span>medv)</span>
-<span id="cb85-14"><a href="#cb85-14" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb85-15"><a href="#cb85-15" aria-hidden="true" tabindex="-1"></a>    errors_list <span class="ot">&lt;-</span> <span class="fu">regr.eval</span>(test_data<span class="sc">$</span>medv, nnet_predicted)</span>
-<span id="cb85-16"><a href="#cb85-16" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb85-17"><a href="#cb85-17" aria-hidden="true" tabindex="-1"></a>    errors[errors<span class="sc">$</span>TrainSize <span class="sc">==</span> j, ]<span class="sc">$</span>RMSE2 <span class="ot">&lt;-</span> errors[errors<span class="sc">$</span>TrainSize <span class="sc">==</span> j, ]<span class="sc">$</span>RMSE2 <span class="sc">+</span> errors_list[<span class="dv">3</span>]</span>
-<span id="cb85-18"><a href="#cb85-18" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb85-19"><a href="#cb85-19" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) {</span>
+<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb78-3"><a href="#cb78-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">90</span>){</span>
+<span id="cb78-4"><a href="#cb78-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb78-5"><a href="#cb78-5" aria-hidden="true" tabindex="-1"></a>    split <span class="ot">&lt;-</span> <span class="fu">sample.split</span>(scaled_data<span class="sc">$</span>medv, <span class="at">SplitRatio =</span> j<span class="sc">/</span><span class="dv">100</span>)</span>
+<span id="cb78-6"><a href="#cb78-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb78-7"><a href="#cb78-7" aria-hidden="true" tabindex="-1"></a>    train_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(scaled_data, split <span class="sc">==</span> <span class="cn">TRUE</span>)</span>
+<span id="cb78-8"><a href="#cb78-8" aria-hidden="true" tabindex="-1"></a>    test_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(scaled_data, split <span class="sc">==</span> <span class="cn">FALSE</span>)</span>
+<span id="cb78-9"><a href="#cb78-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb78-10"><a href="#cb78-10" aria-hidden="true" tabindex="-1"></a>    nnet_model <span class="ot">&lt;-</span> <span class="fu">nnet</span>(formula, <span class="at">data =</span> train_data,  <span class="at">size =</span> <span class="dv">3</span>, <span class="at">maxit =</span> <span class="dv">100</span>, <span class="at">trace =</span> F)</span>
+<span id="cb78-11"><a href="#cb78-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb78-12"><a href="#cb78-12" aria-hidden="true" tabindex="-1"></a>    nnet_predicted_prob_scaled <span class="ot">&lt;-</span> <span class="fu">predict</span>(nnet_model, test_data)</span>
+<span id="cb78-13"><a href="#cb78-13" aria-hidden="true" tabindex="-1"></a>    nnet_predicted <span class="ot">&lt;-</span> nnet_predicted_prob_scaled <span class="sc">*</span> (<span class="fu">max</span>(data<span class="sc">$</span>medv) <span class="sc">-</span> <span class="fu">min</span>(data<span class="sc">$</span>medv)) <span class="sc">+</span> <span class="fu">min</span>(data<span class="sc">$</span>medv)</span>
+<span id="cb78-14"><a href="#cb78-14" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb78-15"><a href="#cb78-15" aria-hidden="true" tabindex="-1"></a>    errors_list <span class="ot">&lt;-</span> <span class="fu">regr.eval</span>(test_data<span class="sc">$</span>medv, nnet_predicted)</span>
+<span id="cb78-16"><a href="#cb78-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb78-17"><a href="#cb78-17" aria-hidden="true" tabindex="-1"></a>    errors[errors<span class="sc">$</span>TrainSize <span class="sc">==</span> j, ]<span class="sc">$</span>RMSE2 <span class="ot">&lt;-</span> errors[errors<span class="sc">$</span>TrainSize <span class="sc">==</span> j, ]<span class="sc">$</span>RMSE2 <span class="sc">+</span> errors_list[<span class="dv">3</span>]</span>
+<span id="cb78-18"><a href="#cb78-18" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb78-19"><a href="#cb78-19" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-execution_count="68">
-<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a>errors<span class="sc">$</span>RMSE2 <span class="ot">&lt;-</span> errors<span class="sc">$</span>RMSE2<span class="sc">/</span><span class="dv">10</span></span>
-<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span> (<span class="at">x =</span> errors<span class="sc">$</span>TrainSize, </span>
-<span id="cb86-3"><a href="#cb86-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> errors<span class="sc">$</span>RMSE2, </span>
-<span id="cb86-4"><a href="#cb86-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">ylim =</span> <span class="fu">c</span>(<span class="fu">min</span>(errors<span class="sc">$</span>RMSE2), </span>
-<span id="cb86-5"><a href="#cb86-5" aria-hidden="true" tabindex="-1"></a>               <span class="fu">max</span>(errors<span class="sc">$</span>RMSE2)), </span>
-<span id="cb86-6"><a href="#cb86-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">type =</span> <span class="st">"l"</span>, </span>
-<span id="cb86-7"><a href="#cb86-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">xlab =</span> <span class="st">"length of training set"</span>, </span>
-<span id="cb86-8"><a href="#cb86-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">ylab =</span> <span class="st">"mean RMSE"</span>, </span>
-<span id="cb86-9"><a href="#cb86-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">main =</span> <span class="st">"Variation of RMSE with length of training set"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>errors<span class="sc">$</span>RMSE2 <span class="ot">&lt;-</span> errors<span class="sc">$</span>RMSE2<span class="sc">/</span><span class="dv">10</span></span>
+<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span> (<span class="at">x =</span> errors<span class="sc">$</span>TrainSize, </span>
+<span id="cb79-3"><a href="#cb79-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> errors<span class="sc">$</span>RMSE2, </span>
+<span id="cb79-4"><a href="#cb79-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">ylim =</span> <span class="fu">c</span>(<span class="fu">min</span>(errors<span class="sc">$</span>RMSE2), </span>
+<span id="cb79-5"><a href="#cb79-5" aria-hidden="true" tabindex="-1"></a>               <span class="fu">max</span>(errors<span class="sc">$</span>RMSE2)), </span>
+<span id="cb79-6"><a href="#cb79-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">type =</span> <span class="st">"l"</span>, </span>
+<span id="cb79-7"><a href="#cb79-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">xlab =</span> <span class="st">"length of training set"</span>, </span>
+<span id="cb79-8"><a href="#cb79-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">ylab =</span> <span class="st">"mean RMSE"</span>, </span>
+<span id="cb79-9"><a href="#cb79-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">main =</span> <span class="st">"Variation of RMSE with length of training set"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="034-supervised-learning-neutal-networks-regression_files/figure-html/cell-69-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="69">
-<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(errors)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(errors)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
 <table class="dataframe table table-sm table-striped">
@@ -1730,14 +1660,14 @@ The following object is masked from 'package:modelr':
 </div>
 <hr>
 <div class="cell" data-execution_count="70">
-<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(caret)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(caret)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-execution_count="71">
-<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a>folds <span class="ot">&lt;-</span> <span class="fu">createFolds</span>(scaled_data<span class="sc">$</span>medv, <span class="at">k =</span> <span class="dv">10</span>, <span class="at">list =</span> <span class="cn">TRUE</span>, <span class="at">returnTrain =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a>errors2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">FoldExcluded =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">RMSE =</span> <span class="fu">c</span>(<span class="dv">0</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a>folds <span class="ot">&lt;-</span> <span class="fu">createFolds</span>(scaled_data<span class="sc">$</span>medv, <span class="at">k =</span> <span class="dv">10</span>, <span class="at">list =</span> <span class="cn">TRUE</span>, <span class="at">returnTrain =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a>errors2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">FoldExcluded =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">RMSE =</span> <span class="fu">c</span>(<span class="dv">0</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-execution_count="72">
-<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a>folds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>folds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <dl>
     <dt>$Fold01</dt>
@@ -1824,31 +1754,31 @@ The following object is masked from 'package:modelr':
 </div>
 </div>
 <div class="cell" data-execution_count="73">
-<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) {</span>
-<span id="cb91-2"><a href="#cb91-2" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb91-3"><a href="#cb91-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>){    </span>
-<span id="cb91-4"><a href="#cb91-4" aria-hidden="true" tabindex="-1"></a>    train_data <span class="ot">&lt;-</span> scaled_data[<span class="sc">-</span>folds[[j]], ]</span>
-<span id="cb91-5"><a href="#cb91-5" aria-hidden="true" tabindex="-1"></a>    test_data <span class="ot">&lt;-</span> scaled_data[folds[[j]], ]</span>
-<span id="cb91-6"><a href="#cb91-6" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb91-7"><a href="#cb91-7" aria-hidden="true" tabindex="-1"></a>    nnet_model <span class="ot">&lt;-</span> <span class="fu">nnet</span>(formula, <span class="at">data =</span> train_data, <span class="at">trace =</span> F,  <span class="at">size =</span> <span class="dv">3</span>, <span class="at">maxit =</span> <span class="dv">100</span>)</span>
-<span id="cb91-8"><a href="#cb91-8" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb91-9"><a href="#cb91-9" aria-hidden="true" tabindex="-1"></a>    nnet_predicted_prob_scaled <span class="ot">&lt;-</span> <span class="fu">predict</span>(nnet_model, test_data)</span>
-<span id="cb91-10"><a href="#cb91-10" aria-hidden="true" tabindex="-1"></a>    nnet_predicted <span class="ot">&lt;-</span> nnet_predicted_prob_scaled <span class="sc">*</span> (<span class="fu">max</span>(data<span class="sc">$</span>medv) <span class="sc">-</span> <span class="fu">min</span>(data<span class="sc">$</span>medv)) <span class="sc">+</span> <span class="fu">min</span>(data<span class="sc">$</span>medv)</span>
-<span id="cb91-11"><a href="#cb91-11" aria-hidden="true" tabindex="-1"></a>    errors_list <span class="ot">&lt;-</span> <span class="fu">regr.eval</span>(test_data<span class="sc">$</span>medv, nnet_predicted)</span>
-<span id="cb91-12"><a href="#cb91-12" aria-hidden="true" tabindex="-1"></a>    errors2[errors2<span class="sc">$</span>FoldExcluded <span class="sc">==</span> j, ]<span class="sc">$</span>RMSE <span class="ot">&lt;-</span> errors2[errors2<span class="sc">$</span>FoldExcluded <span class="sc">==</span> j, ]<span class="sc">$</span>RMSE <span class="sc">+</span> errors_list[<span class="dv">3</span>]</span>
-<span id="cb91-13"><a href="#cb91-13" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb91-14"><a href="#cb91-14" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) {</span>
+<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb84-3"><a href="#cb84-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>){    </span>
+<span id="cb84-4"><a href="#cb84-4" aria-hidden="true" tabindex="-1"></a>    train_data <span class="ot">&lt;-</span> scaled_data[<span class="sc">-</span>folds[[j]], ]</span>
+<span id="cb84-5"><a href="#cb84-5" aria-hidden="true" tabindex="-1"></a>    test_data <span class="ot">&lt;-</span> scaled_data[folds[[j]], ]</span>
+<span id="cb84-6"><a href="#cb84-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb84-7"><a href="#cb84-7" aria-hidden="true" tabindex="-1"></a>    nnet_model <span class="ot">&lt;-</span> <span class="fu">nnet</span>(formula, <span class="at">data =</span> train_data, <span class="at">trace =</span> F,  <span class="at">size =</span> <span class="dv">3</span>, <span class="at">maxit =</span> <span class="dv">100</span>)</span>
+<span id="cb84-8"><a href="#cb84-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb84-9"><a href="#cb84-9" aria-hidden="true" tabindex="-1"></a>    nnet_predicted_prob_scaled <span class="ot">&lt;-</span> <span class="fu">predict</span>(nnet_model, test_data)</span>
+<span id="cb84-10"><a href="#cb84-10" aria-hidden="true" tabindex="-1"></a>    nnet_predicted <span class="ot">&lt;-</span> nnet_predicted_prob_scaled <span class="sc">*</span> (<span class="fu">max</span>(data<span class="sc">$</span>medv) <span class="sc">-</span> <span class="fu">min</span>(data<span class="sc">$</span>medv)) <span class="sc">+</span> <span class="fu">min</span>(data<span class="sc">$</span>medv)</span>
+<span id="cb84-11"><a href="#cb84-11" aria-hidden="true" tabindex="-1"></a>    errors_list <span class="ot">&lt;-</span> <span class="fu">regr.eval</span>(test_data<span class="sc">$</span>medv, nnet_predicted)</span>
+<span id="cb84-12"><a href="#cb84-12" aria-hidden="true" tabindex="-1"></a>    errors2[errors2<span class="sc">$</span>FoldExcluded <span class="sc">==</span> j, ]<span class="sc">$</span>RMSE <span class="ot">&lt;-</span> errors2[errors2<span class="sc">$</span>FoldExcluded <span class="sc">==</span> j, ]<span class="sc">$</span>RMSE <span class="sc">+</span> errors_list[<span class="dv">3</span>]</span>
+<span id="cb84-13"><a href="#cb84-13" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb84-14"><a href="#cb84-14" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-execution_count="74">
-<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a>errors2<span class="sc">$</span>RMSE <span class="ot">&lt;-</span> errors2<span class="sc">$</span>RMSE<span class="sc">/</span><span class="dv">10</span></span>
-<span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span> (<span class="at">x =</span> errors2<span class="sc">$</span>FoldExcluded, <span class="at">y =</span> errors2<span class="sc">$</span>RMSE, </span>
-<span id="cb92-3"><a href="#cb92-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">ylim =</span> <span class="fu">c</span>(<span class="fu">min</span>(errors2<span class="sc">$</span>RMSE)<span class="sc">-</span><span class="dv">5</span>, </span>
-<span id="cb92-4"><a href="#cb92-4" aria-hidden="true" tabindex="-1"></a>               <span class="fu">max</span>(errors2<span class="sc">$</span>RMSE)<span class="sc">+</span><span class="dv">5</span>), </span>
-<span id="cb92-5"><a href="#cb92-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">type =</span> <span class="st">"l"</span>, </span>
-<span id="cb92-6"><a href="#cb92-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">xlab =</span> <span class="st">"length of training set"</span>, </span>
-<span id="cb92-7"><a href="#cb92-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">ylab =</span> <span class="st">"mean RMSE"</span>, </span>
-<span id="cb92-8"><a href="#cb92-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">main =</span> <span class="st">"Variation of RMSE with length of training set"</span>)</span>
-<span id="cb92-9"><a href="#cb92-9" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(errors2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a>errors2<span class="sc">$</span>RMSE <span class="ot">&lt;-</span> errors2<span class="sc">$</span>RMSE<span class="sc">/</span><span class="dv">10</span></span>
+<span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span> (<span class="at">x =</span> errors2<span class="sc">$</span>FoldExcluded, <span class="at">y =</span> errors2<span class="sc">$</span>RMSE, </span>
+<span id="cb85-3"><a href="#cb85-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">ylim =</span> <span class="fu">c</span>(<span class="fu">min</span>(errors2<span class="sc">$</span>RMSE)<span class="sc">-</span><span class="dv">5</span>, </span>
+<span id="cb85-4"><a href="#cb85-4" aria-hidden="true" tabindex="-1"></a>               <span class="fu">max</span>(errors2<span class="sc">$</span>RMSE)<span class="sc">+</span><span class="dv">5</span>), </span>
+<span id="cb85-5"><a href="#cb85-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">type =</span> <span class="st">"l"</span>, </span>
+<span id="cb85-6"><a href="#cb85-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">xlab =</span> <span class="st">"length of training set"</span>, </span>
+<span id="cb85-7"><a href="#cb85-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">ylab =</span> <span class="st">"mean RMSE"</span>, </span>
+<span id="cb85-8"><a href="#cb85-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">main =</span> <span class="st">"Variation of RMSE with length of training set"</span>)</span>
+<span id="cb85-9"><a href="#cb85-9" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(errors2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
 <table class="dataframe table table-sm table-striped">

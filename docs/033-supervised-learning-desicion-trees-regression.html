@@ -326,36 +326,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><input type="checkbox" disabled="" checked="">Predicting Credit Card Balance using Regression <a href="https://www.kaggle.com/suzanaiacob/predicting-credit-card-balance-using-regression/notebook" class="uri">https://www.kaggle.com/suzanaiacob/predicting-credit-card-balance-using-regression/notebook</a></li>
 </ul>
 <p>Для виконнання завдань потрібний ряд R-пакетів:</p>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co"># побудова графіків</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gmodels) <span class="co"># побудова крос-таблиць</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rpart) <span class="co"># дерево рішень</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(partykit) <span class="co"># дерево рішень</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rpart.plot) <span class="co"># візуалізація дерева рішень</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DMwR) <span class="co"># оцінка похибок моделі</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rattle) <span class="co"># допомога у візуалізації </span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RColorBrewer) <span class="co"># допомога у візуалізації </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(ggplot2)) <span class="co"># побудова графіків</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(gmodels)) <span class="co"># побудова крос-таблиць</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(rpart)) <span class="co"># дерево рішень</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(partykit)) <span class="co"># дерево рішень</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(rpart.plot)) <span class="co"># візуалізація дерева рішень</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(DMwR)) <span class="co"># оцінка похибок моделі</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(rattle)) <span class="co"># допомога у візуалізації </span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(RColorBrewer)) <span class="co"># допомога у візуалізації </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: grid
-
-Loading required package: libcoin
-
-Loading required package: mvtnorm
-
-Loading required package: lattice
-
-Registered S3 method overwritten by 'quantmod':
-  method            from
-  as.zoo.data.frame zoo 
-
-Loading required package: tibble
-
-Loading required package: bitops
-
-Rattle: A free graphical interface for data science with R.
-Version 5.5.1 Copyright (c) 2006-2021 Togaware Pty Ltd.
-Type 'rattle()' to shake, rattle, and roll your data.
-</code></pre>
+<pre><code>Your code contains a unicode char which cannot be displayed in your
+current locale and R will silently convert it to an escaped form when the
+R kernel executes this code. This can lead to subtle errors if you use
+such chars to do comparisons. For more information, please see
+https://github.com/IRkernel/repr/wiki/Problems-with-unicode-on-windows</code></pre>
 </div>
 </div>
 <p>Якщо ці пакети відсутні, то інсталюйте їх за допомогою команди <code>install.packages(назва_пакету)</code>.</p>
