@@ -14,4 +14,5 @@ quarto publish gh-pages --yes
 
 cd e:\repos\oa_2023\ml-in-r
 quarto render .
+git fetch --prune
 quarto publish gh-pages
